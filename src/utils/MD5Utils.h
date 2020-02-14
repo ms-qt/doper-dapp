@@ -9,7 +9,7 @@
 #include <QCryptographicHash>
 
 
-class MD5
+class MD5Utils
 {
 public:
 

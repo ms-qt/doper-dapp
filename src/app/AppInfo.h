@@ -1,9 +1,10 @@
-﻿//
-// Created by 毛华伟 on 2020/1/19.
+//
+// Created by maohuawei on 2020/2/14.
 //
 
-#ifndef DOPER_DAPP___APP_CONFIG___H
-#define DOPER_DAPP___APP_CONFIG___H
+#ifndef APP_APPINFO_H
+#define APP_APPINFO_H
+
 
 #include <QString>
 
@@ -13,4 +14,5 @@ static const QString ORGANIZATION = "bdlbsc";
 static const QString APP_NAME = QObject::tr("北斗运营管理平台");
 
 
-#endif //DOPER_DAPP___APP_CONFIG___H
+
+#endif //APP_APPINFO_H

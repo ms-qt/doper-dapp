@@ -170,8 +170,8 @@ set(app_SRC
         src/image/QrCodeImageProvider.h
         src/qrcode/QRCodeGenerator.cpp
         src/qrcode/QRCodeGenerator.h
-        src/utils/MD5.h
-        src/data/Data.h
+        src/utils/MD5Utils.h
+        src/data/CommonData.h
         src/utils/UUIDUtils.h
         src/panel/NotificationPanel.cpp
         src/panel/NotificationPanel.h
@@ -283,7 +283,7 @@ set(app_SRC
         src/app/base/BaseQQuickView.cpp
         src/app/base/BaseQQuickView.h
         src/model/db/mainleftmenu/MainLeftMenu.cpp
-        src/model/db/mainleftmenu/MainLeftMenu.h)
+        src/model/db/mainleftmenu/MainLeftMenu.h src/app/AppInfo.h)
 
 #set(TS_FILES app_zh_CN.ts)
 #set(TS_FILES app_en_US.ts)

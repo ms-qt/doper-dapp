@@ -3,7 +3,7 @@
 //
 
 #include "IM.h"
-#include <src/data/Data.h>
+#include <src/data/CommonData.h>
 
 #include <thread>
 #include <QThread>
@@ -75,9 +75,9 @@ void IM::requestLoginQrCode()
 
     QJsonObject object;
     object.insert("type", "login-qrcode-register");
-    object.insert("qrcode", Data::getInstance().loginQrCodeEnCode);
+    object.insert("qrcode", CommonData::getInstance().loginQrCodeEnCode);
     object.insert("os", "macos");
-    object.insert("uuid", Data::getInstance().uuid);
+    object.insert("uuid", CommonData::getInstance().uuid);
     jsonDocument document = QJsonDocument(object);
     QString data = QString(document.toJson());
 
@@ -138,7 +138,7 @@ void IM::connect()
 
     object.insert("type", "login-app");
     object.insert("os", "macos");
-    object.insert("uuid", Data::getInstance().uuid);
+    object.insert("uuid", CommonData::getInstance().uuid);
     QJsonDocument document = QJsonDocument(object);
     QString data = QString(document.toJson());
     parameters.payload = rsocket::Payload(data.toStdString());

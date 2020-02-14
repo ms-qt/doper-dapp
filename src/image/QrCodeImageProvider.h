@@ -12,10 +12,10 @@
 #include <QJsonObject>
 #include <QJsonDocument>
 #include <QDebug>
-#include"src/qrcode/QRCodeGenerator.h"
+#include "src/qrcode/QRCodeGenerator.h"
 #include "src/utils/SystemUtils.h"
-#include "src/utils/MD5.h"
-#include "src/data/Data.h"
+#include "src/utils/MD5Utils.h"
+#include "src/data/CommonData.h"
 
 class QrCodeImageProvider : public QQuickImageProvider
 {
@@ -26,37 +26,17 @@ public:
 
     QPixmap requestPixmap(const QString &id, QSize *size, const QSize &requestedSize) override
     {
-        return refresh();
+        return refresh(id);
     }
 
-    QPixmap refresh()
+    QPixmap refresh(QString id)
     {
         int levelIndex = 1;
         int versionIndex = 0;
         bool bExtent = true;
         int maskIndex = -1;
 
-        QString uuid = QUuid::createUuid().toString();
-        QDateTime time = QDateTime::currentDateTime();   //获取当前时间
-        int timeT = time.toTime_t();
-
-        QJsonObject object;
-        object.insert("uuid", uuid);
-        object.insert("time", timeT);
-        object.insert("mac", SystemUtils::mac());
-        object.insert("ip", SystemUtils::ip());
-        object.insert("origin", MD5::md5("bdlbs"));
-
-        QJsonDocument document = QJsonDocument(object);
-        QString encodeString = QString(document.toJson());
-
-        encodeString = MD5::md5(encodeString);
-        encodeString = "000000" + encodeString + "000000";
-        Data::getInstance().loginQrCodeEnCode = encodeString;
-
-        qDebug() << "QrCodeImageProvider" << encodeString;
-        
-        qrEncode.EncodeData(levelIndex, versionIndex, bExtent, maskIndex, encodeString.toUtf8().data());
+        qrEncode.EncodeData(levelIndex, versionIndex, bExtent, maskIndex, id.toUtf8().data());
 
         int qrImageSize = qrEncode.m_nSymbleSize;
         int encodeImageSize = qrImageSize + (QR_MARGIN * 2);
@@ -81,6 +61,5 @@ public:
 private:
     CQR_Encode qrEncode;
 };
-
 
 #endif //DOPER_DAPP_QRCODEIMAGEPROVIDER_H

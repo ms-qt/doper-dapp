@@ -7,13 +7,13 @@
 
 #include <iostream>
 
-class Data
+class CommonData
 {
 public:
 
-    static Data &getInstance()
+    static CommonData &getInstance()
     {
-        static Data instance;
+        static CommonData instance;
         return instance;
     }
 
@@ -33,15 +33,15 @@ public:
 
 
 private:
-    Data()
+    CommonData()
     {};
 
-    ~Data()
+    ~CommonData()
     {};
 
-    Data(const Data &);
+    CommonData(const CommonData &);
 
-    Data &operator=(const Data &);
+    CommonData &operator=(const CommonData &);
 };
 
 

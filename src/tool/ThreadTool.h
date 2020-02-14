@@ -15,16 +15,18 @@
 class ThreadTool
 {
 public:
-    static ThreadTool* getInstance();
+    static ThreadTool *getInstance();
+
 public:
     // 操作ui的线程
     static rxcpp::observe_on_one_worker main_thread;
 private:
     ThreadTool();
+
     ~ThreadTool();
 
 private:
-    static ThreadTool* instance;
+    static ThreadTool *instance;
 
 };
 

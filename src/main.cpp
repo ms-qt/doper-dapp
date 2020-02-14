@@ -1,22 +1,30 @@
 ﻿#pragma execution_character_set("utf-8")
 
+// folly
 #include <folly/init/Init.h>
-#include <src/logger/Logger.h>
+// 日志
+#include "src/logger/Logger.h"
 
+// Qt
 #include <QApplication>
 #include <QtWebEngine>
+
 
 #include <src/net/NetWorkManager.h>
 
 #include <src/tool/ThreadTool.h>
-#include <src/config/__APP_CONFIG__.h>
+#include "src/app/AppInfo.h"
+
 #include <src/TaoJsonModel/TaoJsonModel>
+
 #include "src/emoji/emojimodel.h"
 
+// 图片同步
 #include "src/image/ImageProvider.h"
+// 图片异步
 #include "src/image/ImageAsyncImageProvider.h"
+// 二维码
 #include "src/image/QrCodeImageProvider.h"
-
 
 
 static void registertypes(){
@@ -46,11 +54,7 @@ static void connectToDatabase()
     }
 }
 
-
-
 Q_COREAPP_STARTUP_FUNCTION(registertypes)
-
-
 
 int main(int argc, char *argv[])
 {
@@ -109,7 +113,6 @@ int main(int argc, char *argv[])
     QrCodeImageProvider *qrCodeImageProvider = new QrCodeImageProvider();
     engine.addImageProvider("imageQrCode", imageProvider);
 
-    
     engine.load(url);
     return app.exec();
 }
