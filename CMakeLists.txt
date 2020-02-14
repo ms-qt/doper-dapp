@@ -13,6 +13,7 @@ set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
+# c++ 17
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
@@ -46,16 +47,18 @@ if (LINUX)
     find_package(Qt5DBus REQUIRED)
 endif (LINUX)
 
+##############################################
+
 if (APPLE)
     message("配置APPLE VCPKG 路径")
     include_directories(/Users/maohuawei/dev/vcpkg/installed/x64-osx/include)
     link_directories(/Users/maohuawei/dev/vcpkg/installed/x64-osx/lib)
 elseif (WIN32)
     if (DEVELOPER STREQUAL ZN)
-        message("配置WINDOWS本地路径")
+        message("配置WIN32 VCPKG 路径")
         include_directories(D:/thirdparty/include)
     else (DEVELOPER)
-        message("配置WINDOWS本地路径")
+         message("配置WIN32 VCPKG 路径")
         include_directories(D:/Local/vcpkg/installed/x64-windows/include)
         link_directories(D:/Local/vcpkg/installed/x64-windows/lib)
     endif ()
@@ -65,23 +68,30 @@ elseif (UNIX)
     link_directories(/home/dev/Desktop/vcpkg/installed/x64-linux/lib)
 endif ()
 
+##############################################
+
+
 
 if (APPLE)
     message("配置APPLE本地路径")
     include_directories("/usr/local/include")
     link_directories("/usr/local/lib")
 elseif (WIN32)
-    IF (DEVELOPER STREQUAL ZN)
-    ELSE (DEVELOPER)
+    if (DEVELOPER STREQUAL ZN)
+
+    else (DEVELOPER)
         message("配置WINDOWS本地路径")
         include_directories("D:/Local/libs/include")
         link_directories("D:/Local/libs/lib")
-    ENDIF ()
+    endif ()
+
 elseif (LINUX)
     message("配置LINUX本地路径")
     include_directories("/usr/local/include")
     link_directories("/usr/local/lib")
 endif ()
+
+##############################################
 
 IF (DEVELOPER STREQUAL ZN)
     message("配置WINDOWS本地路径")

@@ -22,21 +22,27 @@
     "rsocket_DIR":"D:/Local/libs/lib/cmake/rsocket"
     
     
-    ---
+## QtCreate
     
-        Qt5Core_DIR=C:/Qt/Qt5.14.0/5.14.0/msvc2017_64/lib/cmake/Qt5Core;
-        Qt5Gui_DIR=C:/Qt/Qt5.14.0/5.14.0/msvc2017_64/lib/cmake/Qt5Gui;
-        Qt5Network_DIR=C:/Qt/Qt5.14.0/5.14.0/msvc2017_64/lib/cmake/Qt5Network;
-        Qt5QmlModels_DIR=C:/Qt/Qt5.14.0/5.14.0/msvc2017_64/lib/cmakeQt5QmlModels;
-        Qt5Qml_DIR=C:/Qt/Qt5.14.0/5.14.0/msvc2017_64/lib/cmake/Qt5Qml;
-        Qt5Quick_DIR=C:/Qt/Qt5.14.0/5.14.0/msvc2017_64/lib/cmake/Qt5Quick;
-        Qt5_DIR=C:/Qt/Qt5.14.0/5.14.0/msvc2017_64/lib/cmake/Qt5;
-        folly_DIR=D:/Local/vcpkg/installed/x64-windows/share/folly;
-        glog_DIR=D:/Local/vcpkg/installed/x64-windows/share/glog;
-        gflags_DIR=D:/Local/vcpkg/installed/x64-windows/share/gflags;
-        yarpl_DIR=D:/Local/libs/lib/cmake/yarpl;
-        rsocket_DIR=D:/Local/libs/lib/cmake/rsocket;
-        rxcpp_DIR=D:/Local/vcpkg/installed/x64-windows/share/rxcpp;
+Qt5Core_DIR=C:/Qt/Qt5.14.0/5.14.0/msvc2017_64/lib/cmake/Qt5Core
+Qt5Gui_DIR=C:/Qt/Qt5.14.0/5.14.0/msvc2017_64/lib/cmake/Qt5Gui
+Qt5Network_DIR=C:/Qt/Qt5.14.0/5.14.0/msvc2017_64/lib/cmake/Qt5Network
+Qt5QmlModels_DIR=C:/Qt/Qt5.14.0/5.14.0/msvc2017_64/lib/cmakeQt5QmlModels
+Qt5Qml_DIR=C:/Qt/Qt5.14.0/5.14.0/msvc2017_64/lib/cmake/Qt5Qml
+Qt5Quick_DIR=C:/Qt/Qt5.14.0/5.14.0/msvc2017_64/lib/cmake/Qt5Quick
+Qt5_DIR=C:/Qt/Qt5.14.0/5.14.0/msvc2017_64/lib/cmake/Qt5
+folly_DIR=D:/Local/vcpkg/installed/x64-windows/share/folly
+glog_DIR=D:/Local/vcpkg/installed/x64-windows/share/glog
+gflags_DIR=D:/Local/vcpkg/installed/x64-windows/share/gflags
+rxcpp_DIR=D:/Local/vcpkg/installed/x64-windows/share/rxcpp
+rxqt_DIR=D:/Local/vcpkg/installed/x64-windows/share/rxqt
+yarpl_DIR=D:/Local/libs/lib/cmake/yarpl
+rsocket_DIR=D:/Local/libs/lib/cmake/rsocket
+
+    
+    
+## Clion
+
     
     Qt5Core_DIR=C:/Qt/Qt5.14.0/5.14.0/msvc2017_64/lib/cmake/Qt5Core;Qt5Gui_DIR=C:/Qt/Qt5.14.0/5.14.0/msvc2017_64/lib/cmake/Qt5Gui;Qt5Network_DIR=C:/Qt/Qt5.14.0/5.14.0/msvc2017_64/lib/cmake/Qt5Network;Qt5QmlModels_DIR=C:/Qt/Qt5.14.0/5.14.0/msvc2017_64/lib/cmakeQt5QmlModels;Qt5Qml_DIR=C:/Qt/Qt5.14.0/5.14.0/msvc2017_64/lib/cmake/Qt5Qml;Qt5Quick_DIR=C:/Qt/Qt5.14.0/5.14.0/msvc2017_64/lib/cmake/Qt5Quick;Qt5_DIR=C:/Qt/Qt5.14.0/5.14.0/msvc2017_64/lib/cmake/Qt5;folly_DIR=D:/Local/vcpkg/installed/x64-windows/share/folly;glog_DIR=D:/Local/vcpkg/installed/x64-windows/share/glog;gflags_DIR=D:/Local/vcpkg/installed/x64-windows/share/gflags;yarpl_DIR=D:/Local/libs/lib/cmake/yarpl;rsocket_DIR=D:/Local/libs/lib/cmake/rsocket;rxcpp_DIR=D:/Local/vcpkg/installed/x64-windows/share/rxcpp;
 

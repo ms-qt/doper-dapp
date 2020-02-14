@@ -9,11 +9,6 @@
 
 ## CMake需要设置的属性
 
-
-
-
-
-
 Qt5Core_DIR=/Users/maohuawei/Qt5.14.1/5.14.1/clang_64/lib/cmake/Qt5Core;
 Qt5Gui_DIR=/Users/maohuawei/Qt5.14.1/5.14.1/clang_64/lib/cmake/Qt5Gui;
 Qt5Network_DIR=/Users/maohuawei/Qt5.14.1/5.14.1/clang_64/lib/cmake/Qt5Network;
@@ -50,8 +45,6 @@ rsocket_DIR=/usr/local/lib/cmake/rsocket
 rxcpp_DIR=/Users/maohuawei/dev/vcpkg/installed/x64-osx/share/rxcpp
 rxqt_DIE=/Users/maohuawei/dev/vcpkg/installed/x64-osx/share/rxqt
 yarpl_DIR=/usr/local/lib/cmake/yarpl
-
-
 
 
 ##  设置Cmake环境

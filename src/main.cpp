@@ -20,9 +20,6 @@ int main(int argc, char *argv[])
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
 #endif
 
-
-
-
     // 设置代理
     QNetworkProxyFactory::setUseSystemConfiguration(true);
     // app
@@ -37,9 +34,8 @@ int main(int argc, char *argv[])
     // 设置组织等信息
     app.setOrganizationName(ORGANIZATION);
     app.setOrganizationDomain(ORGANIZATION);
-    // 中文乱码  TODO 为解决
+    // 设置app名称
     app.setApplicationName(APP_NAME);
-
     app.setWindowIcon(QIcon(":/assets/image/icon.png"));
 
     // rxqt loop
@@ -56,7 +52,19 @@ int main(int argc, char *argv[])
     //TODO
     //AppQuickViewManager::GetInstance()->init();
 
-    AppQuickViewManager::GetInstance()->getMainQuickView()->show();
+    //AppQuickViewManager::GetInstance()->getMainQuickView()->show();
+
+
+
+    QQmlApplicationEngine engine;
+    const QUrl url(QStringLiteral("qrc:/qml/main.qml"));
+    QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,
+                     &app, [url](QObject *obj, const QUrl &objUrl) {
+                if (!obj && url == objUrl)
+                    QCoreApplication::exit(-1);
+            }, Qt::QueuedConnection);
+    engine.load(url);
+
 
 
     // 初始化WebEngine

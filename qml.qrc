@@ -72,5 +72,14 @@
         <file>qml/MainControlPanel/IM/RoomListItem.qml</file>
         <file>qml/MainControlPanel/Menu/MenuList.qml</file>
         <file>qml/MainControlPanel/Menu/MenuListItem.qml</file>
+        <file>qml/Setting/Palette.qml</file>
+        <file>qml/Setting/Setting.qml</file>
+        <file>qml/Setting/qmldir</file>
+        <file>qml/main.qml</file>
+        <file>qml/Login/LoginWindow.qml</file>
+        <file>qml/Login/LoginWindowTitle.qml</file>
+        <file>qml/Login/LoginWindowHome.qml</file>
+        <file>qml/Login/LoginButton.qml</file>
+        <file>qml/WindowTitle.qml</file>
     </qresource>
 </RCC>
