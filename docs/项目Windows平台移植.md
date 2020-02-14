@@ -24,13 +24,13 @@
     
 ## QtCreate
     
-Qt5Core_DIR=C:/Qt/Qt5.14.0/5.14.0/msvc2017_64/lib/cmake/Qt5Core
-Qt5Gui_DIR=C:/Qt/Qt5.14.0/5.14.0/msvc2017_64/lib/cmake/Qt5Gui
-Qt5Network_DIR=C:/Qt/Qt5.14.0/5.14.0/msvc2017_64/lib/cmake/Qt5Network
-Qt5QmlModels_DIR=C:/Qt/Qt5.14.0/5.14.0/msvc2017_64/lib/cmakeQt5QmlModels
-Qt5Qml_DIR=C:/Qt/Qt5.14.0/5.14.0/msvc2017_64/lib/cmake/Qt5Qml
-Qt5Quick_DIR=C:/Qt/Qt5.14.0/5.14.0/msvc2017_64/lib/cmake/Qt5Quick
-Qt5_DIR=C:/Qt/Qt5.14.0/5.14.0/msvc2017_64/lib/cmake/Qt5
+Qt5Core_DIR=C:/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Core
+Qt5Gui_DIR=C:/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Gui
+Qt5Network_DIR=C:/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Network
+Qt5QmlModels_DIR=C:/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmakeQt5QmlModels
+Qt5Qml_DIR=C:/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Qml
+Qt5Quick_DIR=C:/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Quick
+Qt5_DIR=C:/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5
 folly_DIR=D:/Local/vcpkg/installed/x64-windows/share/folly
 glog_DIR=D:/Local/vcpkg/installed/x64-windows/share/glog
 gflags_DIR=D:/Local/vcpkg/installed/x64-windows/share/gflags

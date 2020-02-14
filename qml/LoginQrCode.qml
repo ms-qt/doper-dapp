@@ -89,10 +89,5 @@ Item {
             flipableLoginHome.flipped = !flipableLoginHome.flipped
             // 取消登录
         }
-        function err(msg){
-            console.log(msg)
-            flipableLoginHome.flipped = !flipableLoginHome.flipped
-            textHint.text=msg;
-        }
     }
 }

@@ -10,6 +10,7 @@ import QtQuick.Controls.Material 2.12
 import Qt.labs.platform 1.1
 import QtQuick.Window 2.12
 import QtQuick.Layouts 1.3
+
 import Toou2D 1.0
 
 
@@ -70,32 +71,6 @@ Item {
                 target: rotation
                 properties: "angle"
                 duration: 500
-            }
-        }
-
-        // 加载中
-        BaseLoading{
-            visible: false
-            objectName: "loadingLoginHomeObject"
-            id:loadingLoginHome
-            width: parent.width
-            height: parent.height
-            anchors.centerIn: parent
-
-            Layout.margins: 10
-            implicitWidth: 30
-            implicitHeight: 30
-
-
-            function show()
-            {
-                console.log("loadingLoginHome show")
-                loadingLoginHome.visible=true
-            }
-
-            function hide()
-            {
-                loadingLoginHome.visible=false
             }
         }
     }

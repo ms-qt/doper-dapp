@@ -31,20 +31,6 @@ Item {
         }
     }
 
-    // 错误提示
-    Text {
-        objectName: "textHintObj"
-        id: textHint
-        text: ""
-        anchors {
-            top: imageLoginHomeLogo.bottom
-            horizontalCenter: parent.horizontalCenter
-            topMargin: parent.height/25
-        }
-        function changeHintText(msg) {
-            textHint.text = msg
-        }
-    }
 
     ColumnLayout {
         width: parent.width/5*4
@@ -73,17 +59,29 @@ Item {
             checkBoxAutoLogin.checked=auto
         }
 
-//        LoginHomeField {
-//            objectName: "LoginHomeField"
-//            id: loginHomeField
-//            implicitWidth: parent.width
-//            implicitHeight:  120
-//        }
+        //        LoginHomeField {
+        //            objectName: "LoginHomeField"
+        //            id: loginHomeField
+        //            implicitWidth: parent.width
+        //            implicitHeight:  120
+        //        }
+
+        UsernameField{
+
+        }
+
+        Rectangle{
+            width: parent.width
+            height: 1
+        }
+
+        PasswordField{
+
+        }
 
         RowLayout {
             width: parent.width
             objectName: "CheckBoxSavePasswordAutoLogin"
-
             CheckBox {
                 id: checkBoxSavePassword
                 scale: 1
@@ -208,49 +206,49 @@ Item {
         }
     }
 
-//    ImageBackColor {
-//        id: imageQr
-//        source: "qrc:/images/img_qrcode.png"
-//        width:30
-//        height:30
-//        anchors {
+    //    ImageBackColor {
+    //        id: imageQr
+    //        source: "qrc:/images/img_qrcode.png"
+    //        width:30
+    //        height:30
+    //        anchors {
 
-//            rightMargin: parent.height/25
-//            bottomMargin: parent.height/25
-//            right: parent.right
-//            bottom: parent.bottom
+    //            rightMargin: parent.height/25
+    //            bottomMargin: parent.height/25
+    //            right: parent.right
+    //            bottom: parent.bottom
 
-//        }
+    //        }
 
-//        MouseArea {
-//            anchors.fill: parent
-//            hoverEnabled: true
-//            onEntered: {
-//                imageQr.visibleRec = true
-//            }
-//            onExited: {
-//                imageQr.visibleRec = false
-//            }
-//            onClicked: {
-//                console.log("qrcode image")
-//                flipableLoginHome.flipped = !flipableLoginHome.flipped
-//            }
-//        }
-//    }
+    //        MouseArea {
+    //            anchors.fill: parent
+    //            hoverEnabled: true
+    //            onEntered: {
+    //                imageQr.visibleRec = true
+    //            }
+    //            onExited: {
+    //                imageQr.visibleRec = false
+    //            }
+    //            onClicked: {
+    //                console.log("qrcode image")
+    //                flipableLoginHome.flipped = !flipableLoginHome.flipped
+    //            }
+    //        }
+    //    }
 
 
     // 用户名输入处理
-//    Connections {
-//        target: loginHomeField.username
-//        onUsernameChange: {
-//            console.log(loginHomeField.usernametext)
-//        }
-//    }
-//    // 密码输入处理
-//    Connections {
-//        target: loginHomeField.password
-//        onPasswordChange: {
-//            console.log(loginHomeField.passwordtext)
-//        }
-//    }
+    //    Connections {
+    //        target: loginHomeField.username
+    //        onUsernameChange: {
+    //            console.log(loginHomeField.usernametext)
+    //        }
+    //    }
+    //    // 密码输入处理
+    //    Connections {
+    //        target: loginHomeField.password
+    //        onPasswordChange: {
+    //            console.log(loginHomeField.passwordtext)
+    //        }
+    //    }
 }

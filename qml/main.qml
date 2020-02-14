@@ -55,4 +55,28 @@ ApplicationWindow {
     LoginHome{
 
     }
+
+
+    // 加载中
+    BaseLoading{
+        visible: false
+        objectName: "baseLoadingObject"
+        id:baseLoading
+        width: parent.width
+        height: parent.height
+        anchors.centerIn: parent
+
+        Layout.margins: 10
+        implicitWidth: 30
+        implicitHeight: 30
+
+        function show()
+        {
+            loadingLoginHome.visible=true
+        }
+        function hide()
+        {
+            loadingLoginHome.visible=false
+        }
+    }
 }
