@@ -20,7 +20,7 @@ TDialog {
             }
 
             TLabel{
-                text: T2D.version();
+                text: qsTr("1.0.0-dev")
                 anchors.horizontalCenter: parent.horizontalCenter;
             }
 

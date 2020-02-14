@@ -30,16 +30,14 @@ Item {
         anchors.top: textLogin.bottom
         anchors.horizontalCenter: parent.horizontalCenter
         cache: false
-       // source: "image://imageQrCode/green"
+        source: "image://imageQrCode/login"
 
         MouseArea {
             anchors.fill: parent
             onClicked: {
                 console.log("Login.qml : 刷新二维码")
                 imageQrCode.source = ""
-                imageQrCode.source = "image://qrcode/green"
-                //im.requestLoginQrCode()
-
+                imageQrCode.source = "image://imageQrCode/login"
             }
         }
 

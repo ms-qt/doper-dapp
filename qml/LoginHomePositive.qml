@@ -40,15 +40,15 @@ Item {
         anchors.horizontalCenter: parent.horizontalCenter
         width: parent.width/5*4
         height: 60
-        id:usernameField
+        id:fieldUsername
     }
 
 
 
     FieldPassword{
         anchors.topMargin: 20
-        anchors.top: usernameField.bottom
-        id:passwordField
+        anchors.top: fieldUsername.bottom
+        id:fieldPassword
         anchors.horizontalCenter: parent.horizontalCenter
         width: parent.width/5*4
         height: 60
@@ -57,7 +57,7 @@ Item {
 
     RowLayout {
         id:rowLayoutCheckBoxFrom
-        anchors.top: passwordField.bottom
+        anchors.top: fieldPassword.bottom
         anchors.topMargin: 15
         width: parent.width/5*4
         anchors.horizontalCenter: parent.horizontalCenter
@@ -97,6 +97,29 @@ Item {
             anchors.fill: parent
             hoverEnabled: true
             onClicked: {
+
+                if (fieldUsername.usernametext.trim().length == 0) {
+
+                    TToast.showError("请输入账号");
+                    return
+                }
+                if (fieldUsername.usernametext.trim().length < 6) {
+
+                    TToast.showError("请输合法的账号");
+                    return
+                }
+
+                if (fieldPassword.passwordtext.trim().length == 0) {
+
+                    TToast.showError("请输入密码");
+                    return
+                }
+
+                if (fieldPassword.passwordtext.trim().length < 6) {
+
+                    TToast.showError("请输入合法的密码");
+                    return
+                }
 
             }
             onEntered: {

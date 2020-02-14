@@ -150,8 +150,6 @@ set(app_SRC
         src/plugin/AppPluginManager.h
         src/plugin/Plugin.cpp
         src/plugin/Plugin.h
-        src/user/User.cpp
-        src/user/User.h
 
         src/logger/Logger.cpp
         src/logger/Logger.h
@@ -173,8 +171,7 @@ set(app_SRC
         src/utils/MD5Utils.h
         src/data/CommonData.h
         src/utils/UUIDUtils.h
-        src/panel/NotificationPanel.cpp
-        src/panel/NotificationPanel.h
+
 
         src/app/MainQuickView.h
         src/app/MainQuickView.cpp
@@ -262,8 +259,7 @@ set(app_SRC
         src/TaoJsonModel/TaoJsonModel
         src/TaoJsonModel/TaoJsonTreeModel.cpp
 
-        src/conversation/conversation.h
-        src/conversation/conversation.cpp
+
 
         src/model/db/message/MessageBeanText.cpp
         src/model/db/message/MessageBeanText.h

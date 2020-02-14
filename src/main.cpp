@@ -109,9 +109,9 @@ int main(int argc, char *argv[])
     ImageProvider *imageProvider = new ImageProvider(QQmlImageProviderBase::Image);
     engine.addImageProvider("imageSync", imageProvider);
     AsyncImageProvider *asyncImageProvider = new AsyncImageProvider();
-    engine.addImageProvider("imageAsyn", imageProvider);
+    engine.addImageProvider("imageAsyn", asyncImageProvider);
     QrCodeImageProvider *qrCodeImageProvider = new QrCodeImageProvider();
-    engine.addImageProvider("imageQrCode", imageProvider);
+    engine.addImageProvider("imageQrCode", qrCodeImageProvider);
 
     engine.load(url);
     return app.exec();

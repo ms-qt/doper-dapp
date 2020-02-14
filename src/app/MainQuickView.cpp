@@ -72,11 +72,7 @@ MainQuickView::MainQuickView()
 
 
     this->rootContext()->setContextProperty("homeLeftMenuModel", QVariant::fromValue(homeLeftMenuModelList));
-
-
-
-    qmlRegisterType<SqlConversationModel>("conversation", 1, 0, "SqlConversationModel");
-
+    
     connect(UIModelProxy::GetInstance(), SIGNAL(enterRoom(QString)), this, SLOT(enterRoom(QString)));
     connect(UIModelProxy::GetInstance(), SIGNAL(enterTask(QString)), this, SLOT(enterTask(QString)));
     connect(UIModelProxy::GetInstance(), SIGNAL(openMainControllerPanel()), this, SLOT(openMainControllerPanel()));

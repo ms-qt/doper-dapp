@@ -26,6 +26,8 @@ public:
 
     QPixmap requestPixmap(const QString &id, QSize *size, const QSize &requestedSize) override
     {
+        qDebug()<<"id : "<<id;
+
         return refresh(id);
     }
 

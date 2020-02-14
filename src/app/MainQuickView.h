@@ -38,7 +38,7 @@
 #include "src/image/ImageAsyncImageProvider.h"
 
 #include "src/utils/UUIDUtils.h"
-#include "src/conversation/conversation.h"
+
 
 #include "src/model/db/mainleftmenu/MainLeftMenu.h"
 
