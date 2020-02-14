@@ -14,6 +14,10 @@
 #include <QNetworkAccessManager>
 #include <QEventLoop>
 
+
+
+// 图片加载异步
+
 class AsyncImageResponseRunnable : public QObject, public QRunnable
 {
 Q_OBJECT

@@ -3,7 +3,6 @@ import QtQuick.Window 2.12
 import QtQuick.Controls 2.0
 import Qt.labs.platform 1.1
 import QtQuick.Layouts 1.3
-import "qrc:/qml/Base"
 
 Item {
     width:   parent.width
@@ -31,7 +30,7 @@ Item {
         anchors.top: textLogin.bottom
         anchors.horizontalCenter: parent.horizontalCenter
         cache: false
-        source: "image://qrcode/green"
+        source: "image://imageQrCode/green"
 
         MouseArea {
             anchors.fill: parent
@@ -44,7 +43,7 @@ Item {
             }
         }
 
-        Loading {
+        BaseLoading {
             visible: true
             objectName: "loadingQrCodeObject"
             id: loading

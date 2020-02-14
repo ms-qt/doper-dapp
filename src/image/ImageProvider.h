@@ -4,6 +4,9 @@
 
 class QNetworkAccessManager;
 
+
+// 图片加载 同步
+
 class ImageProvider : public QQuickImageProvider
 {
 public:

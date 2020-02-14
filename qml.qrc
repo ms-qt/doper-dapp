@@ -81,5 +81,14 @@
         <file>qml/Login/LoginWindowHome.qml</file>
         <file>qml/Login/LoginButton.qml</file>
         <file>qml/WindowTitle.qml</file>
+        <file>qml/About.qml</file>
+        <file>qml/LoginHome.qml</file>
+        <file>qml/LoginButton.qml</file>
+        <file>qml/LoginHomeBack.qml</file>
+        <file>qml/BaseLoading.qml</file>
+        <file>qml/LoginQrCode.qml</file>
+        <file>qml/LoginHomePositive.qml</file>
+        <file>qml/UsernameField.qml</file>
+        <file>qml/PasswordField.qml</file>
     </qresource>
 </RCC>

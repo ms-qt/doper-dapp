@@ -12,10 +12,10 @@
 #include <QJsonObject>
 #include <QJsonDocument>
 #include <QDebug>
-#include"../qrcode/QRCodeGenerator.h"
-#include "../utils/SystemUtils.h"
-#include "../utils/MD5.h"
-#include "../data/Data.h"
+#include"src/qrcode/QRCodeGenerator.h"
+#include "src/utils/SystemUtils.h"
+#include "src/utils/MD5.h"
+#include "src/data/Data.h"
 
 class QrCodeImageProvider : public QQuickImageProvider
 {

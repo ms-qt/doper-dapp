@@ -2,16 +2,55 @@
 
 #include <folly/init/Init.h>
 #include <src/logger/Logger.h>
-#include <src/app/AppQuickViewManager.h>
+
 #include <QApplication>
 #include <QtWebEngine>
+
 #include <src/net/NetWorkManager.h>
-#include "src/app/NotificationQuickView.h"
+
 #include <src/tool/ThreadTool.h>
-#include <src/model/db/user/UserModel.h>
 #include <src/config/__APP_CONFIG__.h>
 #include <src/TaoJsonModel/TaoJsonModel>
 #include "src/emoji/emojimodel.h"
+
+#include "src/image/ImageProvider.h"
+#include "src/image/ImageAsyncImageProvider.h"
+#include "src/image/QrCodeImageProvider.h"
+
+
+
+static void registertypes(){
+   // qmlRegisterType<TreeElement>("foo", 1, 0, "TreeElement");
+}
+
+static void connectToDatabase()
+{
+    QSqlDatabase database = QSqlDatabase::database();
+    if (!database.isValid()) {
+        database = QSqlDatabase::addDatabase("QSQLITE");
+        if (!database.isValid())
+            qFatal("Cannot add database: %s", qPrintable(database.lastError().text()));
+    }
+
+    const QDir writeDir = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation);
+    if (!writeDir.mkpath("."))
+        qFatal("Failed to create writable directory at %s", qPrintable(writeDir.absolutePath()));
+
+    // Ensure that we have a writable location on all devices.
+    const QString fileName = writeDir.absolutePath() + "/chat-database.sqlite3";
+    // When using the SQLite driver, open() will create the SQLite database if it doesn't exist.
+    database.setDatabaseName(fileName);
+    if (!database.open()) {
+        qFatal("Cannot open database: %s", qPrintable(database.lastError().text()));
+        QFile::remove(fileName);
+    }
+}
+
+
+
+Q_COREAPP_STARTUP_FUNCTION(registertypes)
+
+
 
 int main(int argc, char *argv[])
 {
@@ -47,29 +86,30 @@ int main(int argc, char *argv[])
 
     // 注册表情
     qRegisterMetaTypeStreamOperators<Emoji>();
-    // UI init
-
-    //TODO
-    //AppQuickViewManager::GetInstance()->init();
-
-    //AppQuickViewManager::GetInstance()->getMainQuickView()->show();
-
-
+    
+    // 初始化WebEngine
+    QtWebEngine::initialize();
 
     QQmlApplicationEngine engine;
     const QUrl url(QStringLiteral("qrc:/qml/main.qml"));
     QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,
-                     &app, [url](QObject *obj, const QUrl &objUrl) {
-                if (!obj && url == objUrl)
-                    QCoreApplication::exit(-1);
-            }, Qt::QueuedConnection);
+                     &app, [url](QObject *obj, const QUrl &objUrl)
+                     {
+                         if (!obj && url == objUrl)
+                             QCoreApplication::exit(-1);
+                     }, Qt::QueuedConnection);
+
+
+    engine.addImportPath("qrc:/qml");
+
+    ImageProvider *imageProvider = new ImageProvider(QQmlImageProviderBase::Image);
+    engine.addImageProvider("imageSync", imageProvider);
+    AsyncImageProvider *asyncImageProvider = new AsyncImageProvider();
+    engine.addImageProvider("imageAsyn", imageProvider);
+    QrCodeImageProvider *qrCodeImageProvider = new QrCodeImageProvider();
+    engine.addImageProvider("imageQrCode", imageProvider);
+
+    
     engine.load(url);
-
-
-
-    // 初始化WebEngine
-    QtWebEngine::initialize();
-
-
     return app.exec();
 }

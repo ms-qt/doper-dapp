@@ -17,7 +17,7 @@
 #include <QFile>
 #include <QTextStream>
 
-#include "src/qrimageprovider/QrCodeImageProvider.h"
+#include "src/image/QrCodeImageProvider.h"
 #include "src/db/CertificateDB.h"
 #include "src/im/IMModel.h"
 #include "UIModelProxy.h"

@@ -167,7 +167,7 @@ set(app_SRC
         src/im/IMModel.cpp
         src/im/IMModel.h
 
-        src/qrimageprovider/QrCodeImageProvider.h
+        src/image/QrCodeImageProvider.h
         src/qrcode/QRCodeGenerator.cpp
         src/qrcode/QRCodeGenerator.h
         src/utils/MD5.h
