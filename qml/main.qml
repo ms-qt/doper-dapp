@@ -61,6 +61,24 @@ ApplicationWindow {
     }
 
 
+
+
+    // 标题
+    WindowTitle{
+        id:windowTitle
+        width: parent.width
+        height:rootWindow.global.windowTitleHeight
+    }
+
+    LoginHome{
+        anchors.top: windowTitle.bottom
+        width: parent.width
+        height: parent.height-windowTitle.height
+    }
+
+
+
+
     // 加载中
     BaseLoading{
         visible: false
@@ -82,19 +100,6 @@ ApplicationWindow {
         {
             baseLoading.visible=false
         }
-    }
-
-    // 标题
-    WindowTitle{
-        id:windowTitle
-        width: parent.width
-        height:rootWindow.global.windowTitleHeight
-    }
-
-    LoginHome{
-        anchors.top: windowTitle.bottom
-        width: parent.width
-        height: parent.height-windowTitle.height
     }
 
 }

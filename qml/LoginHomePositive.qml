@@ -121,6 +121,8 @@ Item {
                     return
                 }
 
+                baseLoading.show()
+
             }
             onEntered: {
                 loginButton.color = "#3CC3F5"
