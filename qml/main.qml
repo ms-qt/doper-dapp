@@ -8,8 +8,8 @@ import Toou2D 1.0
 ApplicationWindow {
 
     id:rootWindow
-    property int rootWindowWidth : 320
-    property int rootWindowHeight : 480
+    property int rootWindowWidth : 380
+    property int rootWindowHeight : 600
 
     visible: true
 
@@ -25,6 +25,18 @@ ApplicationWindow {
         ]
         mouseAreaCursorShape: Qt.PointingHandCursor
     }
+
+
+    // 全局变量
+    property TObject global : TObject{
+        // title 高度
+        property int windowTitleHeight: 50
+        // 分割线颜色
+        property color name: "#bdbdbd"
+
+    }
+
+
 
     property int xMouse
     property int yMouse
@@ -42,18 +54,10 @@ ApplicationWindow {
         }
     }
 
-    // 标题
-    WindowTitle{
-        width: parent.width
-        height: 50
-    }
+
     // 关于
     About{
         id:about
-    }
-
-    LoginHome{
-
     }
 
 
@@ -72,11 +76,25 @@ ApplicationWindow {
 
         function show()
         {
-            loadingLoginHome.visible=true
+            baseLoading.visible=true
         }
         function hide()
         {
-            loadingLoginHome.visible=false
+            baseLoading.visible=false
         }
     }
+
+    // 标题
+    WindowTitle{
+        id:windowTitle
+        width: parent.width
+        height:rootWindow.global.windowTitleHeight
+    }
+
+    LoginHome{
+        anchors.top: windowTitle.bottom
+        width: parent.width
+        height: parent.height-windowTitle.height
+    }
+
 }

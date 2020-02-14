@@ -17,6 +17,8 @@ import Toou2D 1.0
 // 登录页面 可翻转
 Item {
     id:itemLoginHomeRoot
+    width: parent.width
+    height: parent.height
 
     // 背景颜色
     Rectangle{
@@ -24,7 +26,6 @@ Item {
         height: parent.height
         color: "#ECF5FF"
     }
-
 
     Flipable {
         property bool flipped: false

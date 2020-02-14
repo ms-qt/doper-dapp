@@ -1,6 +1,8 @@
 import QtQuick 2.0
 import Toou2D 1.0
 
+
+
 Item {
     width: parent.width
     height: parent.height
@@ -68,9 +70,6 @@ Item {
         MouseArea{
             anchors.fill: parent
             onClicked: {
-
-
-
                 if(max)
                 {
                     rootWindow.showNormal()

@@ -30,7 +30,7 @@ Item {
         anchors.top: textLogin.bottom
         anchors.horizontalCenter: parent.horizontalCenter
         cache: false
-        source: "image://imageQrCode/green"
+       // source: "image://imageQrCode/green"
 
         MouseArea {
             anchors.fill: parent

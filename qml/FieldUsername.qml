@@ -6,7 +6,7 @@ import QtQuick.Layouts 1.3
 // 用户名密码输入框
 Rectangle {
     id:rectangleLoginHomeField
-    radius: 4
+    radius: 2
     width: parent.width
     height: parent.height
     border.color: "#bdbdbd"
@@ -17,8 +17,12 @@ Rectangle {
     property alias usernametext: username.text
 
     ColumnLayout{
+        width: parent.width
+        height: parent.height
         spacing: 0
         TextField{
+            width: parent.width
+            height: parent.height
             id:username
             font.pixelSize: 22
             font.bold: true

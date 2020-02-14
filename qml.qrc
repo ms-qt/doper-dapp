@@ -88,7 +88,8 @@
         <file>qml/BaseLoading.qml</file>
         <file>qml/LoginQrCode.qml</file>
         <file>qml/LoginHomePositive.qml</file>
-        <file>qml/UsernameField.qml</file>
-        <file>qml/PasswordField.qml</file>
+        <file>qml/FieldUsername.qml</file>
+        <file>qml/FieldPassword.qml</file>
+        <file>qml/Setting.qml</file>
     </qresource>
 </RCC>
