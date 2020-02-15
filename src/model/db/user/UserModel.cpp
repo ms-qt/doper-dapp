@@ -33,21 +33,6 @@ UserModel::~UserModel()
 
 QHash<int, QByteArray> UserModel::roleNames() const
 {
-
-//    _id
-//            _user_id
-//    _name
-//            _age
-//    _sex
-//            _department
-//    _job_title
-//            _avatar
-//    _signature
-//            _phonenumber
-//    _email
-//            _qq
-//    _introduction
-
     QHash<int, QByteArray> roles;
     roles[_id] = "_id";
     roles[_user_id] = "_user_id";
@@ -62,7 +47,6 @@ QHash<int, QByteArray> UserModel::roleNames() const
     roles[_email] = "_email";
     roles[_qq] = "_qq";
     roles[_introduction] = "_introduction";
-
 
     return roles;
 }

@@ -130,5 +130,4 @@ ColumnLayout {
             onClicked: emojiCategory = category
         }
     }
-
 }

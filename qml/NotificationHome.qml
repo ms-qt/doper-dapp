@@ -6,13 +6,10 @@ import QtQuick.Layouts 1.3
 
 import Toou2D 1.0
 
-
-
 // 通知面板
-
 Item {
     objectName: "itemNotificationPanelHomeObject"
-    id:itemNotificationPanelHome
+    id:itemNotificationHome
 
     // 背景颜色
     Rectangle{
@@ -22,32 +19,28 @@ Item {
     }
 
 
-    // 菜单高度
-    property int menuHeight:50
     // 头部区域高度
-    property int notificationPanelHomeHeaderHeight: 100
+    property int notificationHomeHeaderHeight: 100
 
     Column{
         width: parent.width
         height: parent.height
 
-        NotificationPanelHomeHeader{
-            id:notificationPanelHomeHeader
+        NotificationHomeHeader{
+            id:notificationHomeHeader
             width: parent.width
-            height: notificationPanelHomeHeaderHeight
+            height: notificationHomeHeaderHeight
         }
 
         StackView{
-            id:stackViewNotificationPannelHome
+            id:stackViewNotificationHome
             width: parent.width
-            height: parent.height-notificationPanelHomeHeaderHeight-menuHeight
+            height: parent.height-notificationHomeHeader.height
             visible: true
             //默认显示
-            initialItem:"qrc:/qml/NotificationPanel/NotificationPanelHomeContent.qml"
+            initialItem:"qrc:/qml/NotificationHomeContent.qml"
         }
     }
-
-
 }
 
 

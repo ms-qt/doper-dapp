@@ -9,12 +9,12 @@ import "qrc:/qml/NotificationPanel/SubPage"
 // 通知面板内容
 
 Item{
-    width: stackViewNotificationPannelHome.width
-    height: stackViewNotificationPannelHome.height
+    width: stackViewNotificationHome.width
+    height: stackViewNotificationHome.height
 
     // 切换卡片
     SwipeView {
-        id:swipeViewNotificationPanelHomeContent
+        id:swipeViewNotificationHomeContent
         width: parent.width
         height: parent.height
         anchors.centerIn: parent
@@ -33,16 +33,16 @@ Item{
             }
         }
 
-        AddressBook{
+        NotificationAddressBook{
             width:stackViewNotificationPannelHome.width
             height:stackViewNotificationPannelHome.height
 
         }
-        Message{
+        NotificationMessage{
             width:stackViewNotificationPannelHome.width
             height:stackViewNotificationPannelHome.height
         }
-        Task{
+        NotificationTask{
             width:stackViewNotificationPannelHome.width
             height:stackViewNotificationPannelHome.height
         }
@@ -61,7 +61,7 @@ Item{
             font.pointSize: 20
             font.bold: true
             onClicked: {
-                swipeViewNotificationPanelHomeContent.setCurrentIndex(0)
+                swipeViewNotificationHomeContent.setCurrentIndex(0)
             }
         }
         TabButton {
@@ -70,7 +70,7 @@ Item{
             font.pointSize: 20
             font.bold: true
             onClicked: {
-                swipeViewNotificationPanelHomeContent.setCurrentIndex(1)
+                swipeViewNotificationHomeContent.setCurrentIndex(1)
             }
         }
         TabButton {
@@ -79,7 +79,7 @@ Item{
             font.pointSize: 20
             font.bold: true
             onClicked: {
-                swipeViewNotificationPanelHomeContent.setCurrentIndex(2)
+                swipeViewNotificationHomeContent.setCurrentIndex(2)
             }
         }
     }
