@@ -10,7 +10,7 @@
 #include <rxqt.hpp>
 // 线程
 #include <src/tool/ThreadTool.h>
-// app 信息
+// app 信息 
 #include "src/app/AppInfo.h"
 
 #include <src/TaoJsonModel/TaoJsonModel>

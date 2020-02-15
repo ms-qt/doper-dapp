@@ -14,13 +14,17 @@ TDialog {
             anchors.centerIn: parent;
 
             TLabel{
-                text: "北斗运营管理平台"
+                text: "北斗数睿运营管理平台"
                 font.pixelSize: 30;
                 anchors.horizontalCenter: parent.horizontalCenter;
             }
 
             TLabel{
-                text: qsTr("1.0.0-dev")
+                text: qsTr("版本:1.0.0-dev")
+                anchors.horizontalCenter: parent.horizontalCenter;
+            }
+            TLabel{
+                text: qsTr("作者:maohuawei,zhangning")
                 anchors.horizontalCenter: parent.horizontalCenter;
             }
 

@@ -1,4 +1,4 @@
-//
+﻿//
 // Created by maohuawei on 2020/2/5.
 //
 
@@ -69,7 +69,6 @@ QHash<int, QByteArray> MessageListModel::roleNames() const
 
 void MessageListModel::enterRoom(QString roomId)
 {
-
 
 }
 

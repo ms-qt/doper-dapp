@@ -18,7 +18,7 @@ import QtQuick.Layouts 1.3
 SystemTrayIcon {
     visible: true
     icon.source: "qrc:/images/img_icon_blue.png"
-    tooltip: "北斗IM"
+    tooltip: "北斗运营管理平台"
 
 
     property bool login: rootWindow.global.loginSuccess

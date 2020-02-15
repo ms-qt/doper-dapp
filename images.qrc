@@ -52,5 +52,7 @@
         <file>images/image_module_manager.png</file>
         <file>images/image_message.png</file>
         <file>images/image_task.png</file>
+        <file>images/image_switch_theme.png</file>
+        <file>images/images_bug_feedback.png</file>
     </qresource>
 </RCC>

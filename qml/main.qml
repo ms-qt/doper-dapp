@@ -150,4 +150,29 @@ ApplicationWindow {
             baseLoading.visible=false
         }
     }
+
+    TPopoverMenu{
+        id:themePopover;
+
+        TPopoverElement{
+            text: "默认"
+            otherData: "";
+            iconSource: TThemeManager.appThemeInvalid ? TAwesomeType.FA_check_circle_o : TAwesomeType.FA_circle_o
+        }
+
+        TPopoverElement{
+            text: "宁静"
+            otherData: "Solarized";
+            iconSource: TThemeManager.appTheme === otherData ? TAwesomeType.FA_check_circle_o : TAwesomeType.FA_circle_o
+        }
+
+        TPopoverElement{
+            text: "炫黑"
+            otherData: "Dark";
+            iconSource: TThemeManager.appTheme === otherData ? TAwesomeType.FA_check_circle_o : TAwesomeType.FA_circle_o
+        }
+
+        onTriggered: TThemeManager.appTheme = modelData.otherData;
+    }
+
 }

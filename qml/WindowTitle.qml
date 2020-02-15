@@ -1,4 +1,5 @@
 import QtQuick 2.0
+import QtQuick.Controls 2.0
 import Toou2D 1.0
 
 
@@ -165,4 +166,79 @@ Item {
             }
         }
     }
+
+
+
+
+    // 主题切换
+    Rectangle{
+        id:rectangleWindowTitleSwitchTheme
+        width: 50
+        height: 50
+        anchors.right: rectangleWindowTitleAbout.left
+        color: "#ECF5FF"
+
+        Image {
+            anchors.topMargin: 10
+            anchors.rightMargin: 10
+            scale: 0.8
+            width: 40
+            height: 40
+            source: "qrc:/images/image_switch_theme.png"
+            anchors.centerIn: parent
+        }
+
+        MouseArea{
+            anchors.fill: parent
+            onClicked: {
+
+                themePopover.openToGlobal(rectangleWindowTitleSwitchTheme,0,50);
+
+            }
+            hoverEnabled: true
+            onEntered: {
+                rectangleWindowTitleSwitchTheme.color="#ff0000"
+
+            }
+            onExited: {
+                rectangleWindowTitleSwitchTheme.color="#ECF5FF"
+            }
+        }
+    }
+
+    // BUG反馈
+    Rectangle{
+        id:rectangleWindowTitleBugFeedback
+        width: 50
+        height: 50
+        anchors.right: rectangleWindowTitleSwitchTheme.left
+        color: "#ECF5FF"
+
+        Image {
+            anchors.topMargin: 10
+            anchors.rightMargin: 10
+            scale: 0.8
+            width: 40
+            height: 40
+            source: "qrc:/images/images_bug_feedback.png"
+            anchors.centerIn: parent
+        }
+        MouseArea{
+            anchors.fill: parent
+            onClicked: {
+
+
+            }
+            hoverEnabled: true
+            onEntered: {
+                rectangleWindowTitleBugFeedback.color="#ff0000"
+
+            }
+            onExited: {
+                rectangleWindowTitleBugFeedback.color="#ECF5FF"
+            }
+        }
+    }
+
+
 }

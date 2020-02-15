@@ -31,12 +31,25 @@ Rectangle {
         anchors.verticalCenter: parent.verticalCenter
     }
 
-    Text {
+
+    Column{
+
         anchors.left: imageNotificationAddressBookListItemAvatar.right
         anchors.leftMargin: 15
-        text: qsTr(name)
-        font.pixelSize: 20
+
+        Text {
+            text: qsTr(name)
+            font.pixelSize: 20
+            font.bold: true
+        }
+
+        Text {
+            text: qsTr(phonenumber)
+            font.pixelSize: 20
+            font.bold: true
+        }
     }
+
 
     // 分割线
     Rectangle {

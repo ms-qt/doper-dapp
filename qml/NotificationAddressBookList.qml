@@ -25,6 +25,7 @@ Rectangle {
         delegate: NotificationAddressBookListItem {
             name:_name
             avatar: _avatar
+            phonenumber: _phonenumber
             width: listViewNotificationAddressBookList.width
             height: 85
             color: listViewNotificationAddressBookList.currentIndex === index ? "transparent" : (mouseAreaNotificationAddressBookList.containsMouse ? highlightHover : background)
