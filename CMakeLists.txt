@@ -20,11 +20,14 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # 平台判断
 
 if (CMAKE_HOST_WIN32)
+    message("当前系统为WIN32")
     set(WIN32 1)
 elseif (CMAKE_HOST_APPLE)
+    message("当前系统为APPLE")
     set(APPLE 1)
 elseif (CMAKE_HOST_UNIX)
-    set(UNIX 1)
+    message("当前系统为UNIX")
+    set(LINUX 1)
 endif ()
 
 
@@ -85,11 +88,11 @@ elseif (WIN32)
         link_directories("D:/Local/libs/lib")
     endif ()
 
-elseif (UNIX)
+elseif (LINUX)
     message("配置LINUX本地路径")
     include_directories("/usr/local/include")
     link_directories("/usr/local/lib")
-endif (UNIX)
+endif ()
 
 ##############################################
 
