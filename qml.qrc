@@ -92,5 +92,10 @@
         <file>qml/FieldPassword.qml</file>
         <file>qml/Setting.qml</file>
         <file>qml/Tray.qml</file>
+        <file>qml/NotificationHome.qml</file>
+        <file>qml/NotificationHomeHeader.qml</file>
+        <file>qml/Signature.qml</file>
+        <file>qml/NotificationHomeContent.qml</file>
+        <file>qml/AddressBook.qml</file>
     </qresource>
 </RCC>
