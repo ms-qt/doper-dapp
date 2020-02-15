@@ -27,7 +27,7 @@ public slots:
 
 signals:
 
-    void loginSuccess();
+    void loginSuccess(QString userid);
 
     void loginFailure();
 

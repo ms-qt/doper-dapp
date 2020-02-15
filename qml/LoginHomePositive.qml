@@ -42,8 +42,8 @@ Item {
         onLoginSuccess:
         {
             baseLoading.hide()
-            TToast.showSuccess("登录成功");
-
+            TToast.showSuccess("登录成功"+userid);
+            rootWindow.global.userid=userid
             rootWindow.loginSuccess()
         }
 
