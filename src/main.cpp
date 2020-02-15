@@ -41,6 +41,8 @@
 #include "src/plugin/Plugin.h"
 #include "src/model/PluginModel.h"
 
+#include "src/component/DynamicLoadComponent.h"
+
 static void registertypes()
 {
     qmlRegisterType<CertificateBean>("CertificateBean", 1, 0, "CertificateBean");
@@ -57,6 +59,9 @@ static void registertypes()
     qmlRegisterType<UserModel>("UserModel", 1, 0, "UserModel");
     qmlRegisterType<Plugin>("Plugin", 1, 0, "Plugin");
     qmlRegisterType<PluginModel>("PluginModel", 1, 0, "PluginModel");
+
+    qmlRegisterType<DynamicLoadComponent>("DynamicLoadComponent", 1, 0, "DynamicLoadComponent");
+
 }
 
 static void intiDatabase()
@@ -131,7 +136,8 @@ int main(int argc, char *argv[])
     // 初始化WebEngine
     QtWebEngine::initialize();
 
-    QQmlApplicationEngine engine;
+    QQmlApplicationEngine engine = DynamicLoadComponent::qmlEngine();
+
     const QUrl url(QStringLiteral("qrc:/qml/main.qml"));
     QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,
                      &app, [url](QObject *obj, const QUrl &objUrl)
