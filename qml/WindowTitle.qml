@@ -14,7 +14,7 @@ Item {
     }
 
     // 关闭
-    Rectangle{
+    TRectangle{
         id:rectangleWindowTitleClose
         width: 50
         height: 50
@@ -51,7 +51,7 @@ Item {
     // 最大化
     property bool max: false
 
-    Rectangle{
+    TRectangle{
         id:rectangleWindowTitleMaximize
         width: 50
         height: 50
@@ -97,7 +97,7 @@ Item {
 
     // 最小化
 
-    Rectangle{
+    TRectangle{
         id:rectangleWindowTitleMinimize
         width: 50
         height: 50
@@ -133,7 +133,7 @@ Item {
     }
 
     // 关于
-    Rectangle{
+    TRectangle{
         id:rectangleWindowTitleAbout
         width: 50
         height: 50
@@ -167,11 +167,8 @@ Item {
         }
     }
 
-
-
-
     // 主题切换
-    Rectangle{
+    TRectangle{
         id:rectangleWindowTitleSwitchTheme
         width: 50
         height: 50
@@ -207,7 +204,7 @@ Item {
     }
 
     // BUG反馈
-    Rectangle{
+    TRectangle{
         id:rectangleWindowTitleBugFeedback
         width: 50
         height: 50
@@ -239,6 +236,4 @@ Item {
             }
         }
     }
-
-
 }

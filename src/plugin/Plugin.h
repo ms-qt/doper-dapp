@@ -13,14 +13,8 @@
 class Plugin : public QObject
 {
 Q_OBJECT
-    Q_PROPERTY(
-            QString name
-            READ getName
-            CONSTANT);
-    Q_PROPERTY(
-            QString iconLocal
-            READ getIconLocal
-            CONSTANT)
+    Q_PROPERTY(QString name READ getName CONSTANT);
+    Q_PROPERTY(QString iconLocal READ getIconLocal CONSTANT)
 public:
     Plugin();
 

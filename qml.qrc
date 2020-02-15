@@ -2,9 +2,7 @@
     <qresource prefix="/">
         <file>qml/Base/Loading.qml</file>
         <file>qml/MainControlPanel/Main.qml</file>
-
         <file>qml/Base/NotificationBox.qml</file>
-
         <file>qml/appcomponent/Conversation.qml</file>
         <file>qml/appcomponent/ExplorerView.qml</file>
         <file>qml/appcomponent/Home.qml</file>
@@ -30,14 +28,12 @@
         <file>qml/BizComponent/TSearchInput.qml</file>
         <file>qml/BizComponent/TTreeHeader.qml</file>
         <file>qml/BizComponent/TTreeView.qml</file>
-
         <file>qml/Base/Button/TextButton.qml</file>
         <file>qml/Base/PopupFrame/CustomMouseArea.qml</file>
         <file>qml/Base/PopupFrame/PopupFrame.qml</file>
         <file>qml/Base/PopupFrame/PopupFrameContentItem.qml</file>
         <file>qml/Base/PopupFrame/PopupFrameContentItem.qml</file>
         <file>qml/Base/ListMenuRight.qml</file>
-
         <file>qml/MainControlPanel/MainPanelTitle.qml</file>
         <file>qml/MainControlPanel/LeftMenuSideBar.qml</file>
         <file>qml/MainControlPanel/IM/RoomList.qml</file>

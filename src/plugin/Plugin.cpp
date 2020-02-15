@@ -4,12 +4,10 @@
 
 #include "Plugin.h"
 
-
 Plugin::Plugin()
 {
 
 }
-
 
 const QString &Plugin::getName() const
 {

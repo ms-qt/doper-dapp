@@ -54,5 +54,32 @@
         <file>themes/Solarized/TSwitch.ini</file>
         <file>themes/Solarized/TTag.ini</file>
         <file>themes/Solarized/TToast.ini</file>
+        <file>themes/Quiet/main.ini</file>
+        <file>themes/Quiet/TAvatar.ini</file>
+        <file>themes/Quiet/TAwesomeIcon.ini</file>
+        <file>themes/Quiet/TBadge.ini</file>
+        <file>themes/Quiet/TBusyIndicator.ini</file>
+        <file>themes/Quiet/TButton.ini</file>
+        <file>themes/Quiet/TCarousel.ini</file>
+        <file>themes/Quiet/TCheckBox.ini</file>
+        <file>themes/Quiet/TDialog.ini</file>
+        <file>themes/Quiet/TDividerLine.ini</file>
+        <file>themes/Quiet/TIcon.ini</file>
+        <file>themes/Quiet/TIconButton.ini</file>
+        <file>themes/Quiet/TImage.ini</file>
+        <file>themes/Quiet/TImageButton.ini</file>
+        <file>themes/Quiet/TInputField.ini</file>
+        <file>themes/Quiet/TLabel.ini</file>
+        <file>themes/Quiet/TNavigationBar.ini</file>
+        <file>themes/Quiet/TPagination.ini</file>
+        <file>themes/Quiet/TPopover.ini</file>
+        <file>themes/Quiet/TPopoverMenu.ini</file>
+        <file>themes/Quiet/TProgressBar.ini</file>
+        <file>themes/Quiet/TRadioBox.ini</file>
+        <file>themes/Quiet/TRectangle.ini</file>
+        <file>themes/Quiet/TSVGIcon.ini</file>
+        <file>themes/Quiet/TSwitch.ini</file>
+        <file>themes/Quiet/TTag.ini</file>
+        <file>themes/Quiet/TToast.ini</file>
     </qresource>
 </RCC>

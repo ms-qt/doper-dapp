@@ -8,15 +8,16 @@ PluginModel::PluginModel()
 {
     for (int i = 0; i < 10; i++)
     {
-        Plugin *pluginIm = new Plugin();
-        pluginIm->setIconLocal("qrc:/images/image_message.png");
-        pluginIm->setName("消息");
-        plugins.append(pluginIm);
+        Plugin *pluginIM = new Plugin();
+        pluginIM->setIconLocal("qrc:/images/image_message.png");
+        pluginIM->setName("消息");
+        plugins.append(pluginIM);
     }
 }
 
 PluginModel::~PluginModel()
 {
+
 }
 
 QList<QObject *> PluginModel::getPlugins()

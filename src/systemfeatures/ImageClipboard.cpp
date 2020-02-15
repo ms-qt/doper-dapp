@@ -1,4 +1,4 @@
-#include "imageclipboard.h"
+#include "ImageClipboard.h"
 
 #include <QDir>
 #include <QFileInfo>

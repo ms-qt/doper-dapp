@@ -18,7 +18,6 @@ public:
     }
 
 
-
     QString ip = "";
     QString mac = "";
     QString width = "";
@@ -26,8 +25,7 @@ public:
     QString screenNumber = "";
     QString screenRect = "";
     QString uuid="";
-    QString loginQrCodeEnCode;
-
+    QString login_qrcode_encoding;
     QString access_token = "";
     QString userid = "";
 

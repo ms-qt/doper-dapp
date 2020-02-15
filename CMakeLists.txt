@@ -284,8 +284,8 @@ set(app_SRC
         src/model/db/message/MessageBeanText.h
 
 
-        src/emoji/emojimodel.cpp
-        src/emoji/emojimodel.h
+        src/emoji/EmojiModel.cpp
+        src/emoji/EmojiModel.h
 
 #        src/systemfeatures/imageclipboard.cpp
 #        src/systemfeatures/imageclipboard.h

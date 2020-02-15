@@ -4,7 +4,6 @@
 
 #include "AppPluginManager.h"
 
-
 AppPluginManager *AppPluginManager::instance = nullptr;
 
 AppPluginManager::AppPluginManager()

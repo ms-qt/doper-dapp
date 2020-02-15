@@ -5,6 +5,8 @@
 #include <QImage>
 #include <QObject>
 
+// 图片复制剪切板
+
 class ImageClipboard : public QObject {
   Q_OBJECT
   Q_PROPERTY(bool hasImage READ hasImage NOTIFY imageChanged)

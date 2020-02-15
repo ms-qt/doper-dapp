@@ -15,7 +15,7 @@
 
 #include <src/TaoJsonModel/TaoJsonModel>
 // 表情
-#include "src/emoji/emojimodel.h"
+#include "src/emoji/EmojiModel.h"
 // 图片同步
 #include "src/image/ImageProvider.h"
 // 图片异步
@@ -32,16 +32,23 @@
 #include "src/model/db/message/MessageBeanText.h"
 #include "src/model/db/message/MessageListModel.h"
 #include "src/model/db/room/RoomListModel.h"
-#include "src/model/db/room/RoomP2PModel.h"
 
 #include "src/model/db/task/TaskModel.h"
 #include "src/model/db/task/TaskListModel.h"
 #include "src/model/db/user/UserModel.h"
 
+// 插件
 #include "src/plugin/Plugin.h"
+// 插件MODEL
 #include "src/model/PluginModel.h"
 
+// 动态加载组件
 #include "src/component/DynamicLoadComponent.h"
+// 文字剪切板
+#include "src/systemfeatures/Clipboard.h"
+// 图片剪切板
+#include "src/systemfeatures/ImageClipboard.h"
+
 
 static void registertypes()
 {
@@ -61,6 +68,12 @@ static void registertypes()
     qmlRegisterType<PluginModel>("PluginModel", 1, 0, "PluginModel");
 
     qmlRegisterType<DynamicLoadComponent>("DynamicLoadComponent", 1, 0, "DynamicLoadComponent");
+    qmlRegisterType<EmojiModel>("EmojiModel", 1, 0, "EmojiModel");
+
+    // 文字剪切板
+    qmlRegisterType<Clipboard>("Clipboard", 1, 0, "Clipboard");
+    // 图片剪切板
+    qmlRegisterType<EmojiModel>("ImageClipboard", 1, 0, "ImageClipboard");
 
 }
 
@@ -118,10 +131,8 @@ int main(int argc, char *argv[])
     app.setApplicationName(APP_NAME);
     app.setWindowIcon(QIcon(":/assets/image/icon.png"));
 
-
     // 初始化数据库
     intiDatabase();
-
 
     // rxqt loop
     rxqt::run_loop rxqt_run_loop;
@@ -160,29 +171,12 @@ int main(int argc, char *argv[])
     QrCodeImageProvider *qrCodeImageProvider = new QrCodeImageProvider();
     engine.addImageProvider("imageQrCode", qrCodeImageProvider);
 
-    // 用户信息
+    // 用户信息数据库
     CertificateDB *certificateDb = new CertificateDB();
     engine.rootContext()->setContextProperty("certificateDb", certificateDb);
 
-//    UserModel *userModel = new UserModel();
-//    engine.rootContext()->setContextProperty("userModel", userModel);
-//
-//    TaskModel *taskModel = new TaskModel();
-//    engine.rootContext()->setContextProperty("taskModel", taskModel);
-//
-//    TaskListModel *taskListModel = new TaskListModel();
-//    engine.rootContext()->setContextProperty("taskListModel", taskListModel);
-//
-//    MessageListModel *messageListModel = new MessageListModel();
-//    engine.rootContext()->setContextProperty("messageListModel", messageListModel);
-//
-//    RoomListModel *roomListModel = new RoomListModel();
-//    engine.rootContext()->setContextProperty("roomListModel", roomListModel);
-
-
     PluginModel pluginModel;
     engine.rootContext()->setContextProperty("pluginModel", QVariant::fromValue(pluginModel.getPlugins()));
-
 
     engine.load(url);
     return app.exec();

@@ -18,7 +18,7 @@
 #include <QByteArray>
 #include <QDebug>
 
-#include "emojimodel.h"
+#include "EmojiModel.h"
 
 QVariantList EmojiModel::history() {
     return m_settings->value("Editor/emojis", QVariantList()).toList();
