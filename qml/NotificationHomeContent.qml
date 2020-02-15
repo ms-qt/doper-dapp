@@ -4,20 +4,19 @@ import Qt.labs.platform 1.1
 import QtQuick.Window 2.12
 import QtQuick.Layouts 1.3
 
-import "qrc:/qml/NotificationPanel/SubPage"
 
 // 通知面板内容
 
 Item{
-    width: stackViewNotificationHome.width
-    height: stackViewNotificationHome.height
+    width: parent.width
+    height: parent.height
 
     // 切换卡片
     SwipeView {
         id:swipeViewNotificationHomeContent
         width: parent.width
-        height: parent.height
-        anchors.centerIn: parent
+        height: parent.height-tabBarFoot.height
+        anchors.bottom: tabBarFoot.top
         onCurrentIndexChanged: {
             console.log(currentIndex)
             switch(currentIndex){
@@ -33,18 +32,19 @@ Item{
             }
         }
 
-        NotificationAddressBook{
-            width:stackViewNotificationPannelHome.width
-            height:stackViewNotificationPannelHome.height
+//        NotificationAddressBook{
+//            width:parent.width
+//            height:parent.height
 
-        }
-        NotificationMessage{
-            width:stackViewNotificationPannelHome.width
-            height:stackViewNotificationPannelHome.height
-        }
+//        }
+//        NotificationMessage{
+//            width:parent.width
+//            height:parent.height
+//        }
+
         NotificationTask{
-            width:stackViewNotificationPannelHome.width
-            height:stackViewNotificationPannelHome.height
+            width:parent.width
+            height:parent.height
         }
     }
 
@@ -53,7 +53,7 @@ Item{
     TabBar {
         id:tabBarFoot
         width: parent.width
-
+        height: 50
         anchors.bottom: parent.bottom
         TabButton {
             text: qsTr("通讯录")

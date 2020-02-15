@@ -46,8 +46,13 @@ ApplicationWindow {
         property int windowTitleHeight: 50
         // 分割线颜色
         property color name: "#bdbdbd"
-
+        // 是否登录
         property bool loginSuccess: false
+
+        // 用户id
+
+        property string userid:"maohuawei"
+
 
 
     }
@@ -114,6 +119,14 @@ ApplicationWindow {
         width: parent.width
         height: parent.height-windowTitle.height
     }
+
+    NotificationHome{
+        visible: rootWindow.global.loginSuccess
+        anchors.top: windowTitle.bottom
+        width: parent.width
+        height: parent.height-windowTitle.height
+    }
+
 
     // 加载中
     BaseLoading{

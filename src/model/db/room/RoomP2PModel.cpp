@@ -28,6 +28,12 @@ RoomP2PModel::RoomP2PModel()
 }
 
 
+RoomP2PModel::~RoomP2PModel()
+{
+
+}
+
+
 void RoomP2PModel::refresh()
 {
 

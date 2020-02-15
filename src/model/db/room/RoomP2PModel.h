@@ -31,6 +31,8 @@ public:
 
     RoomP2PModel();
 
+    ~RoomP2PModel();
+
     QVariant data(const QModelIndex &index, int role) const override;
 
     QHash<int, QByteArray> roleNames() const override;

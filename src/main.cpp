@@ -1,75 +1,57 @@
 ﻿#pragma execution_character_set("utf-8")
-
 // folly
 #include <folly/init/Init.h>
 // 日志
 #include "src/logger/Logger.h"
-
 // Qt
 #include <QApplication>
 #include <QtWebEngine>
-
-
-#include <src/net/NetWorkManager.h>
-
+//rxqt
+#include <rxqt.hpp>
+// 线程
 #include <src/tool/ThreadTool.h>
+// app 信息
 #include "src/app/AppInfo.h"
 
 #include <src/TaoJsonModel/TaoJsonModel>
-
+// 表情
 #include "src/emoji/emojimodel.h"
-
 // 图片同步
 #include "src/image/ImageProvider.h"
 // 图片异步
 #include "src/image/ImageAsyncImageProvider.h"
 // 二维码
 #include "src/image/QrCodeImageProvider.h"
-
 // 用户凭证信息实体类
 #include "src/local/db/CertificateDB.h"
 // 用户凭证信息数据库
 #include "src/local/db/CertificateBean.h"
-
 // 登录处理器
 #include "src/login/LoginHandler.h"
-
 // model
-
-#include "src/model/db/mainleftmenu/MainLeftMenu.h"
 #include "src/model/db/message/MessageBeanText.h"
 #include "src/model/db/message/MessageListModel.h"
-#include "src/model/db/message/MessagTextModel.h"
-
-
 #include "src/model/db/room/RoomListModel.h"
 #include "src/model/db/room/RoomP2PModel.h"
-#include "src/model/db/room/RoomTaskModel.h"
-#include "src/model/db/room/RoomMenberModel.h"
 
 #include "src/model/db/task/TaskModel.h"
 #include "src/model/db/task/TaskListModel.h"
-
 #include "src/model/db/user/UserModel.h"
-
 
 static void registertypes()
 {
     qmlRegisterType<CertificateBean>("CertificateBean", 1, 0, "CertificateBean");
     qmlRegisterType<CertificateDB>("CertificateDB", 1, 0, "CertificateDB");
     qmlRegisterType<LoginHandler>("LoginHandler", 1, 0, "LoginHandler");
-    qmlRegisterType<MainLeftMenu>("MainLeftMenu", 1, 0, "MainLeftMenu");
+
     qmlRegisterType<MessageBeanText>("MessageBeanText", 1, 0, "MessageBeanText");
-    qmlRegisterType<MessageListModel>("MessageListModel", 1, 0, "MessageListModel");
-    qmlRegisterType<MessagTextModel>("MessagTextModel", 1, 0, "MessagTextModel");
+
     qmlRegisterType<TaskModel>("TaskModel", 1, 0, "TaskModel");
     qmlRegisterType<TaskListModel>("TaskListModel", 1, 0, "TaskListModel");
-    qmlRegisterType<UserModel>("UserModel", 1, 0, "UserModel");
-
     qmlRegisterType<RoomListModel>("RoomListModel", 1, 0, "RoomListModel");
-    qmlRegisterType<RoomP2PModel>("RoomP2PModel", 1, 0, "RoomP2PModel");
-    qmlRegisterType<RoomTaskModel>("RoomTaskModel", 1, 0, "RoomTaskModel");
-    qmlRegisterType<RoomMenberModel>("RoomMenberModel", 1, 0, "RoomMenberModel");
+    qmlRegisterType<MessageListModel>("MessageListModel", 1, 0, "MessageListModel");
+
+    qmlRegisterType<UserModel>("UserModel", 1, 0, "UserModel");
 }
 
 static void intiDatabase()
@@ -162,7 +144,7 @@ int main(int argc, char *argv[])
     engine.addImageProvider("imageSync", imageProvider);
     // 异步加载
     AsyncImageProvider *asyncImageProvider = new AsyncImageProvider();
-    engine.addImageProvider("imageAsyn", asyncImageProvider);
+    engine.addImageProvider("imageAsync", asyncImageProvider);
     // 二维码
     QrCodeImageProvider *qrCodeImageProvider = new QrCodeImageProvider();
     engine.addImageProvider("imageQrCode", qrCodeImageProvider);
@@ -171,6 +153,23 @@ int main(int argc, char *argv[])
     CertificateDB *certificateDb = new CertificateDB();
     engine.rootContext()->setContextProperty("certificateDb", certificateDb);
 
+
+    UserModel *userModel = new UserModel();
+    engine.rootContext()->setContextProperty("userModel", userModel);
+
+    TaskModel *taskModel = new TaskModel();
+    engine.rootContext()->setContextProperty("taskModel", taskModel);
+
+    TaskListModel *taskListModel = new TaskListModel();
+    engine.rootContext()->setContextProperty("taskListModel", taskListModel);
+
+    MessageListModel *messageListModel = new MessageListModel();
+    engine.rootContext()->setContextProperty("messageListModel", messageListModel);
+
+    RoomListModel *roomListModel = new RoomListModel();
+    engine.rootContext()->setContextProperty("roomListModel", roomListModel);
+
+//
     engine.load(url);
     return app.exec();
 }

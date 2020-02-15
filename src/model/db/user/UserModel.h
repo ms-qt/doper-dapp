@@ -10,7 +10,6 @@
 #include <QSqlQuery>
 #include <QSqlError>
 #include <QSqlDatabase>
-#include "src/app/UIModelProxy.h"
 
 class UserModel : public QSqlQueryModel
 {

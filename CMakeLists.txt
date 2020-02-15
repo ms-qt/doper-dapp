@@ -211,10 +211,10 @@ set(app_SRC
         #        src/db/CertificateBean.h
 
 
-        #        src/model/db/message/MessagTextModel.cpp
-        #        src/model/db/message/MessagTextModel.h
-        #        src/model/db/message/MessageListModel.cpp
-        #        src/model/db/message/MessageListModel.h
+        src/model/db/message/MessagTextModel.cpp
+        src/model/db/message/MessagTextModel.h
+        src/model/db/message/MessageListModel.cpp
+        src/model/db/message/MessageListModel.h
         #
         #        src/model/db/organization/OrganizationModel.cpp
         #        src/model/db/organization/OrganizationModel.h
@@ -235,16 +235,16 @@ set(app_SRC
         #        src/model/db/room/RoomMenberModel.h
         #        src/model/db/room/RoomMenberModel.cpp
         #        src/model/db/room/RoomMenberModel.h
-        #        src/model/db/room/RoomListModel.cpp
-        #        src/model/db/room/RoomListModel.h
+                src/model/db/room/RoomListModel.cpp
+                src/model/db/room/RoomListModel.h
         #
-        #        src/model/db/task/TaskModel.cpp
-        #        src/model/db/task/TaskModel.h
-        #        src/model/db/task/TaskListModel.cpp
-        #        src/model/db/task/TaskListModel.h
-        #
-        #        src/model/db/user/UserModel.cpp
-        #        src/model/db/user/UserModel.h
+                src/model/db/task/TaskModel.cpp
+                src/model/db/task/TaskModel.h
+                src/model/db/task/TaskListModel.cpp
+                src/model/db/task/TaskListModel.h
+        
+                src/model/db/user/UserModel.cpp
+                src/model/db/user/UserModel.h
 
 
         src/tool/ThreadTool.cpp

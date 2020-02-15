@@ -140,7 +140,6 @@ void  UserModel::setSignature(QString userId, QString text)
 
 void UserModel::sendMessage(QString userId)
 {
-
-    emit UIModelProxy::GetInstance()->sendMessage(userId);
+    
 
 }

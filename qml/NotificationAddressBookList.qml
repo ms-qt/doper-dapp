@@ -1,6 +1,7 @@
 import QtQuick 2.0
 import QtGraphicalEffects 1.0
 
+
 Rectangle {
     property color background: "#EBEDEE"
     property color highlightHover: "#DDE0DF"
@@ -8,6 +9,10 @@ Rectangle {
 
     color: background
     clip: true
+
+
+
+
 
     ListView {
         id: listViewMemberList
@@ -23,12 +28,12 @@ Rectangle {
         delegate: NotificationAddressBookListItem {
             name:_name
             avatar: _avatar
-            width: listViewMessageList.width
+            width: listViewMemberList.width
             height: 85
-            color: listViewMessageList.currentIndex === index ? "transparent" : (mouseAreaMemberList.containsMouse ? highlightHover : background)
+            color: listViewMemberList.currentIndex === index ? "transparent" : (mouseAreaMemberList.containsMouse ? highlightHover : background)
             backgroundColor: listViewMemberList.currentIndex === index ? "transparent" : (mouseAreaMemberList.containsMouse ? highlightHover : background)
             separatorColor: listViewMemberList.currentIndex === index ? "transparent" : highlightHover
-            smooth: mouseArea.containsMouse
+            smooth: mouseAreaMemberList.containsMouse
 
             MouseArea {
                 id: mouseAreaMemberList
@@ -36,12 +41,12 @@ Rectangle {
                 anchors.fill: parent
                 hoverEnabled: true
                 onClicked: {
-                    listViewMessageList.currentIndex = index
+                    listViewMemberList.currentIndex = index
 
                 }
 
                 onDoubleClicked: {
-                    messageListModel.enterRoom(_room_id)
+
 
                 }
             }
@@ -51,7 +56,7 @@ Rectangle {
             Rectangle {
             color: highlightSelection
             radius: 3
-            anchors.fill: listViewMessageList.currentItem
+            anchors.fill: listViewMemberList.currentItem
         }
         highlightFollowsCurrentItem: true
         highlightRangeMode: ListView.NoHighlightRange

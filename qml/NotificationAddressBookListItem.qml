@@ -1,4 +1,5 @@
 import QtQuick 2.0
+import QtQuick.Layouts 1.12
 
 Rectangle {
 
@@ -22,16 +23,27 @@ Rectangle {
     property color presenceTextColor: "#5B5B5B"
 
 
+    width: parent.width
+    height: parent.height
+
+
     Image{
-        width: 30
-        height: 30
-        //source: "image://imageProvider/"+avatar
-        source: "image://async/"+avatar
+        id:imageNotificationAddressBookListItemAvatar
+        width: parent.height
+        height: parent.height
+        source: "image://imageAsync/"+avatar
+        anchors.verticalCenter: parent.verticalCenter
     }
 
     Text {
+        anchors.left: imageNotificationAddressBookListItemAvatar.right
+        anchors.leftMargin: 15
         text: qsTr(name)
+        font.pixelSize: 20
     }
+
+
+
 
     // 分割线
     Rectangle {

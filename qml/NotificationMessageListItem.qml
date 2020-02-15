@@ -23,9 +23,7 @@ Rectangle {
     property color onlineColor: "#5ABE50"
     property color presenceTextColor: "#5B5B5B"
 
-
     color: background
-
 
     Item {
         id: avatarItem
@@ -42,8 +40,7 @@ Rectangle {
             smooth: true
             visible: false
             asynchronous: true
-            //source: roomAvatar
-            source: "image://async/"+roomAvatar
+            source: "image://imageAsync/"+roomAvatar
         }
 
         Rectangle {

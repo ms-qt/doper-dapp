@@ -26,11 +26,8 @@ TaskListModel::TaskListModel()
     refresh();
 }
 
-
 TaskListModel::~TaskListModel()
 {
-
-
 }
 
 void TaskListModel::refresh()
@@ -66,8 +63,5 @@ QHash<int, QByteArray> TaskListModel::roleNames() const
 
 void TaskListModel::enterTask(QString taskId)
 {
-    qDebug() << "enterRoom " + taskId;
-
-    emit UIModelProxy::GetInstance()->enterTask(taskId);
 
 }

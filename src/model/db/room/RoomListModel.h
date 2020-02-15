@@ -31,11 +31,11 @@ public:
 
     RoomListModel();
 
+    ~RoomListModel() ;
+
     QVariant data(const QModelIndex &index, int role) const override;
 
     QHash<int, QByteArray> roleNames() const override;
-
-
 
 
 public slots:
@@ -47,8 +47,6 @@ public slots:
     QString getRoomType(QString roomId);
 
     QString getRoomAvatar(QString roomId);
-
-
 
 
 private:

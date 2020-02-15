@@ -27,6 +27,12 @@ MessageListModel::MessageListModel()
 }
 
 
+MessageListModel::~MessageListModel()
+{
+
+};
+
+
 void MessageListModel::refresh()
 {
     setQuery("SELECT * FROM _message_list");
@@ -64,9 +70,6 @@ QHash<int, QByteArray> MessageListModel::roleNames() const
 void MessageListModel::enterRoom(QString roomId)
 {
 
-    qDebug() << "enterRoom " + roomId;
-
-    emit UIModelProxy::GetInstance()->enterRoom(roomId);
 
 }
 
@@ -130,18 +133,6 @@ MessageBeanText* MessageListModel::getLasterMessageText(QString roomId)
 
     QSqlQuery result;
 
-
-//    _id                   integer primary key autoincrement,
-//    _room_id              varchar(255),
-//    _message_id           varchar(255),
-//    _event_id             varchar(255),
-//    _sender_id            varchar(255),
-//    _time                 bigint,
-//    _text_content         text,
-//    _message_sender_time  bigint,
-//    _message_receive_time bigint,
-//    _is_me                boolean,
-//    _is_read              boolean
 
     if (result.exec(sql))
     {

@@ -28,6 +28,12 @@ RoomListModel::RoomListModel()
     refresh();
 }
 
+
+RoomListModel::~RoomListModel()
+{
+
+}
+
 void RoomListModel::refresh()
 {
     setQuery("SELECT * FROM _room_list ");

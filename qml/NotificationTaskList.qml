@@ -1,7 +1,6 @@
 import QtQuick 2.0
 import QtGraphicalEffects 1.0
 
-
 Rectangle {
     id: rectangleTaskListRoot
     property color background: "#EBEDEE"
@@ -44,7 +43,7 @@ Rectangle {
                 }
 
                 onDoubleClicked: {
-                    taskListModel.enterTask(_task_id)
+
                 }
             }
         }

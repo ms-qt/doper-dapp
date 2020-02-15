@@ -12,7 +12,6 @@
 #include <QSqlError>
 #include <QSqlDatabase>
 
-#include "src/app/UIModelProxy.h"
 #include "src/model/db/message/MessageBeanText.h"
 
 class MessageListModel : public QSqlQueryModel
@@ -33,6 +32,7 @@ public:
 
 public:
     MessageListModel();
+    ~MessageListModel();
 
     QVariant data(const QModelIndex &index, int role) const override;
 

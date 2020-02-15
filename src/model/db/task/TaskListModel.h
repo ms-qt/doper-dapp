@@ -12,7 +12,6 @@
 #include <QSqlError>
 #include <QSqlDatabase>
 
-#include "src/app/UIModelProxy.h"
 
 class TaskListModel : public QSqlQueryModel
 {
