@@ -1,7 +1,6 @@
 import QtQuick 2.0
 import QtGraphicalEffects 1.0
 
-import UserModel 1.0
 
 Rectangle {
     property color background: "#EBEDEE"
@@ -10,17 +9,6 @@ Rectangle {
 
     color: background
     clip: true
-
-
-
-
-
-    UserModel{
-        id:userModelNotificationAddressBookList
-    }
-
-
-
 
     ListView {
 
@@ -33,7 +21,7 @@ Rectangle {
         maximumFlickVelocity: 2500
         snapMode: ListView.SnapToItem
 
-        model:  userModelNotificationAddressBookList
+        model:  userModel
         delegate: NotificationAddressBookListItem {
             name:_name
             avatar: _avatar

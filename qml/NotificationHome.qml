@@ -3,12 +3,13 @@ import QtQuick.Controls 2.12
 import Qt.labs.platform 1.1
 import QtQuick.Window 2.12
 import QtQuick.Layouts 1.3
-
-
-
-
-
 import Toou2D 1.0
+
+import UserModel 1.0
+import TaskListModel 1.0
+import TaskModel 1.0
+import MessageListModel 1.0
+import RoomListModel 1.0
 
 
 // 通知面板
@@ -21,6 +22,24 @@ Item {
         width: parent.width
         height: parent.height
         color: "#ECF5FF"
+    }
+
+    UserModel{
+        id:userModel
+    }
+
+    TaskListModel{
+        id:taskListModel
+    }
+
+    TaskModel{
+        id:taskModel
+    }
+    MessageListModel{
+        id:messageListModel
+    }
+    RoomListModel{
+        id:roomListModel
     }
 
     // 头部区域高度

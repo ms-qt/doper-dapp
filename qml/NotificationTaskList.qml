@@ -1,8 +1,6 @@
 import QtQuick 2.0
 import QtGraphicalEffects 1.0
 
-import TaskListModel 1.0
-import TaskModel 1.0
 
 Rectangle {
     id: rectangleTaskListRoot
@@ -14,39 +12,23 @@ Rectangle {
     color: background
     clip: true
 
-
-    TaskModel{
-        id:taskModelNotificationTaskList
-    }
-
-    TaskListModel{
-        id:taskListModelNotificationTaskList
-
-    }
-
     ListView {
         id: listViewNotificationTaskList
         anchors.fill: parent
         anchors.topMargin: 5
-
         opacity: 1
         boundsBehavior: Flickable.DragAndOvershootBounds
         maximumFlickVelocity: 2500
         snapMode: ListView.SnapToItem
-
-        model:taskListModelNotificationTaskList
+        model:taskListModel
         delegate: NotificationTaskListItem {
-            //taskName: taskModelNotificationTaskList.getTaskName(_task_id)
-
+            taskName: taskModel.getTaskName(_task_id)
             width: listViewNotificationTaskList.width
             height: 85
-
             color: listViewNotificationTaskList.currentIndex === index ? "transparent" : (mouseAreaNotificationTaskList.containsMouse ? highlightHover : background)
             backgroundColor: listViewNotificationTaskList.currentIndex === index ? "transparent" : (mouseAreaNotificationTaskList.containsMouse ? highlightHover : background)
             separatorColor: listViewNotificationTaskList.currentIndex === index ? "transparent" : highlightHover
             smooth: mouseAreaNotificationTaskList.containsMouse
-
-
             MouseArea {
                 id: mouseAreaNotificationTaskList
                 anchors.left: parent.left
