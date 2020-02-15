@@ -21,62 +21,85 @@ SystemTrayIcon {
     tooltip: "北斗IM"
 
 
+    property bool login: rootWindow.global.loginSuccess
+
+
     menu: Menu {
+
+        MenuItem {
+            visible: login
+            text: qsTr("打开主控面板")
+            onTriggered: {
+
+            }
+        }
+
+        MenuItem {
+            visible: login
+            text: qsTr("打开导航面板")
+            onTriggered: {
+
+            }
+        }
+
+        MenuSeparator{
+            visible: login
+        }
+
+        MenuItem {
+            visible: login
+            text: qsTr("在线")
+            onTriggered: {
+
+            }
+        }
+
+        MenuItem {
+            visible: login
+            text: qsTr("离开")
+            onTriggered: {
+
+            }
+        }
+        MenuItem {
+            visible: login
+            text: qsTr("忙碌")
+            onTriggered: {
+
+            }
+        }
+        MenuItem {
+            visible: login
+            text: qsTr("隐身")
+            onTriggered: {
+
+            }
+        }
+
+        MenuItem {
+            visible: login
+            text: qsTr("离线")
+            onTriggered: {
+
+            }
+        }
+
+
+        MenuSeparator{
+            visible: login
+        }
+
         MenuItem {
             text: qsTr("退出")
             onTriggered: {
                 Qt.quit()
             }
         }
-        MenuSeparator{
-        }
-        MenuItem {
-            text: qsTr("在线")
-            onTriggered: {
-                Qt.quit()
-            }
-        }
-        MenuItem {
-            text: qsTr("离线")
-            onTriggered: {
-                Qt.quit()
-            }
-        }
-        MenuItem {
-            text: qsTr("离开")
-            onTriggered: {
-                Qt.quit()
-            }
-        }
-        MenuItem {
-            text: qsTr("忙碌")
-            onTriggered: {
-                Qt.quit()
-            }
-        }
-        MenuItem {
-            text: qsTr("隐身")
-            onTriggered: {
-                Qt.quit()
-            }
-        }
 
-        MenuSeparator{
-        }
 
-        MenuItem {
-            text: qsTr("打开导航面板")
-            onTriggered: {
-                Qt.quit()
-            }
-        }
 
-        MenuItem {
-            text: qsTr("打开主控面板")
-            onTriggered: {
-                Qt.quit()
-            }
-        }
+
+
 
     }
 }
