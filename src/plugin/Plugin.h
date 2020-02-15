@@ -8,60 +8,72 @@
 
 #include <QString>
 #include <QDate>
+#include <QObject>
 
-class Plugin
+class Plugin : public QObject
 {
+Q_OBJECT
+    Q_PROPERTY(
+            QString name
+            READ getName
+            CONSTANT);
+    Q_PROPERTY(
+            QString iconLocal
+            READ getIconLocal
+            CONSTANT)
 public:
     Plugin();
 
-
-    const QString &getName() const;
-
     void setName(const QString &name);
-
-    const QString &getPath() const;
 
     void setPath(const QString &path);
 
-    const QString &getVersionName() const;
-
     void setVersionName(const QString &versionName);
-
-    const QString &getVersionCode() const;
 
     void setVersionCode(const QString &versionCode);
 
-    const QString &getDesc() const;
-
     void setDesc(const QString &desc);
-
-    const QString &getIconLocal() const;
 
     void setIconLocal(const QString &iconLocal);
 
-    const QString &getIconRemotely() const;
-
     void setIconRemotely(const QString &iconRemotely);
-
-    const QDate &getDate() const;
 
     void setDate(const QDate &date);
 
-    const QString &getStatus() const;
-
     void setStatus(const QString &status);
-
-    bool isForceUpdate() const;
 
     void setForceUpdate(bool forceUpdate);
 
-    bool isEnable() const;
-
     void setEnable(bool enable);
+
+    void setAuthor(const QString &author);
+
+
+public slots:
 
     const QString &getAuthor() const;
 
-    void setAuthor(const QString &author);
+    bool isEnable() const;
+
+    bool isForceUpdate() const;
+
+    const QString &getStatus() const;
+
+    const QDate &getDate() const;
+
+    const QString &getIconRemotely() const;
+
+    const QString &getIconLocal() const;
+
+    const QString &getDesc() const;
+
+    const QString &getVersionCode() const;
+
+    const QString &getVersionName() const;
+
+    const QString &getPath() const;
+
+    const QString &getName() const;
 
 
 private:

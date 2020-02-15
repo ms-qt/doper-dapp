@@ -12,42 +12,11 @@ import Toou2D 1.0
 
 ApplicationWindow {
 
-    id:rootWindow
-    property int rootWindowWidth : 380
-    property int rootWindowHeight : 600
+    id:mainWindow
 
     visible: true
-    width: rootWindowWidth
-    height: rootWindowHeight
-
-    flags: Qt.Window | Qt.FramelessWindowHint
-
-
-    T2DWorld{
-        appStartupTheme: "Solarized"
-        appThemePaths: [
-            "qrc:/themes/"
-        ]
-        mouseAreaCursorShape: Qt.PointingHandCursor
-    }
-
-
-    // 全局变量
-    property TObject global : TObject{
-        // title 高度
-        property int windowTitleHeight: 50
-        // 分割线颜色
-        property color name: "#bdbdbd"
-        // 是否登录
-        property bool loginSuccess: false
-
-        // 用户id
-
-        property string userid:"maohuawei"
-
-
-
-    }
+    width: Screen.width/6*5
+    height: Screen.height/6*5
 
     property int xMouse
     property int yMouse
@@ -60,11 +29,12 @@ ApplicationWindow {
             yMouse = mouse.y
         }
         onPositionChanged: { //鼠标按下后改变位置
-            rootWindow.x = rootWindow.x + (mouse.x - xMouse)
-            rootWindow.y = rootWindow.y + (mouse.y - yMouse)
+            mainWindow.x = mainWindow.x + (mouse.x - xMouse)
+            mainWindow.y = mainWindow.y + (mouse.y - yMouse)
         }
     }
 
+    flags: Qt.Window | Qt.FramelessWindowHint
 
     function doMinimized() {
         flags = Qt.Window | Qt.WindowFullscreenButtonHint | Qt.CustomizeWindowHint | Qt.WindowMinimizeButtonHint
@@ -77,61 +47,13 @@ ApplicationWindow {
     }
 
 
-    // 托盘
-    Tray{
-
-    }
-
-    // 关于
-    About{
-        id:about
-    }
-
-    // 标题
-    WindowTitle{
-        id:windowTitle
-        width: parent.width
-        height:rootWindow.global.windowTitleHeight
-    }
-
-
-    function loginSuccess()
-    {
-        rootWindow.global.loginSuccess=true;
-        rootWindowWidth=Screen.width/5*1.3
-        rootWindowHeight= Screen.height/6*5
-
-        rootWindow.x=Screen.width/5*3
-        rootWindow.y=100
-    }
-
-    LoginHome{
-        visible: !rootWindow.global.loginSuccess
-        anchors.top: windowTitle.bottom
-        width: parent.width
-        height: parent.height-windowTitle.height
-    }
-
-    NotificationHome{
-        visible: rootWindow.global.loginSuccess
-        anchors.top: windowTitle.bottom
-        width: parent.width
-        height: parent.height-windowTitle.height
-    }
-
-
-    MainWindow{
-
-        visible: true
-
-    }
 
 
     // 加载中
     BaseLoading{
         visible: false
         objectName: "baseLoadingObject"
-        id:baseLoading
+        id:baseLoadingMainWindow
         width: parent.width
         height: parent.height
         anchors.centerIn: parent
@@ -150,8 +72,15 @@ ApplicationWindow {
         }
     }
 
+
+    // 关于
+    About{
+        id:aboutMainWindow
+    }
+
+
     TPopoverMenu{
-        id:themePopover;
+        id:themePopoverMainWindow;
 
         TPopoverElement{
             text: "默认"
@@ -175,6 +104,19 @@ ApplicationWindow {
     }
 
 
+
+    MainHome{
+        anchors.top: mainWindowTitle.bottom
+        width: parent.width
+        height: parent.height-mainWindowTitle.height
+    }
+
+    // 标题
+    MainWindowTitle{
+        id:mainWindowTitle
+        width: parent.width
+        height:rootWindow.global.windowTitleHeight
+    }
 
 
 }

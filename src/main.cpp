@@ -38,6 +38,9 @@
 #include "src/model/db/task/TaskListModel.h"
 #include "src/model/db/user/UserModel.h"
 
+#include "src/plugin/Plugin.h"
+#include "src/model/PluginModel.h"
+
 static void registertypes()
 {
     qmlRegisterType<CertificateBean>("CertificateBean", 1, 0, "CertificateBean");
@@ -52,6 +55,8 @@ static void registertypes()
     qmlRegisterType<MessageListModel>("MessageListModel", 1, 0, "MessageListModel");
 
     qmlRegisterType<UserModel>("UserModel", 1, 0, "UserModel");
+    qmlRegisterType<Plugin>("Plugin", 1, 0, "Plugin");
+    qmlRegisterType<PluginModel>("PluginModel", 1, 0, "PluginModel");
 }
 
 static void intiDatabase()
@@ -167,6 +172,10 @@ int main(int argc, char *argv[])
 //
 //    RoomListModel *roomListModel = new RoomListModel();
 //    engine.rootContext()->setContextProperty("roomListModel", roomListModel);
+
+
+    PluginModel pluginModel;
+    engine.rootContext()->setContextProperty("pluginModel", QVariant::fromValue(pluginModel.getPlugins()));
 
 
     engine.load(url);

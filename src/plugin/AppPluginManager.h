@@ -67,7 +67,6 @@ private:
 public:
     const QList<Plugin *> getPlugins() const;
 
-
 private:
     QHash<QString, IAppPluginInterface *> pluginsCache;
 

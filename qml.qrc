@@ -71,6 +71,9 @@
         <file>qml/NotificationMessageList.qml</file>
         <file>qml/NotificationMessageListItem.qml</file>
         <file>qml/EmojiPicker.qml</file>
+        <file>qml/MainWindow.qml</file>
+        <file>qml/MainWindowTitle.qml</file>
         <file>qml/MainHome.qml</file>
+        <file>qml/MainHomeLeftMenu.qml</file>
     </qresource>
 </RCC>
