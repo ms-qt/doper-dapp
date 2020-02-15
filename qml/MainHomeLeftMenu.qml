@@ -33,7 +33,7 @@ Rectangle {
                 height: parent.width/2
                 source: model.iconLocal
                 anchors.centerIn: parent
-                anchors.topMargin: -10
+                anchors.topMargin: -20
             }
 
             TLabel{
@@ -42,14 +42,9 @@ Rectangle {
                 anchors.top: imageIcon.bottom
                 id:labelName
                 text:model.name
-                font.pixelSize: 15
+                font.pixelSize: 10
             }
-            TRectangle{
-                anchors.bottom: parent.bottom
-                width: parent.width
-                height: 1
-                color: "#000000"
-            }
+
 
             //            color: listViewMainHomeLeftMenu.currentIndex === index ? "transparent" : (mouseAreaMainHomeLeftMenu.containsMouse ? highlightHover : background)
             //            backgroundColor: listViewMainHomeLeftMenu.currentIndex === index ? "transparent" : (mouseAreaMainHomeLeftMenu.containsMouse ? highlightHover : background)
