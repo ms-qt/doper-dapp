@@ -41,6 +41,7 @@ public:
 public:
 
     CertificateDB();
+    Q_INVOKABLE
     CertificateBean *queryLaster();
     Q_INVOKABLE
     bool usernameCheckUserExists(QString username);

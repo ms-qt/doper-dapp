@@ -15,32 +15,32 @@ class CertificateBean : public QObject
 
 Q_OBJECT
     Q_PROPERTY(int
-                       id
+                       _id
                        READ
                        id
                        CONSTANT
     )
     Q_PROPERTY(QString
-                       user_id
+                       _user_id
                        READ
                        userid
                        CONSTANT
     )
     Q_PROPERTY(QString
-                       username
+                       _username
                        READ
                        username
                        CONSTANT
     )
     Q_PROPERTY(QString
-                       password
+                       _password
                        READ
                        password
                        CONSTANT
     )
 
     Q_PROPERTY(QString
-                       access_token
+                       _access_token
                        READ
                        access_token
                        CONSTANT
@@ -48,7 +48,7 @@ Q_OBJECT
 
 
     Q_PROPERTY(QString
-                       refresh_token
+                       _refresh_token
                        READ
                        refresh_token
                        CONSTANT
@@ -56,7 +56,7 @@ Q_OBJECT
 
 
     Q_PROPERTY(QString
-                       login_type
+                       _login_type
                        READ
                        login_type
                        CONSTANT
@@ -64,7 +64,7 @@ Q_OBJECT
 
 
     Q_PROPERTY(bool
-                       save_password
+                       _save_password
                        READ
                        save_password
                        CONSTANT
@@ -72,7 +72,7 @@ Q_OBJECT
 
 
     Q_PROPERTY(bool
-                       auto_login
+                       _auto_login
                        READ
                        auto_login
                        CONSTANT
@@ -80,7 +80,7 @@ Q_OBJECT
 
 
     Q_PROPERTY(int
-                       time
+                       _time
                        READ
                        time
                        CONSTANT

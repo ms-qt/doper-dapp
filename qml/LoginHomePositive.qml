@@ -25,17 +25,18 @@ Item {
     height: parent.height
     id:itemLoginHomePositiveFrom
 
-    CertificateDb{
+    // 用户信息
+    CertificateDB{
         id:certificateDb
     }
 
-
     Component.onCompleted: {
-
         fieldUsername.usernametext=certificateDb.queryLaster().username
-        fieldPassword.password=certificateDb.queryLaster().password
-    }
+        fieldPassword.passwordtext=certificateDb.queryLaster().password
 
+        checkBoxSavePassword.checked=certificateDb.queryLaster().save_password
+        checkBoxAutoLogin.checked=certificateDb.queryLaster().auto_login
+    }
 
     //Logo
     Image {
@@ -49,7 +50,6 @@ Item {
     }
 
     FieldUsername{
-
         anchors.top: imageLoginHomeLogo.bottom
         anchors.topMargin: 30
         anchors.horizontalCenter: parent.horizontalCenter
