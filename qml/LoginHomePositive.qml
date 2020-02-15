@@ -15,6 +15,7 @@ import Toou2D 1.0
 
 
 import CertificateDB 1.0
+import LoginHandler 1.0
 
 // 登录正面
 
@@ -30,10 +31,29 @@ Item {
         id:certificateDb
     }
 
+    // 登录处理
+    LoginHandler{
+        id:loginHandler
+    }
+
+    // 回调函数处理
+    Connections{
+        target: loginHandler
+        onLoginSuccess:
+        {
+            baseLoading.hide()
+            TToast.showSuccess("登录成功");
+        }
+
+        onLoginFailure:{
+            TToast.showError("登录失败");
+        }
+    }
+
+    // 表单信息回显处理
     Component.onCompleted: {
         fieldUsername.usernametext=certificateDb.queryLaster().username
         fieldPassword.passwordtext=certificateDb.queryLaster().password
-
         checkBoxSavePassword.checked=certificateDb.queryLaster().save_password
         checkBoxAutoLogin.checked=certificateDb.queryLaster().auto_login
     }
@@ -135,7 +155,7 @@ Item {
                     TToast.showError("请输入合法的密码");
                     return
                 }
-
+                loginHandler.login(fieldUsername.usernametext,fieldPassword.passwordtext,checkBoxSavePassword.checked,checkBoxAutoLogin.checked)
                 baseLoading.show()
 
             }

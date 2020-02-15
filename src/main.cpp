@@ -26,14 +26,20 @@
 // 二维码
 #include "src/image/QrCodeImageProvider.h"
 
+// 用户凭证信息实体类
 #include "src/local/db/CertificateDB.h"
+// 用户凭证信息数据库
 #include "src/local/db/CertificateBean.h"
+
+// 登录处理器
+#include "src/login/LoginHandler.h"
 
 
 static void registertypes()
 {
     qmlRegisterType<CertificateBean>("CertificateBean", 1, 0, "CertificateBean");
     qmlRegisterType<CertificateDB>("CertificateDB", 1, 0, "CertificateDB");
+    qmlRegisterType<LoginHandler>("LoginHandler", 1, 0, "LoginHandler");
 }
 
 static void intiDatabase()

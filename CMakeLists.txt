@@ -306,8 +306,7 @@ set(app_SRC
         src/proxy/ui/UIProxy.h
 
 
-
-        )
+        src/login/LoginHandler.cpp src/login/LoginHandler.h)
 
 # 通知代码配置
 if (APPLE)
