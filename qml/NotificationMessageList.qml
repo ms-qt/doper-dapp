@@ -24,12 +24,11 @@ Rectangle {
         delegate: NotificationMessageListItem {
 
             roomName: roomListModel.getRoomName(_room_id)
-//            roomAvatar: roomListModel.getRoomAvatar(_room_id)
-//            lasterMessage: messageListModel.getLasterMessageText(_room_id).textContent
-//            online: _room_type=='_p2p' ? true : false
-//            time : Qt.formatDateTime(new Date(messageListModel.getLasterMessageText(_room_id).time), "hh:mm")
-
-//            roomType:_room_type
+            roomAvatar: roomListModel.getRoomAvatar(_room_id)
+            lasterMessage: messageListModel.getLasterMessageText(_room_id).textContent
+            online: _room_type=='_p2p' ? true : false
+            time : Qt.formatDateTime(new Date(messageListModel.getLasterMessageText(_room_id).time), "hh:mm")
+            roomType:_room_type
             width: listViewNotificationMessageList.width
             height: 85
             color: listViewNotificationMessageList.currentIndex === index ? "transparent" : (mouseAreaNotificationMessageList.containsMouse ? highlightHover : background)
@@ -44,12 +43,9 @@ Rectangle {
                 hoverEnabled: true
                 onClicked: {
                     listViewNotificationMessageList.currentIndex = index
-
                 }
-
                 onDoubleClicked: {
                     messageListModel.enterRoom(_room_id)
-
                 }
             }
         }

@@ -10,12 +10,9 @@ Rectangle {
     color: background
     clip: true
 
-
-
-
-
     ListView {
-        id: listViewMemberList
+
+        id: listViewNotificationAddressBookList
         anchors.fill: parent
         anchors.topMargin: 5
 
@@ -28,20 +25,20 @@ Rectangle {
         delegate: NotificationAddressBookListItem {
             name:_name
             avatar: _avatar
-            width: listViewMemberList.width
+            width: listViewNotificationAddressBookList.width
             height: 85
-            color: listViewMemberList.currentIndex === index ? "transparent" : (mouseAreaMemberList.containsMouse ? highlightHover : background)
-            backgroundColor: listViewMemberList.currentIndex === index ? "transparent" : (mouseAreaMemberList.containsMouse ? highlightHover : background)
-            separatorColor: listViewMemberList.currentIndex === index ? "transparent" : highlightHover
-            smooth: mouseAreaMemberList.containsMouse
+            color: listViewNotificationAddressBookList.currentIndex === index ? "transparent" : (mouseAreaNotificationAddressBookList.containsMouse ? highlightHover : background)
+            backgroundColor: listViewNotificationAddressBookList.currentIndex === index ? "transparent" : (mouseAreaNotificationAddressBookList.containsMouse ? highlightHover : background)
+            separatorColor: listViewNotificationAddressBookList.currentIndex === index ? "transparent" : highlightHover
+            smooth: mouseAreaNotificationAddressBookList.containsMouse
 
             MouseArea {
-                id: mouseAreaMemberList
+                id: mouseAreaNotificationAddressBookList
                 anchors.left: parent.left
                 anchors.fill: parent
                 hoverEnabled: true
                 onClicked: {
-                    listViewMemberList.currentIndex = index
+                    listViewNotificationAddressBookList.currentIndex = index
 
                 }
 
@@ -56,7 +53,7 @@ Rectangle {
             Rectangle {
             color: highlightSelection
             radius: 3
-            anchors.fill: listViewMemberList.currentItem
+            anchors.fill: listViewNotificationAddressBookList.currentItem
         }
         highlightFollowsCurrentItem: true
         highlightRangeMode: ListView.NoHighlightRange

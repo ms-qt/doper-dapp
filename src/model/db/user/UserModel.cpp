@@ -47,7 +47,7 @@ QHash<int, QByteArray> UserModel::roleNames() const
     roles[_email] = "_email";
     roles[_qq] = "_qq";
     roles[_introduction] = "_introduction";
-
+    roles[_company] = "_company";
     return roles;
 }
 
@@ -135,8 +135,6 @@ void  UserModel::setSignature(QString userId, QString text)
 
     }
 }
-
-
 
 void UserModel::sendMessage(QString userId)
 {

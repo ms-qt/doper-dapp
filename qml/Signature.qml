@@ -25,7 +25,7 @@ Item {
         console.debug("textMetrics.elidedText: ", textMetrics.elidedText);
         console.debug("textMetrics.text: ", textMetrics.text);
         console.debug("textField.text: ", textField.text);
-        userModel.setSignature(certificateBean.user_id,textField.text);
+        userModel.setSignature(rootWindow.global.userid,textField.text);
     }
 
     MouseArea{

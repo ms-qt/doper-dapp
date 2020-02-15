@@ -14,18 +14,14 @@ Rectangle {
     property string department
     property string phonenumber
 
-
-
     property color backgroundColor: "#EBEDEE"
     property color separatorColor: "#DDE0DF"
     property color offlineColor: "#FF645F"
     property color onlineColor: "#5ABE50"
     property color presenceTextColor: "#5B5B5B"
 
-
     width: parent.width
     height: parent.height
-
 
     Image{
         id:imageNotificationAddressBookListItemAvatar
@@ -41,9 +37,6 @@ Rectangle {
         text: qsTr(name)
         font.pixelSize: 20
     }
-
-
-
 
     // 分割线
     Rectangle {

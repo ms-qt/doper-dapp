@@ -30,7 +30,8 @@ public:
         _phonenumber,
         _email,
         _qq,
-        _introduction
+        _introduction,
+        _company
     };
 
     UserModel();
@@ -63,18 +64,19 @@ private:
     const QString __CREATE_TABLE__ = "CREATE TABLE IF NOT EXISTS _user\n"
                                      "(\n"
                                      "    _id           integer primary key autoincrement,\n"
-                                     "    _user_id      varchar(64),\n"
-                                     "    _name         varchar(64),\n"
-                                     "    _age          int,\n"
-                                     "    _sex          int,\n"
+                                     "    _user_id      varchar(256),\n"
+                                     "    _name         varchar(256),\n"
+                                     "    _age          integer,\n"
+                                     "    _sex          integer,\n"
                                      "    _department   varchar(256),\n"
                                      "    _job_title    varchar(256),\n"
                                      "    _avatar       varchar(1024),\n"
                                      "    _signature    varchar(1024),\n"
-                                     "    _phonenumber  varchar(64),\n"
-                                     "    _email        varchar(64),\n"
-                                     "    _qq           varchar(64),\n"
-                                     "    _introduction text\n"
+                                     "    _phonenumber  varchar(256),\n"
+                                     "    _email        varchar(256),\n"
+                                     "    _qq           varchar(256),\n"
+                                     "    _introduction text,\n"
+                                     "    _company      varchar(256)\n"
                                      ");";
 };
 

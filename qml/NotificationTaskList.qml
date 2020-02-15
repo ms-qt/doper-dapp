@@ -11,7 +11,7 @@ Rectangle {
     clip: true
 
     ListView {
-        id: listViewTaskList
+        id: listViewNotificationTaskList
         anchors.fill: parent
         anchors.topMargin: 5
 
@@ -24,35 +24,32 @@ Rectangle {
         delegate: NotificationTaskListItem {
             taskName: taskModel.getTaskName(_task_id+"")
 
-            width: listViewTaskList.width
+            width: listViewNotificationTaskList.width
             height: 85
 
-            color: listViewTaskList.currentIndex === index ? "transparent" : (mouseAreaTaskList.containsMouse ? highlightHover : background)
-            backgroundColor: listViewTaskList.currentIndex === index ? "transparent" : (mouseAreaTaskList.containsMouse ? highlightHover : background)
-            separatorColor: listViewTaskList.currentIndex === index ? "transparent" : highlightHover
-            smooth: mouseAreaTaskList.containsMouse
+            color: listViewNotificationTaskList.currentIndex === index ? "transparent" : (mouseAreaNotificationTaskList.containsMouse ? highlightHover : background)
+            backgroundColor: listViewNotificationTaskList.currentIndex === index ? "transparent" : (mouseAreaNotificationTaskList.containsMouse ? highlightHover : background)
+            separatorColor: listViewNotificationTaskList.currentIndex === index ? "transparent" : highlightHover
+            smooth: mouseAreaNotificationTaskList.containsMouse
 
 
             MouseArea {
-                id: mouseAreaTaskList
+                id: mouseAreaNotificationTaskList
                 anchors.left: parent.left
                 anchors.fill: parent
                 hoverEnabled: true
                 onClicked: {
-                    listViewTaskList.currentIndex = index
+                    listViewNotificationTaskList.currentIndex = index
                 }
-
                 onDoubleClicked: {
-
                 }
             }
         }
-
         highlight:
             Rectangle {
             color: highlightSelection
             radius: 3
-            anchors.fill: listViewTaskList.currentItem
+            anchors.fill: listViewNotificationTaskList.currentItem
         }
         highlightFollowsCurrentItem: true
         highlightRangeMode: ListView.NoHighlightRange

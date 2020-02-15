@@ -32,15 +32,15 @@ Item{
             }
         }
 
-//        NotificationAddressBook{
-//            width:parent.width
-//            height:parent.height
+        NotificationAddressBook{
+            width:parent.width
+            height:parent.height
 
-//        }
-//        NotificationMessage{
-//            width:parent.width
-//            height:parent.height
-//        }
+        }
+        NotificationMessage{
+            width:parent.width
+            height:parent.height
+        }
 
         NotificationTask{
             width:parent.width
