@@ -18,18 +18,22 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # 平台判断
-
-if (CMAKE_HOST_WIN32)
-    message("当前系统为WIN32")
-    set(WIN32 1)
-elseif (CMAKE_HOST_APPLE)
-    message("当前系统为APPLE")
-    set(APPLE 1)
-elseif (CMAKE_HOST_UNIX)
-    message("当前系统为UNIX")
+# LINUX平台判断
+if(UNIX AND NOT APPLE)
     set(LINUX 1)
-endif ()
+endif(UNIX AND NOT APPLE)
 
+
+#if (CMAKE_HOST_WIN32)
+#    message("当前系统为WIN32")
+#    set(WIN32 1)
+#elseif (CMAKE_HOST_APPLE)
+#    message("当前系统为APPLE")
+#    set(APPLE 1)
+#elseif (CMAKE_HOST_UNIX)
+#    message("当前系统为UNIX")
+#    set(LINUX 1)
+#endif ()
 
 if(WIN32)
     set(DEVELOPER MS)
@@ -39,7 +43,13 @@ if (NOT WIN32)
     include(cmake/ECMInstallIcons.cmake)
 endif (NOT WIN32)
 
+
+
 find_package(Qt5 COMPONENTS Core Quick Qml Sql Network Widgets WebEngine WebChannel Multimedia LinguistTools QuickControls2 REQUIRED)
+
+if(WIN32)
+    find_package(zlib)
+endif(WIN32)
 
 if (APPLE)
     find_package(Qt5MacExtras REQUIRED)
@@ -65,7 +75,7 @@ elseif (WIN32)
         include_directories(D:/Local/vcpkg/installed/x64-windows/include)
         link_directories(D:/Local/vcpkg/installed/x64-windows/lib)
     endif ()
-elseif (UNIX)
+elseif (LINUX)
     message("配置LINUX VCPKG 路径")
     include_directories(/home/dev/Desktop/vcpkg/installed/x64-linux/include)
     link_directories(/home/dev/Desktop/vcpkg/installed/x64-linux/lib)
@@ -284,9 +294,6 @@ set(app_SRC
         src/model/db/mainleftmenu/MainLeftMenu.cpp
         src/model/db/mainleftmenu/MainLeftMenu.h src/app/AppInfo.h)
 
-#set(TS_FILES app_zh_CN.ts)
-#set(TS_FILES app_en_US.ts)
-
 # 通知代码配置
 if (APPLE)
     set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -framework Foundation -framework Cocoa")
@@ -322,7 +329,6 @@ if (WIN32)
             )
 endif (WIN32)
 
-
 if (LINUX)
     add_executable(${PROJECT_NAME}
             ${app_SRC}
@@ -352,18 +358,18 @@ if (APPLE)
 
 endif (APPLE)
 
-if (UNIX)
+if (LINUX)
     target_link_libraries(${PROJECT_NAME} PRIVATE app-plugininterface)
     target_link_libraries(${PROJECT_NAME} PRIVATE Qt5::DBus)
     target_link_libraries(${PROJECT_NAME} PRIVATE Folly::folly Folly::folly_deps Folly::follybenchmark Folly::folly_test_util)
     target_link_libraries(${PROJECT_NAME} PRIVATE yarpl)
     target_link_libraries(${PROJECT_NAME} PRIVATE ReactiveSocket)
     target_link_libraries(${PROJECT_NAME} PRIVATE rxcpp)
-endif (UNIX)
+endif (LINUX)
 
-if (WINDOWS)
-    IF (DEVELOPER STREQUAL ZN)
-        message("配置WINDOWS本地路径")
+if (WIN32)
+    if (DEVELOPER STREQUAL ZN)
+        message("配置WIN32本地路径")
         target_link_libraries(${PROJECT_NAME} PRIVATE app-plugininterface)
         target_link_libraries(${PROJECT_NAME} PRIVATE Folly::folly Folly::folly_deps Folly::follybenchmark Folly::folly_test_util)
         target_link_libraries(${PROJECT_NAME} PRIVATE fmt::fmt fmt::fmt-header-only)
@@ -371,16 +377,16 @@ if (WINDOWS)
         target_link_libraries(${PROJECT_NAME} PRIVATE rxcpp)
         target_link_libraries(${PROJECT_NAME} PRIVATE D:/thirdparty/lib/yarpl.lib)
         target_link_libraries(${PROJECT_NAME} PRIVATE D:/thirdparty/lib/ReactiveSocket.lib)
-    ELSE (DEVELOPER)
-        message("配置WINDOWS本地路径")
+    else (DEVELOPER)
+        message("配置WIN32本地路径")
         target_link_libraries(${PROJECT_NAME} PRIVATE app-plugininterface)
         target_link_libraries(${PROJECT_NAME} PRIVATE Folly::folly Folly::folly_deps Folly::follybenchmark Folly::folly_test_util)
         target_link_libraries(${PROJECT_NAME} PRIVATE yarpl)
         target_link_libraries(${PROJECT_NAME} PRIVATE ReactiveSocket)
         target_link_libraries(${PROJECT_NAME} PRIVATE rxcpp)
-    ENDIF ()
+    endif ()
 
-endif (WINDOWS)
+endif (WIN32)
 
 qt5_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})
 
