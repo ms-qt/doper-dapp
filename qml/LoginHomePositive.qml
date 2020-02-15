@@ -43,6 +43,8 @@ Item {
         {
             baseLoading.hide()
             TToast.showSuccess("登录成功");
+
+            rootWindow.loginSuccess()
         }
 
         onLoginFailure:{

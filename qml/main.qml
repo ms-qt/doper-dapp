@@ -47,6 +47,9 @@ ApplicationWindow {
         // 分割线颜色
         property color name: "#bdbdbd"
 
+        property bool loginSuccess: false
+
+
     }
 
     property int xMouse
@@ -82,7 +85,20 @@ ApplicationWindow {
         height:rootWindow.global.windowTitleHeight
     }
 
+
+    function loginSuccess()
+    {
+        rootWindow.global.loginSuccess=true;
+        rootWindowWidth=Screen.width/5*1.3
+        rootWindowHeight= Screen.height/6*5
+
+        rootWindow.x=Screen.width/5*3
+        rootWindow.y=100
+
+    }
+
     LoginHome{
+        visible: !rootWindow.global.loginSuccess
         anchors.top: windowTitle.bottom
         width: parent.width
         height: parent.height-windowTitle.height
