@@ -27,14 +27,17 @@
 #include "src/image/QrCodeImageProvider.h"
 
 
-static void registertypes(){
-   // qmlRegisterType<TreeElement>("foo", 1, 0, "TreeElement");
+static void registertypes()
+{
+    // qmlRegisterType<TreeElement>("foo", 1, 0, "TreeElement");
 }
 
-static void connectToDatabase()
+static void intiDatabase()
 {
+    // 初始化数据库
     QSqlDatabase database = QSqlDatabase::database();
-    if (!database.isValid()) {
+    if (!database.isValid())
+    {
         database = QSqlDatabase::addDatabase("QSQLITE");
         if (!database.isValid())
             qFatal("Cannot add database: %s", qPrintable(database.lastError().text()));
@@ -44,11 +47,13 @@ static void connectToDatabase()
     if (!writeDir.mkpath("."))
         qFatal("Failed to create writable directory at %s", qPrintable(writeDir.absolutePath()));
 
-    // Ensure that we have a writable location on all devices.
-    const QString fileName = writeDir.absolutePath() + "/chat-database.sqlite3";
-    // When using the SQLite driver, open() will create the SQLite database if it doesn't exist.
+    const QString fileName = writeDir.absolutePath() + "/app-database.sqlite3";
+
+    qDebug() << "数据库位置 :  " << fileName;
+
     database.setDatabaseName(fileName);
-    if (!database.open()) {
+    if (!database.open())
+    {
         qFatal("Cannot open database: %s", qPrintable(database.lastError().text()));
         QFile::remove(fileName);
     }
@@ -81,6 +86,11 @@ int main(int argc, char *argv[])
     app.setApplicationName(APP_NAME);
     app.setWindowIcon(QIcon(":/assets/image/icon.png"));
 
+
+    // 初始化数据库
+    intiDatabase();
+
+
     // rxqt loop
     rxqt::run_loop rxqt_run_loop;
     // main线程
@@ -90,7 +100,7 @@ int main(int argc, char *argv[])
 
     // 注册表情
     qRegisterMetaTypeStreamOperators<Emoji>();
-    
+
     // 初始化WebEngine
     QtWebEngine::initialize();
 

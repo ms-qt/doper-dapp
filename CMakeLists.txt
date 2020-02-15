@@ -200,7 +200,6 @@ set(app_SRC
 
         src/db/CertificateDB.cpp
         src/db/CertificateDB.h
-        src/db/CertificateBean.cpp
         src/db/CertificateBean.h
 
 
@@ -292,7 +291,13 @@ set(app_SRC
         src/app/base/BaseQQuickView.cpp
         src/app/base/BaseQQuickView.h
         src/model/db/mainleftmenu/MainLeftMenu.cpp
-        src/model/db/mainleftmenu/MainLeftMenu.h src/app/AppInfo.h)
+        src/model/db/mainleftmenu/MainLeftMenu.h src/app/AppInfo.h
+
+        src/local/db/CertificateBean.h
+        src/db/CertificateDB.cpp
+        src/db/CertificateDB.h
+
+        src/proxy/ui/UIProxy.cpp src/proxy/ui/UIProxy.h)
 
 # 通知代码配置
 if (APPLE)
