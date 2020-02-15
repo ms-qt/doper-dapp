@@ -19,9 +19,9 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # 平台判断
 # LINUX平台判断
-if(UNIX AND NOT APPLE)
+if (UNIX AND NOT APPLE)
     set(LINUX 1)
-endif(UNIX AND NOT APPLE)
+endif (UNIX AND NOT APPLE)
 
 
 #if (CMAKE_HOST_WIN32)
@@ -35,21 +35,20 @@ endif(UNIX AND NOT APPLE)
 #    set(LINUX 1)
 #endif ()
 
-if(WIN32)
+if (WIN32)
     set(DEVELOPER MS)
-endif(WIN32)
+endif (WIN32)
 
 if (NOT WIN32)
     include(cmake/ECMInstallIcons.cmake)
 endif (NOT WIN32)
 
 
-
 find_package(Qt5 COMPONENTS Core Quick Qml Sql Network Widgets WebEngine WebChannel Multimedia LinguistTools QuickControls2 REQUIRED)
 
-if(WIN32)
+if (WIN32)
     find_package(zlib)
-endif(WIN32)
+endif (WIN32)
 
 if (APPLE)
     find_package(Qt5MacExtras REQUIRED)
@@ -71,7 +70,7 @@ elseif (WIN32)
         message("配置WIN32 VCPKG 路径")
         include_directories(D:/thirdparty/include)
     else (DEVELOPER)
-         message("配置WIN32 VCPKG 路径")
+        message("配置WIN32 VCPKG 路径")
         include_directories(D:/Local/vcpkg/installed/x64-windows/include)
         link_directories(D:/Local/vcpkg/installed/x64-windows/lib)
     endif ()
@@ -82,7 +81,6 @@ elseif (LINUX)
 endif ()
 
 ##############################################
-
 
 
 if (APPLE)
@@ -167,86 +165,96 @@ set(app_SRC
         src/logger/Logger.cpp
         src/logger/Logger.h
         src/logger/LoggerTemplate.h
+
+        src/utils/MD5Utils.h
         src/utils/SystemUtils.cpp
         src/utils/SystemUtils.h
         src/systemfeatures/Clipboard.cpp
         src/systemfeatures/Clipboard.h
-        src/im/IM.cpp
-        src/im/IM.h
-        src/im/IMProxy.cpp
-        src/im/IMProxy.h
-        src/im/IMModel.cpp
-        src/im/IMModel.h
 
-        src/image/QrCodeImageProvider.h
+        #        src/im/IM.cpp
+        #        src/im/IM.h
+        #        src/im/IMProxy.cpp
+        #        src/im/IMProxy.h
+        #        src/im/IMModel.cpp
+        #        src/im/IMModel.h
+
+
         src/qrcode/QRCodeGenerator.cpp
         src/qrcode/QRCodeGenerator.h
-        src/utils/MD5Utils.h
+
+        src/image/ImageProvider.h
+        src/image/ImageProvider.cpp
+        src/image/QrCodeImageProvider.h
+        src/image/ImageAsyncImageProvider.cpp
+        src/image/ImageAsyncImageProvider.h
+
+
         src/data/CommonData.h
         src/utils/UUIDUtils.h
 
 
-        src/app/MainQuickView.h
-        src/app/MainQuickView.cpp
-        src/app/LoginQuickView.cpp
-        src/app/LoginQuickView.h
-        src/app/NotificationQuickView.cpp
-        src/app/NotificationQuickView.h
-        src/app/AppQuickViewManager.h
-        src/app/AppQuickViewManager.cpp
-        src/net/NetWorkManager.cpp
-        src/net/NetWorkManager.h
+        #        src/app/MainQuickView.h
+        #        src/app/MainQuickView.cpp
+        #        src/app/LoginQuickView.cpp
+        #        src/app/LoginQuickView.h
+        #        src/app/NotificationQuickView.cpp
+        #        src/app/NotificationQuickView.h
+        #        src/app/AppQuickViewManager.h
+        #        src/app/AppQuickViewManager.cpp
+        #        src/net/NetWorkManager.cpp
+        #        src/net/NetWorkManager.h
+        #
+        #
+        #        src/db/CertificateDB.cpp
+        #        src/db/CertificateDB.h
+        #        src/db/CertificateBean.h
 
 
-        src/db/CertificateDB.cpp
-        src/db/CertificateDB.h
-        src/db/CertificateBean.h
-
-
-        src/model/db/message/MessagTextModel.cpp
-        src/model/db/message/MessagTextModel.h
-        src/model/db/message/MessageListModel.cpp
-        src/model/db/message/MessageListModel.h
-
-        src/model/db/organization/OrganizationModel.cpp
-        src/model/db/organization/OrganizationModel.h
-        src/model/db/organization/OrganizationDepartmentModel.cpp
-        src/model/db/organization/OrganizationDepartmentModel.h
-        src/model/db/organization/OrganizationMemberModel.cpp
-        src/model/db/organization/OrganizationMemberModel.h
-
-        src/model/db/room/RoomP2PModel.cpp
-        src/model/db/room/RoomP2PModel.h
-        src/model/db/room/RoomGroupModel.cpp
-        src/model/db/room/RoomGroupModel.h
-        src/model/db/room/RoomTaskModel.cpp
-        src/model/db/room/RoomTaskModel.h
-        src/model/db/room/RoomDiscussionGroupModel.cpp
-        src/model/db/room/RoomDiscussionGroupModel.h
-        src/model/db/room/RoomMenberModel.cpp
-        src/model/db/room/RoomMenberModel.h
-        src/model/db/room/RoomMenberModel.cpp
-        src/model/db/room/RoomMenberModel.h
-        src/model/db/room/RoomListModel.cpp
-        src/model/db/room/RoomListModel.h
-
-        src/model/db/task/TaskModel.cpp
-        src/model/db/task/TaskModel.h
-        src/model/db/task/TaskListModel.cpp
-        src/model/db/task/TaskListModel.h
-
-        src/model/db/user/UserModel.cpp
-        src/model/db/user/UserModel.h
+        #        src/model/db/message/MessagTextModel.cpp
+        #        src/model/db/message/MessagTextModel.h
+        #        src/model/db/message/MessageListModel.cpp
+        #        src/model/db/message/MessageListModel.h
+        #
+        #        src/model/db/organization/OrganizationModel.cpp
+        #        src/model/db/organization/OrganizationModel.h
+        #        src/model/db/organization/OrganizationDepartmentModel.cpp
+        #        src/model/db/organization/OrganizationDepartmentModel.h
+        #        src/model/db/organization/OrganizationMemberModel.cpp
+        #        src/model/db/organization/OrganizationMemberModel.h
+        #
+        #        src/model/db/room/RoomP2PModel.cpp
+        #        src/model/db/room/RoomP2PModel.h
+        #        src/model/db/room/RoomGroupModel.cpp
+        #        src/model/db/room/RoomGroupModel.h
+        #        src/model/db/room/RoomTaskModel.cpp
+        #        src/model/db/room/RoomTaskModel.h
+        #        src/model/db/room/RoomDiscussionGroupModel.cpp
+        #        src/model/db/room/RoomDiscussionGroupModel.h
+        #        src/model/db/room/RoomMenberModel.cpp
+        #        src/model/db/room/RoomMenberModel.h
+        #        src/model/db/room/RoomMenberModel.cpp
+        #        src/model/db/room/RoomMenberModel.h
+        #        src/model/db/room/RoomListModel.cpp
+        #        src/model/db/room/RoomListModel.h
+        #
+        #        src/model/db/task/TaskModel.cpp
+        #        src/model/db/task/TaskModel.h
+        #        src/model/db/task/TaskListModel.cpp
+        #        src/model/db/task/TaskListModel.h
+        #
+        #        src/model/db/user/UserModel.cpp
+        #        src/model/db/user/UserModel.h
 
 
         src/tool/ThreadTool.cpp
         src/tool/ThreadTool.h
 
-        src/inter/callback/ICallBack.h
-        src/im/LoginCallBack.cpp
-        src/im/LoginCallBack.h
-        src/app/UIModelProxy.cpp
-        src/app/UIModelProxy.h
+        #        src/inter/callback/ICallBack.h
+        #        src/im/LoginCallBack.cpp
+        #        src/im/LoginCallBack.h
+        #        src/app/UIModelProxy.cpp
+        #        src/app/UIModelProxy.h
 
         src/networkserver/HttpClient.h
         src/networkserver/HttpRequest.h
@@ -272,7 +280,6 @@ set(app_SRC
         src/TaoJsonModel/TaoJsonTreeModel.cpp
 
 
-
         src/model/db/message/MessageBeanText.cpp
         src/model/db/message/MessageBeanText.h
 
@@ -280,24 +287,27 @@ set(app_SRC
         src/emoji/emojimodel.cpp
         src/emoji/emojimodel.h
 
-        src/systemfeatures/imageclipboard.cpp
-        src/systemfeatures/imageclipboard.h
+#        src/systemfeatures/imageclipboard.cpp
+#        src/systemfeatures/imageclipboard.h
 
-        src/image/ImageProvider.h
-        src/image/ImageProvider.cpp
 
-        src/image/ImageAsyncImageProvider.cpp
-        src/image/ImageAsyncImageProvider.h
-        src/app/base/BaseQQuickView.cpp
-        src/app/base/BaseQQuickView.h
-        src/model/db/mainleftmenu/MainLeftMenu.cpp
-        src/model/db/mainleftmenu/MainLeftMenu.h src/app/AppInfo.h
+#        src/app/base/BaseQQuickView.cpp
+#        src/app/base/BaseQQuickView.h
+#        src/model/db/mainleftmenu/MainLeftMenu.cpp
+#        src/model/db/mainleftmenu/MainLeftMenu.h
+
+        src/app/AppInfo.h
 
         src/local/db/CertificateBean.h
         src/db/CertificateDB.cpp
         src/db/CertificateDB.h
 
-        src/proxy/ui/UIProxy.cpp src/proxy/ui/UIProxy.h)
+        src/proxy/ui/UIProxy.cpp
+        src/proxy/ui/UIProxy.h
+
+
+
+        )
 
 # 通知代码配置
 if (APPLE)

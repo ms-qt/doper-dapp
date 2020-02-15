@@ -91,5 +91,6 @@
         <file>qml/FieldUsername.qml</file>
         <file>qml/FieldPassword.qml</file>
         <file>qml/Setting.qml</file>
+        <file>qml/Tray.qml</file>
     </qresource>
 </RCC>

@@ -59,15 +59,15 @@ CertificateBean *CertificateDB::queryLaster()
         bool auto_login = result.value(8).toBool();
         int time = result.value(9).toInt();
 
-        certificateBean->setId(id);
-        certificateBean->setUserId(userid);
-        certificateBean->setUsername(username);
-        certificateBean->setPassword(password);
-        certificateBean->setAccessToken(access_token);
-        certificateBean->setRefreshToken(refresh_token);
-        certificateBean->setAutoLogin(auto_login);
-        certificateBean->setSavePassword(save_password);
-        certificateBean->setTime(time);
+        certificateBean->_id = (id);
+        certificateBean->_user_id = (userid);
+        certificateBean->_username = (username);
+        certificateBean->_password = (password);
+        certificateBean->_access_token = (access_token);
+        certificateBean->_refresh_token = (refresh_token);
+        certificateBean->_auto_login = (auto_login);
+        certificateBean->_save_password = (save_password);
+        certificateBean->_time = (time);
     }
     return certificateBean;
 
@@ -121,14 +121,14 @@ bool CertificateDB::userIdCheckUserExists(QString userid)
 
 void CertificateDB::insert(CertificateBean *certificateBean)
 {
-    QString userId = certificateBean->getUserId();
-    QString username = certificateBean->getUsername();
-    QString password = certificateBean->getPassword();
-    QString accessToken = certificateBean->getAccessToken();
-    QString loginType = certificateBean->getLoginType();
-    QString refreshToken = certificateBean->getRefreshToken();
-    bool autoLogin = certificateBean->isAutoLogin();
-    bool savePassword = certificateBean->isSavePassword();
+    QString userId = certificateBean->userid();
+    QString username = certificateBean->username();
+    QString password = certificateBean->password();
+    QString accessToken = certificateBean->access_token();
+    QString loginType = certificateBean->login_type();
+    QString refreshToken = certificateBean->refresh_token();
+    bool autoLogin = certificateBean->auto_login();
+    bool savePassword = certificateBean->save_password();
 
 
     QString sql;
@@ -138,17 +138,22 @@ void CertificateDB::insert(CertificateBean *certificateBean)
         // 存在更新
 
 
-        sql="UPDATE _certificate SET "
-            "                        _user_id='"+userId+"', "
-            "                        _username='"+username+"', "
-            "                        _password='"+password+"', "
-            "                        _access_token='"+accessToken+"', "
-            "                        _refresh_token='"+refreshToken+"', "
-            "                        _login_type='"+loginType+"', "
-            "                        _save_password="+QString::number(savePassword)+", "
-            "                        _auto_login="+QString::number(autoLogin)+", "
-            "                        _time="+QString::number(QDateTime::currentDateTime().toTime_t())+" "
-            "                        WHERE _username = '"+username+"'";
+        sql = "UPDATE _certificate SET "
+              "                        _user_id='" + userId + "', "
+                                                              "                        _username='" + username + "', "
+                                                                                                                 "                        _password='" +
+              password + "', "
+                         "                        _access_token='" + accessToken + "', "
+                                                                                   "                        _refresh_token='" +
+              refreshToken + "', "
+                             "                        _login_type='" + loginType + "', "
+                                                                                   "                        _save_password=" +
+              QString::number(savePassword) + ", "
+                                              "                        _auto_login=" + QString::number(autoLogin) + ", "
+                                                                                                                    "                        _time=" +
+              QString::number(QDateTime::currentDateTime().toTime_t()) + " "
+                                                                         "                        WHERE _username = '" +
+              username + "'";
 
     } else
     {

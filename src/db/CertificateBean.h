@@ -132,7 +132,7 @@ public:
         return _access_token;
     }
 
-    const QString &refresg_token() const
+    const QString &refresh_token() const
     {
         return _refresh_token;
     }

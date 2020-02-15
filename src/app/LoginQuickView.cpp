@@ -65,10 +65,10 @@ LoginQuickView::LoginQuickView()
     CertificateBean *certificateBean = certificateDb->queryLaster();
     this->rootContext()->setContextProperty("certificateBean", certificateBean);
 
-    QString username = certificateBean->getUsername();
-    QString password = certificateBean->getPassword();
-    bool save_password = certificateBean->isSavePassword();
-    bool auto_login = certificateBean->isAutoLogin();
+    QString username = certificateBean->username();
+    QString password = certificateBean->password();
+    bool save_password = certificateBean->save_password();
+    bool auto_login = certificateBean->auto_login();
 
 
     // 登录信息回显

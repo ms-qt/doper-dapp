@@ -37,14 +37,14 @@ void LoginCallBack::onSuccess(std::string res)
 
         CertificateBean *certificateBean = new CertificateBean();
 
-        certificateBean->setUsername(QString::fromStdString(username));
-        certificateBean->setPassword(QString::fromStdString(password));
-        certificateBean->setUserId(QString::fromStdString(userid));
-        certificateBean->setAccessToken(QString::fromStdString(access_token));
-        certificateBean->setRefreshToken(QString::fromStdString(refresh_token));
-        certificateBean->setAutoLogin(auto_login);
-        certificateBean->setSavePassword(save_password);
-        certificateBean->setLoginType("login-username");
+        certificateBean->_username = (QString::fromStdString(username));
+        certificateBean->_password = (QString::fromStdString(password));
+        certificateBean->_user_id = (QString::fromStdString(userid));
+        certificateBean->_access_token = (QString::fromStdString(access_token));
+        certificateBean->_refresh_token = (QString::fromStdString(refresh_token));
+        certificateBean->_auto_login = (auto_login);
+        certificateBean->_save_password = (save_password);
+        certificateBean->_login_type = ("login-username");
 
         CertificateDB *certificateDb = new CertificateDB();
         certificateDb->insert(certificateBean);

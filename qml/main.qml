@@ -67,20 +67,9 @@ ApplicationWindow {
 
 
 
-    SystemTrayIcon {
-        visible: true
-        icon.source: "qrc:/images/img_icon_blue.png"
-        tooltip: "北斗IM"
 
+    Tray{
 
-        menu: Menu {
-            MenuItem {
-                text: qsTr("退出")
-                onTriggered: {
-                    Qt.quit()
-                }
-            }
-        }
     }
 
 
