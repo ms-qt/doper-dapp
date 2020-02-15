@@ -2,6 +2,10 @@ import QtQuick 2.0
 import QtGraphicalEffects 1.0
 
 
+import MessageListModel 1.0
+import RoomListModel 1.0
+
+
 Rectangle {
     property color background: "#EBEDEE"
     property color highlightHover: "#DDE0DF"
@@ -9,6 +13,16 @@ Rectangle {
 
     color: background
     clip: true
+
+
+    MessageListModel{
+        id:messageListModelNotificationMessageList
+    }
+
+    RoomListModel{
+        id:roomlistModelNotificationMessageList
+    }
+
 
     ListView {
         id: listViewNotificationMessageList
@@ -20,15 +34,15 @@ Rectangle {
         maximumFlickVelocity: 2500
         snapMode: ListView.SnapToItem
 
-        model:  messageListModel
+        model:  messageListModelNotificationMessageList
         delegate: NotificationMessageListItem {
 
-            roomName: roomListModel.getRoomName(_room_id)
-            roomAvatar: roomListModel.getRoomAvatar(_room_id)
-            lasterMessage: messageListModel.getLasterMessageText(_room_id).textContent
-            online: _room_type=='_p2p' ? true : false
-            time : Qt.formatDateTime(new Date(messageListModel.getLasterMessageText(_room_id).time), "hh:mm")
-            roomType:_room_type
+            roomName: roomlistModelNotificationMessageList.getRoomName(_room_id)
+            //roomAvatar: roomlistModelNotificationMessageList.getRoomAvatar(_room_id)
+            //lasterMessage: messageListModelNotificationMessageList.getLasterMessageText(_room_id).textContent
+            //online: _room_type=='_p2p' ? true : false
+            //time : Qt.formatDateTime(new Date(messageListModelNotificationMessageList.getLasterMessageText(_room_id).time), "hh:mm")
+            //roomType:_room_type
             width: listViewNotificationMessageList.width
             height: 85
             color: listViewNotificationMessageList.currentIndex === index ? "transparent" : (mouseAreaNotificationMessageList.containsMouse ? highlightHover : background)
@@ -45,7 +59,7 @@ Rectangle {
                     listViewNotificationMessageList.currentIndex = index
                 }
                 onDoubleClicked: {
-                    messageListModel.enterRoom(_room_id)
+
                 }
             }
         }

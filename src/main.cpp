@@ -153,20 +153,20 @@ int main(int argc, char *argv[])
     CertificateDB *certificateDb = new CertificateDB();
     engine.rootContext()->setContextProperty("certificateDb", certificateDb);
 
-    UserModel *userModel = new UserModel();
-    engine.rootContext()->setContextProperty("userModel", userModel);
-
-    TaskModel *taskModel = new TaskModel();
-    engine.rootContext()->setContextProperty("taskModel", taskModel);
-
-    TaskListModel *taskListModel = new TaskListModel();
-    engine.rootContext()->setContextProperty("taskListModel", taskListModel);
-
-    MessageListModel *messageListModel = new MessageListModel();
-    engine.rootContext()->setContextProperty("messageListModel", messageListModel);
-
-    RoomListModel *roomListModel = new RoomListModel();
-    engine.rootContext()->setContextProperty("roomListModel", roomListModel);
+//    UserModel *userModel = new UserModel();
+//    engine.rootContext()->setContextProperty("userModel", userModel);
+//
+//    TaskModel *taskModel = new TaskModel();
+//    engine.rootContext()->setContextProperty("taskModel", taskModel);
+//
+//    TaskListModel *taskListModel = new TaskListModel();
+//    engine.rootContext()->setContextProperty("taskListModel", taskListModel);
+//
+//    MessageListModel *messageListModel = new MessageListModel();
+//    engine.rootContext()->setContextProperty("messageListModel", messageListModel);
+//
+//    RoomListModel *roomListModel = new RoomListModel();
+//    engine.rootContext()->setContextProperty("roomListModel", roomListModel);
 
 
     engine.load(url);

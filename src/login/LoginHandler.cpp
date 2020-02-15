@@ -32,6 +32,9 @@ void LoginHandler::login(QString username, QString password, bool savePassword, 
                                              std::cout << " sub : " << std::this_thread::get_id() << std::endl;
                                              subscriber.on_next(i);
                                              QThread::sleep(1);
+
+
+
                                          }
                                      })
             .subscribe_on(rxcpp::observe_on_event_loop())
@@ -43,20 +46,20 @@ void LoginHandler::login(QString username, QString password, bool savePassword, 
                         if (i == 2)
                         {
 
-                            CertificateBean *certificateBean = new CertificateBean();
-                            CertificateDB *certificateDb = new CertificateDB();
-
-                            certificateBean->_username = username;
-                            certificateBean->_password = password;
-                            certificateBean->_save_password = savePassword;
-                            certificateBean->_auto_login = autoLogin;
-                            certificateBean->_access_token = "test_access_token";
-                            certificateBean->_refresh_token = "test_refresg_token";
-                            certificateBean->_user_id="maohuawei";
-                            certificateBean->_login_type="login-username";
-
-
-                            certificateDb->insert(certificateBean);
+//                            CertificateBean *certificateBean = new CertificateBean();
+//                            CertificateDB *certificateDb = new CertificateDB();
+//
+//                            certificateBean->_username = username;
+//                            certificateBean->_password = password;
+//                            certificateBean->_save_password = savePassword;
+//                            certificateBean->_auto_login = autoLogin;
+//                            certificateBean->_access_token = "test_access_token";
+//                            certificateBean->_refresh_token = "test_refresg_token";
+//                            certificateBean->_user_id="maohuawei";
+//                            certificateBean->_login_type="login-username";
+//
+//
+//                            certificateDb->insert(certificateBean);
 
                             emit loginSuccess();
                         }

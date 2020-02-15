@@ -5,11 +5,7 @@ import QtQuick.Window 2.12
 import QtQuick.Layouts 1.3
 
 
-import UserModel 1.0
-import MessageListModel 1.0
-import RoomListModel 1.0
-import TaskListModel 1.0
-import TaskModel 1.0
+
 
 
 import Toou2D 1.0
@@ -26,28 +22,6 @@ Item {
         height: parent.height
         color: "#ECF5FF"
     }
-
-//    UserModel{
-//        id:userModel
-//    }
-
-//    MessageListModel{
-//        id:messageListModel
-//    }
-
-//    RoomListModel{
-//        id:roomListModel
-//    }
-
-
-//    TaskListModel{
-//        id:taskListModel
-//    }
-
-//    TaskModel{
-//        id:taskModel
-//    }
-
 
     // 头部区域高度
     property int notificationHomeHeaderHeight: 100

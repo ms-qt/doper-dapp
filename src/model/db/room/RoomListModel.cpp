@@ -63,7 +63,7 @@ QHash<int, QByteArray> RoomListModel::roleNames() const
 
 QString RoomListModel::getRoomType(QString roomId)
 {
-    qDebug() << "RoomListModel::getRoomType";
+    qDebug() << "获取房间类型"<<roomId;
     QSqlQuery result;
     QString sql = "SELECT _room_type FROM _room_list WHERE _room_id = '" + roomId + "'";
     qDebug() << "sql : " << sql;

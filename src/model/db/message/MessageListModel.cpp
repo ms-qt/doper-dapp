@@ -75,7 +75,7 @@ void MessageListModel::enterRoom(QString roomId)
 
 QString MessageListModel::getRoomLasterMessageType(QString roomId)
 {
-    qDebug() << " MessageListModel::getRoomLasterMessageType";
+    qDebug() << " 获取房间最后一条信息类型"<<roomId;
     QString sql =
             "SELECT _message_type FROM  _message_list WHERE _room_id = '" + roomId + "' ORDER BY _time DESC LIMIT 1";
     qDebug() << "sql : " << sql;
@@ -98,7 +98,7 @@ QString MessageListModel::getRoomLasterMessageType(QString roomId)
 QString MessageListModel::getRoomLasterMessage(QString roomId)
 {
 
-    qDebug() << " MessageListModel::getRoomLasterMessage";
+    qDebug() << " 获取房间最后一条信息"<<roomId;
 
     QString messageType = getRoomLasterMessageType(roomId);
 

@@ -1,14 +1,28 @@
 import QtQuick 2.0
 import QtGraphicalEffects 1.0
 
+import TaskListModel 1.0
+import TaskModel 1.0
+
 Rectangle {
     id: rectangleTaskListRoot
+
     property color background: "#EBEDEE"
     property color highlightHover: "#DDE0DF"
     property color highlightSelection: "#8D8E8E"
 
     color: background
     clip: true
+
+
+    TaskModel{
+        id:taskModelNotificationTaskList
+    }
+
+    TaskListModel{
+        id:taskListModelNotificationTaskList
+
+    }
 
     ListView {
         id: listViewNotificationTaskList
@@ -20,9 +34,9 @@ Rectangle {
         maximumFlickVelocity: 2500
         snapMode: ListView.SnapToItem
 
-        model:taskListModel
+        model:taskListModelNotificationTaskList
         delegate: NotificationTaskListItem {
-            taskName: taskModel.getTaskName(_task_id+"")
+            //taskName: taskModelNotificationTaskList.getTaskName(_task_id)
 
             width: listViewNotificationTaskList.width
             height: 85

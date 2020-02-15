@@ -82,7 +82,7 @@ QHash<int, QByteArray> TaskModel::roleNames() const
 
 QString TaskModel::getTaskName(QString taskId)
 {
-    qDebug() << " getTaskName  : " << taskId;
+    qDebug() << " 获取任务名称  : " << taskId;
 
     QSqlQuery result;
 

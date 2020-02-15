@@ -3,11 +3,23 @@ import QtQuick.Controls 2.12
 import QtQuick.Layouts 1.1
 import QtQuick.Controls.Material 2.3
 
+import UserModel 1.0
+
+
+
 // 通知面板头部
 Rectangle{
     width: parent.width
     height: parent.height
     id:rectangleNotificationPanelHomeHeader
+
+
+    UserModel{
+
+        id:userModelNotificationHomeHeader
+
+    }
+
 
     Row{
         width: parent.width
@@ -28,7 +40,7 @@ Rectangle{
                     width: parent.height/2
                     height: parent.height/2
 
-                    source:"image://imageAsync/"+userModel.getAvatar(rootWindow.global.userid)
+                    source:"image://imageAsync/"+userModelNotificationHomeHeader.getAvatar(rootWindow.global.userid)
                     anchors.centerIn: parent
                 }
             }
@@ -43,7 +55,7 @@ Rectangle{
                 topPadding: 10
                 anchors.leftMargin: 20
                 anchors.topMargin: 20
-                text: qsTr(userModel.getName(rootWindow.global.userid))
+                text: qsTr(userModelNotificationHomeHeader.getName(rootWindow.global.userid))
                 font.pixelSize: 25
                 font.bold: true
                 font.family: "Microsoft YaHei Mono"
@@ -55,7 +67,7 @@ Rectangle{
                 anchors.top: textNotificationPanelHomeHeaderName.bottom
                 anchors.leftMargin: 20
                 anchors.topMargin: 20
-                signatureText:userModel.getSignature(rootWindow.global.userid)==""?"点击修改签名":userModel.getSignature(rootWindow.global.userid)
+                signatureText:userModelNotificationHomeHeader.getSignature(rootWindow.global.userid)==""?"点击修改签名":userModelNotificationHomeHeader.getSignature(rootWindow.global.userid)
             }
         }
     }
