@@ -104,12 +104,16 @@ int main(int argc, char *argv[])
                      }, Qt::QueuedConnection);
 
 
+    // qml 路径
     engine.addImportPath("qrc:/qml");
 
+    // 同步加载图片
     ImageProvider *imageProvider = new ImageProvider(QQmlImageProviderBase::Image);
     engine.addImageProvider("imageSync", imageProvider);
+    // 异步加载
     AsyncImageProvider *asyncImageProvider = new AsyncImageProvider();
     engine.addImageProvider("imageAsyn", asyncImageProvider);
+    // 二维码
     QrCodeImageProvider *qrCodeImageProvider = new QrCodeImageProvider();
     engine.addImageProvider("imageQrCode", qrCodeImageProvider);
 

@@ -12,11 +12,11 @@ ApplicationWindow {
     property int rootWindowHeight : 600
 
     visible: true
-
     width: rootWindowWidth
     height: rootWindowHeight
 
-    flags: Qt.FramelessWindowHint
+    flags: Qt.Window | Qt.FramelessWindowHint
+
 
     T2DWorld{
         appStartupTheme: "Solarized"
@@ -75,9 +75,6 @@ ApplicationWindow {
         width: parent.width
         height: parent.height-windowTitle.height
     }
-
-
-
 
     // 加载中
     BaseLoading{

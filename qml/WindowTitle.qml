@@ -33,7 +33,7 @@ Item {
         MouseArea{
             anchors.fill: parent
             onClicked: {
-               rootWindow.close()
+                rootWindow.close()
             }
 
             hoverEnabled: true
@@ -116,7 +116,8 @@ Item {
         MouseArea{
             anchors.fill: parent
             onClicked: {
-                rootWindow.    showMinimized()
+                console.log("最小化")
+                rootWindow.showMinimized()
             }
 
             hoverEnabled: true
