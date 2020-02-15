@@ -43,9 +43,9 @@ if (APPLE)
     find_package(Qt5DBus REQUIRED)
 endif (APPLE)
 
-if (LINUX)
+if (UNIX)
     find_package(Qt5DBus REQUIRED)
-endif (LINUX)
+endif (UNIX)
 
 ##############################################
 
@@ -85,11 +85,11 @@ elseif (WIN32)
         link_directories("D:/Local/libs/lib")
     endif ()
 
-elseif (LINUX)
+elseif (UNIX)
     message("配置LINUX本地路径")
     include_directories("/usr/local/include")
     link_directories("/usr/local/lib")
-endif ()
+endif (UNIX)
 
 ##############################################
 

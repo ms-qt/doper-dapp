@@ -36,8 +36,6 @@ ApplicationWindow {
 
     }
 
-
-
     property int xMouse
     property int yMouse
 
@@ -59,8 +57,6 @@ ApplicationWindow {
     About{
         id:about
     }
-
-
 
 
     // 标题
@@ -98,5 +94,4 @@ ApplicationWindow {
             baseLoading.visible=false
         }
     }
-
 }

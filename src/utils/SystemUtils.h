@@ -25,7 +25,11 @@
 class SystemUtils : public QObject
 {
 
+    Q_OBJECT
 public:
+
+
+    static QString getOS();
 
     static QString localmachineName();
 

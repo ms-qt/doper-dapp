@@ -6,6 +6,17 @@
 #include "SystemUtils.h"
 
 
+QString SystemUtils::getOS()
+{
+#if defined(Q_OS_WIN32)
+    return "WIN32";
+#elif defined(Q_OS_UNIX)
+    return "UNIX";
+#elif defined(Q_OS_OSX)
+    return "MACOS";
+#endif
+}
+
 QString SystemUtils::localmachineName()
 {
     QString machineName = QHostInfo::localHostName();
