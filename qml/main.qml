@@ -65,22 +65,15 @@ ApplicationWindow {
         }
     }
 
-
-
-
+    // 托盘
     Tray{
 
     }
-
-
-
-
 
     // 关于
     About{
         id:about
     }
-
 
     // 标题
     WindowTitle{

@@ -28,13 +28,55 @@ SystemTrayIcon {
                 Qt.quit()
             }
         }
-
+        MenuSeparator{
+        }
         MenuItem {
-            visible: false
             text: qsTr("在线")
             onTriggered: {
                 Qt.quit()
             }
         }
+        MenuItem {
+            text: qsTr("离线")
+            onTriggered: {
+                Qt.quit()
+            }
+        }
+        MenuItem {
+            text: qsTr("离开")
+            onTriggered: {
+                Qt.quit()
+            }
+        }
+        MenuItem {
+            text: qsTr("忙碌")
+            onTriggered: {
+                Qt.quit()
+            }
+        }
+        MenuItem {
+            text: qsTr("隐身")
+            onTriggered: {
+                Qt.quit()
+            }
+        }
+
+        MenuSeparator{
+        }
+
+        MenuItem {
+            text: qsTr("打开导航面板")
+            onTriggered: {
+                Qt.quit()
+            }
+        }
+
+        MenuItem {
+            text: qsTr("打开主控面板")
+            onTriggered: {
+                Qt.quit()
+            }
+        }
+
     }
 }

@@ -25,7 +25,6 @@ CertificateDB::CertificateDB()
     }
 }
 
-
 // 查询最后一条数据
 CertificateBean *CertificateDB::queryLaster()
 {

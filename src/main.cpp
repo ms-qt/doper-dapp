@@ -26,10 +26,14 @@
 // 二维码
 #include "src/image/QrCodeImageProvider.h"
 
+#include "src/local/db/CertificateDB.h"
+#include "src/local/db/CertificateBean.h"
+
 
 static void registertypes()
 {
-    // qmlRegisterType<TreeElement>("foo", 1, 0, "TreeElement");
+    qmlRegisterType<CertificateBean>("CertificateBean", 1, 0, "CertificateBean");
+    qmlRegisterType<CertificateDB>("CertificateDB", 1, 0, "CertificateDB");
 }
 
 static void intiDatabase()
@@ -126,6 +130,10 @@ int main(int argc, char *argv[])
     // 二维码
     QrCodeImageProvider *qrCodeImageProvider = new QrCodeImageProvider();
     engine.addImageProvider("imageQrCode", qrCodeImageProvider);
+
+    // 用户信息
+    CertificateDB *certificateDb = new CertificateDB();
+    engine.rootContext()->setContextProperty("certificateDb",certificateDb);
 
     engine.load(url);
     return app.exec();

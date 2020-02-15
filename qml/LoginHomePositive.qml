@@ -13,6 +13,9 @@ import QtQuick.Layouts 1.3
 
 import Toou2D 1.0
 
+
+import CertificateDB 1.0
+
 // 登录正面
 
 
@@ -21,6 +24,17 @@ Item {
     width: parent.width
     height: parent.height
     id:itemLoginHomePositiveFrom
+
+    CertificateDb{
+        id:certificateDb
+    }
+
+
+    Component.onCompleted: {
+
+        fieldUsername.usernametext=certificateDb.queryLaster().username
+        fieldPassword.password=certificateDb.queryLaster().password
+    }
 
 
     //Logo
@@ -35,6 +49,7 @@ Item {
     }
 
     FieldUsername{
+
         anchors.top: imageLoginHomeLogo.bottom
         anchors.topMargin: 30
         anchors.horizontalCenter: parent.horizontalCenter
