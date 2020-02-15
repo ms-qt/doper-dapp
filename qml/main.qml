@@ -68,6 +68,18 @@ ApplicationWindow {
         }
     }
 
+
+    function doMinimized() {
+        flags = Qt.Window | Qt.WindowFullscreenButtonHint | Qt.CustomizeWindowHint | Qt.WindowMinimizeButtonHint
+        visibility = Window.Minimized
+    }
+    onVisibilityChanged: {
+        if (Window.Minimized !== visibility) {
+            flags = Qt.Window | Qt.FramelessWindowHint
+        }
+    }
+
+
     // 托盘
     Tray{
 
@@ -94,7 +106,6 @@ ApplicationWindow {
 
         rootWindow.x=Screen.width/5*3
         rootWindow.y=100
-
     }
 
     LoginHome{

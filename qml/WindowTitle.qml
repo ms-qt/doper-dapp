@@ -117,7 +117,7 @@ Item {
             anchors.fill: parent
             onClicked: {
                 console.log("最小化")
-                rootWindow.showMinimized()
+                rootWindow.doMinimized()
             }
 
             hoverEnabled: true
