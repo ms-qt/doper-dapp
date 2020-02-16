@@ -74,7 +74,7 @@ void MessageListModel::enterRoom(QString roomId)
 
 QString MessageListModel::getRoomLasterMessageType(QString roomId)
 {
-    qDebug() << " 获取房间最后一条信息类型"<<roomId;
+    qDebug() << " 获取房间最后一条信息类型" << roomId;
     QString sql =
             "SELECT _message_type FROM  _message_list WHERE _room_id = '" + roomId + "' ORDER BY _time DESC LIMIT 1";
     qDebug() << "sql : " << sql;
@@ -97,7 +97,7 @@ QString MessageListModel::getRoomLasterMessageType(QString roomId)
 QString MessageListModel::getRoomLasterMessage(QString roomId)
 {
 
-    qDebug() << " 获取房间最后一条信息"<<roomId;
+    qDebug() << " 获取房间最后一条信息" << roomId;
 
     QString messageType = getRoomLasterMessageType(roomId);
 
@@ -125,7 +125,7 @@ QString MessageListModel::getRoomLasterMessage(QString roomId)
 }
 
 
-MessageBeanText* MessageListModel::getLasterMessageText(QString roomId)
+MessageBeanText *MessageListModel::getLasterMessageText(QString roomId)
 {
     QString sql =
             "SELECT * FROM _message_text WHERE _room_id = '" + roomId + "' ORDER BY _time DESC LIMIT 1";
@@ -135,7 +135,7 @@ MessageBeanText* MessageListModel::getLasterMessageText(QString roomId)
 
     if (result.exec(sql))
     {
-        MessageBeanText *messageBeanText =new MessageBeanText();
+        MessageBeanText *messageBeanText = new MessageBeanText();
         while (result.next())
         {
             int _id = result.value(0).toInt();
@@ -143,7 +143,7 @@ MessageBeanText* MessageListModel::getLasterMessageText(QString roomId)
             QString _message_id = result.value(2).toString();
             QString _event_id = result.value(3).toString();
             QString _sender_id = result.value(4).toString();
-            qint64 _time = result.value(5).toLongLong()/1000;
+            qint64 _time = result.value(5).toLongLong() / 1000;
             QString _text_content = result.value(6).toString();
             qint64 _message_sender_time = result.value(7).toLongLong();
             qint64 _message_receive_time = result.value(8).toLongLong();
@@ -156,4 +156,10 @@ MessageBeanText* MessageListModel::getLasterMessageText(QString roomId)
         }
         return messageBeanText;
     }
+}
+
+
+void MessageListModel::filterByRoomId(QString roomId)
+{
+    setQuery("select * from _message_list where _room_id = '" + roomId + "'");
 }

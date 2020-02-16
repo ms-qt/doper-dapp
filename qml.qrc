@@ -86,5 +86,6 @@
         <file>qml/MainHomeMessageChatListItemImage.qml</file>
         <file>qml/MainHomeMessageChatListItemText.qml</file>
         <file>qml/MainHomeMessageChatListItemUrl.qml</file>
+        <file>qml/MainHomeMessageChatListItem.qml</file>
     </qresource>
 </RCC>

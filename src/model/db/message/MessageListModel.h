@@ -34,6 +34,7 @@ public:
 
 public:
     MessageListModel();
+
     ~MessageListModel();
 
     QVariant data(const QModelIndex &index, int role) const override;
@@ -46,12 +47,16 @@ public slots:
 
     void enterRoom(QString roomId);
 
-
     QString getRoomLasterMessageType(QString roomId);
 
     QString getRoomLasterMessage(QString roomId);
 
-    MessageBeanText* getLasterMessageText(QString roomId);
+    MessageBeanText *getLasterMessageText(QString roomId);
+
+    // 筛选
+    void filterByRoomId(QString roomId);
+
+
 
 
 private:
