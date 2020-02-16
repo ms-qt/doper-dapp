@@ -26,6 +26,7 @@ Item {
     {
         messageListModelContent.filterByRoomId(roomid)
         listViewMainHomeMessageChatList.currentIndex=0
+        listViewMainHomeMessageChatList.update()
     }
 
     ListView {
@@ -43,9 +44,6 @@ Item {
         ScrollBar.vertical: ScrollBar {}
         model: messageListModelContent
         delegate:Component{
-
-
-
             Rectangle{
                 width:parent.width
                 height: messageText.implicitHeight+30

@@ -19,6 +19,7 @@ Rectangle {
 
 
     ListView {
+        currentIndex: 0
         id: listViewMainHomeMessageList
         anchors.fill: parent
         anchors.topMargin: 5
@@ -32,6 +33,7 @@ Rectangle {
         snapMode: ListView.SnapToItem
 
         model:  messageListModel
+
         delegate: MainHomeMessageListItem {
 
             roomName: roomListModel.getRoomName(_room_id)
@@ -70,5 +72,11 @@ Rectangle {
         }
         highlightFollowsCurrentItem: true
         highlightRangeMode: ListView.NoHighlightRange
+    }
+
+    Component.onCompleted: {
+
+        currentRoom(listViewMainHomeMessageList.model.get(0)._room_id,listViewMainHomeMessageList.model.get(0)._room_type)
+
     }
 }
