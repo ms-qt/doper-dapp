@@ -1,11 +1,10 @@
-//
+﻿//
 // Created by 毛华伟 on 2020/1/17.
 // 凭证数据库
 //
-
+#pragma execution_character_set("utf-8")
 #ifndef DOPER_DAPP_CERTIFICATEDB_H
 #define DOPER_DAPP_CERTIFICATEDB_H
-
 
 #include <QString>
 #include <QSqlDatabase>
@@ -41,14 +40,16 @@ public:
 public:
 
     CertificateDB();
+
     CertificateBean *queryLaster();
+
     Q_INVOKABLE
     bool usernameCheckUserExists(QString username);
 
     Q_INVOKABLE
     bool userIdCheckUserExists(QString userid);
 
-    void insert(CertificateBean* certificateBean);
+    void insert(CertificateBean *certificateBean);
 
 
 public:

@@ -1,7 +1,7 @@
-//
+﻿//
 // Created by maohuawei on 2020/2/6.
 //
-
+#pragma execution_character_set("utf-8")
 #ifndef DOPER_DAPP_MESSAGEBEANTEXT_H
 #define DOPER_DAPP_MESSAGEBEANTEXT_H
 

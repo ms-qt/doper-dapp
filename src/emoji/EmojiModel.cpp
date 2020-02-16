@@ -1,4 +1,4 @@
-/*
+﻿/*
  * nheko Copyright (C) 2017  Konstantinos Sideris <siderisk@auth.gr>
  *
  * This program is free software: you can redistribute it and/or modify

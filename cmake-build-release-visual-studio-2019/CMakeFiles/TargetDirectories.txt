@@ -1,0 +1,7 @@
+D:/project/ms-github-organizations/msqt/doper-dapp/cmake-build-release-visual-studio-2019/CMakeFiles/app.dir
+D:/project/ms-github-organizations/msqt/doper-dapp/cmake-build-release-visual-studio-2019/CMakeFiles/install/local.dir
+D:/project/ms-github-organizations/msqt/doper-dapp/cmake-build-release-visual-studio-2019/CMakeFiles/install.dir
+D:/project/ms-github-organizations/msqt/doper-dapp/cmake-build-release-visual-studio-2019/CMakeFiles/edit_cache.dir
+D:/project/ms-github-organizations/msqt/doper-dapp/cmake-build-release-visual-studio-2019/CMakeFiles/rebuild_cache.dir
+D:/project/ms-github-organizations/msqt/doper-dapp/cmake-build-release-visual-studio-2019/CMakeFiles/list_install_components.dir
+D:/project/ms-github-organizations/msqt/doper-dapp/cmake-build-release-visual-studio-2019/CMakeFiles/app_autogen.dir

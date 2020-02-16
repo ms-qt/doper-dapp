@@ -1,4 +1,4 @@
-#include "QRCodeGenerator.h"
+﻿#include "QRCodeGenerator.h"
 
 #include <algorithm>
 #include <cstring>

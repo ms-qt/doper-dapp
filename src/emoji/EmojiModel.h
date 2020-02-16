@@ -1,4 +1,4 @@
-#ifndef EMOJIMODEL_H
+﻿#ifndef EMOJIMODEL_H
 #define EMOJIMODEL_H
 
 #include <QObject>

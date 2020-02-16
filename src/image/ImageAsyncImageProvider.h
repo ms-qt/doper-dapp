@@ -1,6 +1,7 @@
-//
+﻿//
 // Created by maohuawei on 2020/2/10.
 //
+#pragma execution_character_set("utf-8")
 
 #ifndef DOPER_DAPP_IMAGEASYNCIMAGEPROVIDER_H
 #define DOPER_DAPP_IMAGEASYNCIMAGEPROVIDER_H

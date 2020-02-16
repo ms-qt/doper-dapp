@@ -1,8 +1,8 @@
-//
+﻿//
 // Created by 毛华伟 on 2020/1/17.
 // 两人对话
 //
-
+#pragma execution_character_set("utf-8")
 #ifndef DOPER_DAPP_ROOMP2PMODEL_H
 #define DOPER_DAPP_ROOMP2PMODEL_H
 

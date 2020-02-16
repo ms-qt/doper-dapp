@@ -1,8 +1,8 @@
-//
+﻿//
 // Created by maohuawei on 2020/2/15.
 // 动态加载组件
 //
-
+#pragma execution_character_set("utf-8")
 #ifndef APP_DYNAMICLOADCOMPONENT_H
 #define APP_DYNAMICLOADCOMPONENT_H
 

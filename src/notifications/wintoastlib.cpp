@@ -1,4 +1,4 @@
-#include "wintoastlib.h"
+﻿#include "wintoastlib.h"
 #include <memory>
 #include <assert.h>
 

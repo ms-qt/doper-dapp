@@ -1,4 +1,4 @@
-#include "ImageProvider.h"
+﻿#include "ImageProvider.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkReply>

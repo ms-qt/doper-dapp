@@ -1,7 +1,7 @@
 ﻿//
 // Created by 毛华伟 on 2020/1/17.
 //
-
+#pragma execution_character_set("utf-8")
 #ifndef DOPER_DAPP_USERMODEL_H
 #define DOPER_DAPP_USERMODEL_H
 

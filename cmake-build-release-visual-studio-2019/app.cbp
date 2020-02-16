@@ -1,0 +1,795 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="app"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="msvc8"/>
+		<Option virtualFolders="CMake Files\;CMake Files\Qt\;CMake Files\Qt\Qt5.14.1\;CMake Files\Qt\Qt5.14.1\5.14.1\;CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\;CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\;CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\;CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5\;CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Core\;CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Quick\;CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5QmlModels\;CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Qml\;CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Network\;CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Gui\;CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Sql\;CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Widgets\;CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5WebEngine\;CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5WebEngineCore\;CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5WebChannel\;CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Positioning\;CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Multimedia\;CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5LinguistTools\;CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5QuickControls2\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\Local\;CMake Files\..\..\..\..\Local\vcpkg\;CMake Files\..\..\..\..\Local\vcpkg\installed\;CMake Files\..\..\..\..\Local\vcpkg\installed\x64-windows\;CMake Files\..\..\..\..\Local\vcpkg\installed\x64-windows\share\;CMake Files\..\..\..\..\Local\vcpkg\installed\x64-windows\share\folly\;CMake Files\..\..\..\..\Local\vcpkg\installed\x64-windows\share\glog\;CMake Files\..\..\..\..\Local\vcpkg\installed\x64-windows\share\gflags\;CMake Files\..\..\..\..\Local\vcpkg\installed\x64-windows\share\rxcpp\;CMake Files\..\..\..\..\Local\libs\;CMake Files\..\..\..\..\Local\libs\lib\;CMake Files\..\..\..\..\Local\libs\lib\cmake\;CMake Files\..\..\..\..\Local\libs\lib\cmake\yarpl\;CMake Files\..\..\..\..\Local\libs\lib\cmake\rsocket\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="D:/project/ms-github-organizations/msqt/doper-dapp/cmake-build-release-visual-studio-2019"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f D:\project\ms-github-organizations\msqt\doper-dapp\cmake-build-release-visual-studio-2019\Makefile VERBOSE=1 all"/>
+					<CompileFile command="nmake /NOLOGO /f D:\project\ms-github-organizations\msqt\doper-dapp\cmake-build-release-visual-studio-2019\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\project\ms-github-organizations\msqt\doper-dapp\cmake-build-release-visual-studio-2019\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\project\ms-github-organizations\msqt\doper-dapp\cmake-build-release-visual-studio-2019\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="app">
+				<Option output="D:/project/ms-github-organizations/msqt/doper-dapp/cmake-build-release-visual-studio-2019/app.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/project/ms-github-organizations/msqt/doper-dapp/cmake-build-release-visual-studio-2019"/>
+				<Option object_output="./"/>
+				<Option type="0"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_NO_DEBUG"/>
+					<Add option="-DQT_QUICK_LIB"/>
+					<Add option="-DQT_QMLMODELS_LIB"/>
+					<Add option="-DQT_QML_LIB"/>
+					<Add option="-DQT_NETWORK_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add option="-DQT_SQL_LIB"/>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add option="-DQT_WEBENGINE_LIB"/>
+					<Add option="-DQT_WEBENGINECORE_LIB"/>
+					<Add option="-DQT_WEBCHANNEL_LIB"/>
+					<Add option="-DQT_POSITIONING_LIB"/>
+					<Add option="-DQT_MULTIMEDIA_LIB"/>
+					<Add option="-D_CRT_NONSTDC_NO_WARNINGS"/>
+					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
+					<Add option="-D_SCL_SECURE_NO_WARNINGS"/>
+					<Add option="-D_ENABLE_EXTENDED_ALIGNED_STORAGE"/>
+					<Add option="-D_STL_EXTRA_DISABLED_WARNINGS=4774 4987"/>
+					<Add option="-DWIN32_LEAN_AND_MEAN"/>
+					<Add option="-DBOOST_CONFIG_SUPPRESS_OUTDATED_MESSAGE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=1"/>
+					<Add directory="D:/project/ms-github-organizations/msqt/doper-dapp/cmake-build-release-visual-studio-2019"/>
+					<Add directory="D:/project/ms-github-organizations/msqt/doper-dapp"/>
+					<Add directory="D:/project/ms-github-organizations/msqt/doper-dapp/cmake-build-release-visual-studio-2019/app_autogen/include"/>
+					<Add directory="D:/Local/libs/include"/>
+					<Add directory="D:/Local/vcpkg/installed/x64-windows/include"/>
+					<Add directory="C:/Qt/Qt5.14.1/5.14.1/msvc2017_64/include"/>
+					<Add directory="C:/Qt/Qt5.14.1/5.14.1/msvc2017_64/include/QtCore"/>
+					<Add directory="C:/Qt/Qt5.14.1/5.14.1/msvc2017_64/./mkspecs/win32-msvc"/>
+					<Add directory="C:/Qt/Qt5.14.1/5.14.1/msvc2017_64/include/QtQuick"/>
+					<Add directory="C:/Qt/Qt5.14.1/5.14.1/msvc2017_64/include/QtQmlModels"/>
+					<Add directory="C:/Qt/Qt5.14.1/5.14.1/msvc2017_64/include/QtQml"/>
+					<Add directory="C:/Qt/Qt5.14.1/5.14.1/msvc2017_64/include/QtNetwork"/>
+					<Add directory="C:/Qt/Qt5.14.1/5.14.1/msvc2017_64/include/QtGui"/>
+					<Add directory="C:/Qt/Qt5.14.1/5.14.1/msvc2017_64/include/QtANGLE"/>
+					<Add directory="C:/Qt/Qt5.14.1/5.14.1/msvc2017_64/include/QtSql"/>
+					<Add directory="C:/Qt/Qt5.14.1/5.14.1/msvc2017_64/include/QtWidgets"/>
+					<Add directory="C:/Qt/Qt5.14.1/5.14.1/msvc2017_64/include/QtWebEngine"/>
+					<Add directory="C:/Qt/Qt5.14.1/5.14.1/msvc2017_64/include/QtWebEngineCore"/>
+					<Add directory="C:/Qt/Qt5.14.1/5.14.1/msvc2017_64/include/QtWebChannel"/>
+					<Add directory="C:/Qt/Qt5.14.1/5.14.1/msvc2017_64/include/QtPositioning"/>
+					<Add directory="C:/Qt/Qt5.14.1/5.14.1/msvc2017_64/include/QtMultimedia"/>
+					<Add directory="D:/Local/vcpkg/installed/x64-windows/include/rxcpp"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f D:\project\ms-github-organizations\msqt\doper-dapp\cmake-build-release-visual-studio-2019\Makefile VERBOSE=1 app"/>
+					<CompileFile command="nmake /NOLOGO /f D:\project\ms-github-organizations\msqt\doper-dapp\cmake-build-release-visual-studio-2019\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\project\ms-github-organizations\msqt\doper-dapp\cmake-build-release-visual-studio-2019\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\project\ms-github-organizations\msqt\doper-dapp\cmake-build-release-visual-studio-2019\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="app/fast">
+				<Option output="D:/project/ms-github-organizations/msqt/doper-dapp/cmake-build-release-visual-studio-2019/app.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/project/ms-github-organizations/msqt/doper-dapp/cmake-build-release-visual-studio-2019"/>
+				<Option object_output="./"/>
+				<Option type="0"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_NO_DEBUG"/>
+					<Add option="-DQT_QUICK_LIB"/>
+					<Add option="-DQT_QMLMODELS_LIB"/>
+					<Add option="-DQT_QML_LIB"/>
+					<Add option="-DQT_NETWORK_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add option="-DQT_SQL_LIB"/>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add option="-DQT_WEBENGINE_LIB"/>
+					<Add option="-DQT_WEBENGINECORE_LIB"/>
+					<Add option="-DQT_WEBCHANNEL_LIB"/>
+					<Add option="-DQT_POSITIONING_LIB"/>
+					<Add option="-DQT_MULTIMEDIA_LIB"/>
+					<Add option="-D_CRT_NONSTDC_NO_WARNINGS"/>
+					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
+					<Add option="-D_SCL_SECURE_NO_WARNINGS"/>
+					<Add option="-D_ENABLE_EXTENDED_ALIGNED_STORAGE"/>
+					<Add option="-D_STL_EXTRA_DISABLED_WARNINGS=4774 4987"/>
+					<Add option="-DWIN32_LEAN_AND_MEAN"/>
+					<Add option="-DBOOST_CONFIG_SUPPRESS_OUTDATED_MESSAGE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=1"/>
+					<Add directory="D:/project/ms-github-organizations/msqt/doper-dapp/cmake-build-release-visual-studio-2019"/>
+					<Add directory="D:/project/ms-github-organizations/msqt/doper-dapp"/>
+					<Add directory="D:/project/ms-github-organizations/msqt/doper-dapp/cmake-build-release-visual-studio-2019/app_autogen/include"/>
+					<Add directory="D:/Local/libs/include"/>
+					<Add directory="D:/Local/vcpkg/installed/x64-windows/include"/>
+					<Add directory="C:/Qt/Qt5.14.1/5.14.1/msvc2017_64/include"/>
+					<Add directory="C:/Qt/Qt5.14.1/5.14.1/msvc2017_64/include/QtCore"/>
+					<Add directory="C:/Qt/Qt5.14.1/5.14.1/msvc2017_64/./mkspecs/win32-msvc"/>
+					<Add directory="C:/Qt/Qt5.14.1/5.14.1/msvc2017_64/include/QtQuick"/>
+					<Add directory="C:/Qt/Qt5.14.1/5.14.1/msvc2017_64/include/QtQmlModels"/>
+					<Add directory="C:/Qt/Qt5.14.1/5.14.1/msvc2017_64/include/QtQml"/>
+					<Add directory="C:/Qt/Qt5.14.1/5.14.1/msvc2017_64/include/QtNetwork"/>
+					<Add directory="C:/Qt/Qt5.14.1/5.14.1/msvc2017_64/include/QtGui"/>
+					<Add directory="C:/Qt/Qt5.14.1/5.14.1/msvc2017_64/include/QtANGLE"/>
+					<Add directory="C:/Qt/Qt5.14.1/5.14.1/msvc2017_64/include/QtSql"/>
+					<Add directory="C:/Qt/Qt5.14.1/5.14.1/msvc2017_64/include/QtWidgets"/>
+					<Add directory="C:/Qt/Qt5.14.1/5.14.1/msvc2017_64/include/QtWebEngine"/>
+					<Add directory="C:/Qt/Qt5.14.1/5.14.1/msvc2017_64/include/QtWebEngineCore"/>
+					<Add directory="C:/Qt/Qt5.14.1/5.14.1/msvc2017_64/include/QtWebChannel"/>
+					<Add directory="C:/Qt/Qt5.14.1/5.14.1/msvc2017_64/include/QtPositioning"/>
+					<Add directory="C:/Qt/Qt5.14.1/5.14.1/msvc2017_64/include/QtMultimedia"/>
+					<Add directory="D:/Local/vcpkg/installed/x64-windows/include/rxcpp"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f D:\project\ms-github-organizations\msqt\doper-dapp\cmake-build-release-visual-studio-2019\Makefile VERBOSE=1 app/fast"/>
+					<CompileFile command="nmake /NOLOGO /f D:\project\ms-github-organizations\msqt\doper-dapp\cmake-build-release-visual-studio-2019\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\project\ms-github-organizations\msqt\doper-dapp\cmake-build-release-visual-studio-2019\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\project\ms-github-organizations\msqt\doper-dapp\cmake-build-release-visual-studio-2019\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/local">
+				<Option working_dir="D:/project/ms-github-organizations/msqt/doper-dapp/cmake-build-release-visual-studio-2019"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f D:\project\ms-github-organizations\msqt\doper-dapp\cmake-build-release-visual-studio-2019\Makefile VERBOSE=1 install/local"/>
+					<CompileFile command="nmake /NOLOGO /f D:\project\ms-github-organizations\msqt\doper-dapp\cmake-build-release-visual-studio-2019\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\project\ms-github-organizations\msqt\doper-dapp\cmake-build-release-visual-studio-2019\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\project\ms-github-organizations\msqt\doper-dapp\cmake-build-release-visual-studio-2019\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install">
+				<Option working_dir="D:/project/ms-github-organizations/msqt/doper-dapp/cmake-build-release-visual-studio-2019"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f D:\project\ms-github-organizations\msqt\doper-dapp\cmake-build-release-visual-studio-2019\Makefile VERBOSE=1 install"/>
+					<CompileFile command="nmake /NOLOGO /f D:\project\ms-github-organizations\msqt\doper-dapp\cmake-build-release-visual-studio-2019\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\project\ms-github-organizations\msqt\doper-dapp\cmake-build-release-visual-studio-2019\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\project\ms-github-organizations\msqt\doper-dapp\cmake-build-release-visual-studio-2019\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="D:/project/ms-github-organizations/msqt/doper-dapp/cmake-build-release-visual-studio-2019"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f D:\project\ms-github-organizations\msqt\doper-dapp\cmake-build-release-visual-studio-2019\Makefile VERBOSE=1 edit_cache"/>
+					<CompileFile command="nmake /NOLOGO /f D:\project\ms-github-organizations\msqt\doper-dapp\cmake-build-release-visual-studio-2019\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\project\ms-github-organizations\msqt\doper-dapp\cmake-build-release-visual-studio-2019\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\project\ms-github-organizations\msqt\doper-dapp\cmake-build-release-visual-studio-2019\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="D:/project/ms-github-organizations/msqt/doper-dapp/cmake-build-release-visual-studio-2019"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f D:\project\ms-github-organizations\msqt\doper-dapp\cmake-build-release-visual-studio-2019\Makefile VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="nmake /NOLOGO /f D:\project\ms-github-organizations\msqt\doper-dapp\cmake-build-release-visual-studio-2019\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\project\ms-github-organizations\msqt\doper-dapp\cmake-build-release-visual-studio-2019\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\project\ms-github-organizations\msqt\doper-dapp\cmake-build-release-visual-studio-2019\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="list_install_components">
+				<Option working_dir="D:/project/ms-github-organizations/msqt/doper-dapp/cmake-build-release-visual-studio-2019"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f D:\project\ms-github-organizations\msqt\doper-dapp\cmake-build-release-visual-studio-2019\Makefile VERBOSE=1 list_install_components"/>
+					<CompileFile command="nmake /NOLOGO /f D:\project\ms-github-organizations\msqt\doper-dapp\cmake-build-release-visual-studio-2019\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\project\ms-github-organizations\msqt\doper-dapp\cmake-build-release-visual-studio-2019\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\project\ms-github-organizations\msqt\doper-dapp\cmake-build-release-visual-studio-2019\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="app_autogen">
+				<Option working_dir="D:/project/ms-github-organizations/msqt/doper-dapp/cmake-build-release-visual-studio-2019"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f D:\project\ms-github-organizations\msqt\doper-dapp\cmake-build-release-visual-studio-2019\Makefile VERBOSE=1 app_autogen"/>
+					<CompileFile command="nmake /NOLOGO /f D:\project\ms-github-organizations\msqt\doper-dapp\cmake-build-release-visual-studio-2019\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\project\ms-github-organizations\msqt\doper-dapp\cmake-build-release-visual-studio-2019\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\project\ms-github-organizations\msqt\doper-dapp\cmake-build-release-visual-studio-2019\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/app_win32.rc">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/cmake-build-release-visual-studio-2019/app_autogen/mocs_compilation.cpp">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/cmake-build-release-visual-studio-2019/qrc_images.cpp">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/cmake-build-release-visual-studio-2019/qrc_qml.cpp">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/cmake-build-release-visual-studio-2019/qrc_resources.cpp">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/cmake-build-release-visual-studio-2019/qrc_theme.cpp">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/images.qrc">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/qml.qrc">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/resources.qrc">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/TaoJsonModel/FileReadWrite.h">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/TaoJsonModel/TaoJsonModel">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/TaoJsonModel/TaoJsonTreeModel.cpp">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/TaoJsonModel/TaoJsonTreeModel.h">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/TaoJsonModel/TaoListModel.h">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/TaoJsonModel/TaoListModel.inl">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/TaoJsonModel/Tools.h">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/app/AppInfo.h">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/component/DynamicLoadComponent.cpp">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/component/DynamicLoadComponent.h">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/data/CommonData.h">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/db/CertificateDB.cpp">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/db/CertificateDB.h">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/emoji/EmojiModel.cpp">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/emoji/EmojiModel.h">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/image/ImageAsyncImageProvider.cpp">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/image/ImageAsyncImageProvider.h">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/image/ImageProvider.cpp">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/image/ImageProvider.h">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/image/QrCodeImageProvider.h">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/local/db/CertificateBean.h">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/logger/Logger.cpp">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/logger/Logger.h">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/logger/LoggerTemplate.h">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/login/LoginHandler.cpp">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/login/LoginHandler.h">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/main.cpp">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/model/PluginModel.cpp">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/model/PluginModel.h">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/model/db/message/MessagTextModel.cpp">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/model/db/message/MessagTextModel.h">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/model/db/message/MessageBeanText.cpp">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/model/db/message/MessageBeanText.h">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/model/db/message/MessageListModel.cpp">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/model/db/message/MessageListModel.h">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/model/db/room/RoomListModel.cpp">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/model/db/room/RoomListModel.h">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/model/db/task/TaskListModel.cpp">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/model/db/task/TaskListModel.h">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/model/db/task/TaskModel.cpp">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/model/db/task/TaskModel.h">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/model/db/user/UserModel.cpp">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/model/db/user/UserModel.h">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/networkserver/HttpClient.cpp">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/networkserver/HttpClient.h">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/networkserver/HttpRequest.cpp">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/networkserver/HttpRequest.h">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/networkserver/HttpResponse.cpp">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/networkserver/HttpResponse.h">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/networkserver/NetworkDownloadFile.cpp">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/networkserver/NetworkDownloadFile.h">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/networkserver/UdpClient.cpp">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/networkserver/UdpClient.h">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/networkserver/UdpServer.cpp">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/networkserver/UdpServer.h">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/notifications/manager.h">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/notifications/managerwin.cpp">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/notifications/wintoastlib.cpp">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/notifications/wintoastlib.h">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/plugin/AppPluginManager.cpp">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/plugin/AppPluginManager.h">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/plugin/Plugin.cpp">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/plugin/Plugin.h">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/proxy/ui/UIProxy.cpp">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/proxy/ui/UIProxy.h">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/qrcode/QRCodeGenerator.cpp">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/qrcode/QRCodeGenerator.h">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/systemfeatures/Clipboard.cpp">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/systemfeatures/Clipboard.h">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/tool/ThreadTool.cpp">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/tool/ThreadTool.h">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/utils/MD5Utils.h">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/utils/SystemUtils.cpp">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/utils/SystemUtils.h">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/src/utils/UUIDUtils.h">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/theme.qrc">
+			<Option target="app"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/images.qrc">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/qml.qrc">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/resources.qrc">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/theme.qrc">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5/Qt5Config.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5/Qt5ConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5/Qt5ModuleLocation.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Core/Qt5CoreConfig.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Core/Qt5CoreConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Core/Qt5CoreConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Core/Qt5CoreMacros.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Quick/Qt5QuickConfig.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Quick\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Quick/Qt5QuickConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Quick\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5QmlModels/Qt5QmlModelsConfig.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5QmlModels\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5QmlModels/Qt5QmlModelsConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5QmlModels\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Qml/Qt5QmlConfig.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Qml\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Qml/Qt5QmlConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Qml\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Qml/Qt5QmlConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Qml\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Qml/Qt5Qml_QDebugMessageServiceFactory.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Qml\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Qml/Qt5Qml_QLocalClientConnectionFactory.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Qml\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Qml/Qt5Qml_QQmlDebugServerFactory.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Qml\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Qml/Qt5Qml_QQmlDebuggerServiceFactory.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Qml\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Qml/Qt5Qml_QQmlInspectorServiceFactory.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Qml\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Qml/Qt5Qml_QQmlNativeDebugConnectorFactory.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Qml\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Qml/Qt5Qml_QQmlNativeDebugServiceFactory.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Qml\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Qml/Qt5Qml_QQmlPreviewServiceFactory.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Qml\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Qml/Qt5Qml_QQmlProfilerServiceFactory.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Qml\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Qml/Qt5Qml_QQuickProfilerAdapterFactory.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Qml\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Qml/Qt5Qml_QTcpServerConnectionFactory.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Qml\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Network/Qt5NetworkConfig.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Network\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Network/Qt5NetworkConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Network\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Network/Qt5Network_QGenericEnginePlugin.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Network\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Gui/Qt5GuiConfig.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Gui/Qt5Gui_QGifPlugin.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Gui/Qt5Gui_QICNSPlugin.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Gui/Qt5Gui_QMinimalIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Gui/Qt5Gui_QSvgIconPlugin.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Gui/Qt5Gui_QSvgPlugin.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Gui/Qt5Gui_QTgaPlugin.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Gui/Qt5Gui_QTiffPlugin.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Gui/Qt5Gui_QTuioTouchPlugin.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Gui/Qt5Gui_QVirtualKeyboardPlugin.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Gui/Qt5Gui_QWbmpPlugin.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Gui/Qt5Gui_QWebGLIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Gui/Qt5Gui_QWebpPlugin.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Gui/Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Gui/Qt5Gui_QWindowsIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Gui/Qt5Gui_QXdgDesktopPortalThemePlugin.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Sql/Qt5SqlConfig.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Sql\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Sql/Qt5SqlConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Sql\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Sql/Qt5Sql_QODBCDriverPlugin.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Sql\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Sql/Qt5Sql_QPSQLDriverPlugin.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Sql\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Sql/Qt5Sql_QSQLiteDriverPlugin.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Sql\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Widgets/Qt5Widgets_QWindowsVistaStylePlugin.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5WebEngine/Qt5WebEngineConfig.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5WebEngine\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5WebEngine/Qt5WebEngineConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5WebEngine\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5WebEngineCore/Qt5WebEngineCoreConfig.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5WebEngineCore\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5WebEngineCore/Qt5WebEngineCoreConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5WebEngineCore\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5WebChannel/Qt5WebChannelConfig.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5WebChannel\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5WebChannel/Qt5WebChannelConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5WebChannel\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Positioning/Qt5PositioningConfig.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Positioning\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Positioning/Qt5PositioningConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Positioning\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Multimedia/Qt5MultimediaConfig.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Multimedia\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Multimedia/Qt5MultimediaConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Multimedia\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Multimedia/Qt5Multimedia_AudioCaptureServicePlugin.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Multimedia\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Multimedia/Qt5Multimedia_DSServicePlugin.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Multimedia\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Multimedia/Qt5Multimedia_QM3uPlaylistPlugin.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Multimedia\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Multimedia/Qt5Multimedia_QWasapiPlugin.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Multimedia\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Multimedia/Qt5Multimedia_QWindowsAudioPlugin.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Multimedia\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5Multimedia/Qt5Multimedia_WMFServicePlugin.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5Multimedia\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5LinguistTools/Qt5LinguistToolsConfig.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5LinguistTools\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5LinguistTools/Qt5LinguistToolsConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5LinguistTools\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5LinguistTools/Qt5LinguistToolsMacros.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5LinguistTools\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5QuickControls2/Qt5QuickControls2Config.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5QuickControls2\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/Qt/Qt5.14.1/5.14.1/msvc2017_64/lib/cmake/Qt5QuickControls2/Qt5QuickControls2ConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\Qt\Qt5.14.1\5.14.1\msvc2017_64\lib\cmake\Qt5QuickControls2\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/../../../../Local/vcpkg/installed/x64-windows/share/folly/folly-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\Local\vcpkg\installed\x64-windows\share\folly\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/../../../../Local/vcpkg/installed/x64-windows/share/folly/folly-targets-debug.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\Local\vcpkg\installed\x64-windows\share\folly\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/../../../../Local/vcpkg/installed/x64-windows/share/folly/folly-targets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\Local\vcpkg\installed\x64-windows\share\folly\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/../../../../Local/vcpkg/installed/x64-windows/share/folly/folly-targets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\Local\vcpkg\installed\x64-windows\share\folly\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/../../../../Local/vcpkg/installed/x64-windows/share/glog/glog-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\Local\vcpkg\installed\x64-windows\share\glog\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/../../../../Local/vcpkg/installed/x64-windows/share/glog/glog-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\Local\vcpkg\installed\x64-windows\share\glog\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/../../../../Local/vcpkg/installed/x64-windows/share/glog/glog-targets-debug.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\Local\vcpkg\installed\x64-windows\share\glog\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/../../../../Local/vcpkg/installed/x64-windows/share/glog/glog-targets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\Local\vcpkg\installed\x64-windows\share\glog\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/../../../../Local/vcpkg/installed/x64-windows/share/glog/glog-targets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\Local\vcpkg\installed\x64-windows\share\glog\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/../../../../Local/vcpkg/installed/x64-windows/share/gflags/gflags-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\Local\vcpkg\installed\x64-windows\share\gflags\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/../../../../Local/vcpkg/installed/x64-windows/share/gflags/gflags-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\Local\vcpkg\installed\x64-windows\share\gflags\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/../../../../Local/vcpkg/installed/x64-windows/share/gflags/gflags-nonamespace-targets-debug.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\Local\vcpkg\installed\x64-windows\share\gflags\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/../../../../Local/vcpkg/installed/x64-windows/share/gflags/gflags-nonamespace-targets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\Local\vcpkg\installed\x64-windows\share\gflags\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/../../../../Local/vcpkg/installed/x64-windows/share/gflags/gflags-nonamespace-targets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\Local\vcpkg\installed\x64-windows\share\gflags\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/../../../../Local/vcpkg/installed/x64-windows/share/rxcpp/rxcppConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\Local\vcpkg\installed\x64-windows\share\rxcpp\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/../../../../Local/vcpkg/installed/x64-windows/share/rxcpp/rxcppConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\Local\vcpkg\installed\x64-windows\share\rxcpp\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/../../../../Local/libs/lib/cmake/yarpl/yarpl-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\Local\libs\lib\cmake\yarpl\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/../../../../Local/libs/lib/cmake/yarpl/yarpl-exports-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\Local\libs\lib\cmake\yarpl\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/../../../../Local/libs/lib/cmake/yarpl/yarpl-exports.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\Local\libs\lib\cmake\yarpl\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/../../../../Local/libs/lib/cmake/rsocket/rsocket-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\Local\libs\lib\cmake\rsocket\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/../../../../Local/libs/lib/cmake/rsocket/rsocket-exports-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\Local\libs\lib\cmake\rsocket\"/>
+		</Unit>
+		<Unit filename="D:/project/ms-github-organizations/msqt/doper-dapp/../../../../Local/libs/lib/cmake/rsocket/rsocket-exports.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\Local\libs\lib\cmake\rsocket\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

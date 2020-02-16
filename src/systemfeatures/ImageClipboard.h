@@ -1,4 +1,4 @@
-#ifndef IMAGECLIPBOARD_H
+﻿#ifndef IMAGECLIPBOARD_H
 #define IMAGECLIPBOARD_H
 
 #include <QClipboard>

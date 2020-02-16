@@ -1,6 +1,8 @@
+﻿#pragma execution_character_set("utf-8")
 #include <QQuickImageProvider>
 #include <QQuickAsyncImageProvider>
 #include <QQmlImageProviderBase>
+
 
 class QNetworkAccessManager;
 

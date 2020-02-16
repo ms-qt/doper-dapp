@@ -1,7 +1,7 @@
-//
+﻿//
 // Created by maohuawei on 2020/2/15.
 //
-
+#pragma execution_character_set("utf-8")
 #ifndef APP_PLUGINMODEL_H
 #define APP_PLUGINMODEL_H
 

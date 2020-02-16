@@ -59,6 +59,7 @@ Item {
 
 
     function resetStatus(){
+        menuPosition=-1
         avatarShow=false
         managerShow=false
     }
