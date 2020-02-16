@@ -74,7 +74,17 @@
         <file>qml/BaseListMenuRight.qml</file>
         <file>qml/BaseTextButton.qml</file>
         <file>qml/MainHomeMessage.qml</file>
+        <file>qml/MainHomeMessageList.qml</file>
+        <file>qml/MainHomeMessageListItem.qml</file>
         <file>qml/MainHomeTask.qml</file>
+        <file>qml/MainHomeTaskList.qml</file>
+        <file>qml/MainHomeTaskListItem.qml</file>
         <file>qml/MainHomePluginManager.qml</file>
+        <file>qml/MainHomeMessageChat.qml</file>
+        <file>qml/MainHomeMessageChatList.qml</file>
+        <file>qml/MainHomeMessageChatListItemFile.qml</file>
+        <file>qml/MainHomeMessageChatListItemImage.qml</file>
+        <file>qml/MainHomeMessageChatListItemText.qml</file>
+        <file>qml/MainHomeMessageChatListItemUrl.qml</file>
     </qresource>
 </RCC>

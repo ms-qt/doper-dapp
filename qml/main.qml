@@ -10,6 +10,15 @@ import QtQuick.Layouts 1.3
 
 import Toou2D 1.0
 
+
+
+import UserModel 1.0
+import TaskListModel 1.0
+import TaskModel 1.0
+import MessageListModel 1.0
+import RoomListModel 1.0
+
+
 ApplicationWindow {
 
     id:rootWindow
@@ -48,6 +57,25 @@ ApplicationWindow {
 
 
     }
+
+    UserModel{
+        id:userModel
+    }
+
+    TaskListModel{
+        id:taskListModel
+    }
+
+    TaskModel{
+        id:taskModel
+    }
+    MessageListModel{
+        id:messageListModel
+    }
+    RoomListModel{
+        id:roomListModel
+    }
+
 
     property int xMouse
     property int yMouse

@@ -1,4 +1,5 @@
 import QtQuick 2.0
+import QtQuick.Controls 2.0
 import Toou2D 1.0
 
 
@@ -11,8 +12,20 @@ Item {
 
     property int leftMenuWidth : 100
 
+    // 点击头像显示
     property bool avatarShow : false
+    // 点击插件管理显示
     property bool managerShow : false
+    // 菜单条目数
+    property int  menuPosition : 0
+
+    // 重置状态
+    function resetStatus(){
+        menuPosition=-1
+        avatarShow=false
+        managerShow=false
+    }
+
 
     // 头像
     Image {
@@ -57,16 +70,6 @@ Item {
         }
     }
 
-
-    function resetStatus(){
-        menuPosition=-1
-        avatarShow=false
-        managerShow=false
-    }
-
-
-    property int  menuPosition : 0
-
     // 点击头像
     TRectangle{
         visible:avatarShow
@@ -86,37 +89,20 @@ Item {
     }
 
 
+
     TRectangle{
         visible:menuPosition==0
         anchors.left: imageMainHomeAvatar.right
-        color: "#f0f0f0"
+        color: "#001122"
         width: parent.width-leftMenuWidth
         height: parent.height
+
+        MainHomeMessage{
+            width: parent.width
+            height: parent.height
+        }
     }
 
-    TRectangle{
-        visible:menuPosition==1
-        anchors.left: imageMainHomeAvatar.right
-        color: "#aaa000"
-        width: parent.width-leftMenuWidth
-        height: parent.height
-    }
-
-    TRectangle{
-        visible:menuPosition==2
-        anchors.left: imageMainHomeAvatar.right
-        color: "#aa00ff"
-        width: parent.width-leftMenuWidth
-        height: parent.height
-    }
-
-    TRectangle{
-        visible:menuPosition==2
-        anchors.left: imageMainHomeAvatar.right
-        color: "#aa00ff"
-        width: parent.width-leftMenuWidth
-        height: parent.height
-    }
     Connections{
         target: mainHomeLeftMenu
         onMenuCurrent:{
