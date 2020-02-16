@@ -10,6 +10,8 @@
 #include <QSqlQuery>
 #include <QSqlError>
 #include <QSqlDatabase>
+#include <QVariant>
+#include <QHash>
 
 class MessagTextModel : public QSqlQueryModel
 {

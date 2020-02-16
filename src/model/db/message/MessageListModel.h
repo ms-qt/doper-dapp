@@ -11,6 +11,8 @@
 #include <QSqlQuery>
 #include <QSqlError>
 #include <QSqlDatabase>
+#include <QVariant>
+#include <QHash>
 
 #include "src/model/db/message/MessageBeanText.h"
 

@@ -6,12 +6,13 @@
 #ifndef DOPER_DAPP_ROOMP2PMODEL_H
 #define DOPER_DAPP_ROOMP2PMODEL_H
 
-#include <QObject>
 #include <QSqlQueryModel>
 #include <QDebug>
 #include <QSqlQuery>
 #include <QSqlError>
 #include <QSqlDatabase>
+#include <QVariant>
+#include <QHash>
 
 class RoomP2PModel : public QSqlQueryModel
 {

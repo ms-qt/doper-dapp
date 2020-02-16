@@ -73,5 +73,8 @@
         <file>qml/MainHomeLeftMenu.qml</file>
         <file>qml/BaseListMenuRight.qml</file>
         <file>qml/BaseTextButton.qml</file>
+        <file>qml/MainHomeMessage.qml</file>
+        <file>qml/MainHomeTask.qml</file>
+        <file>qml/MainHomePluginManager.qml</file>
     </qresource>
 </RCC>

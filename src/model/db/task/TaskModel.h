@@ -1,4 +1,4 @@
-//
+﻿//
 // Created by 毛华伟 on 2020/1/16.
 //
 
@@ -11,6 +11,8 @@
 #include <QSqlQuery>
 #include <QSqlError>
 #include <QSqlDatabase>
+#include <QVariant>
+#include <QHash>
 
 class TaskModel : public QSqlQueryModel
 {

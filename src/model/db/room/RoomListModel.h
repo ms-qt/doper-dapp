@@ -6,12 +6,13 @@
 #define DOPER_DAPP_ROOMLISTMODEL_H
 
 
-#include <QObject>
 #include <QSqlQueryModel>
 #include <QDebug>
 #include <QSqlQuery>
 #include <QSqlError>
 #include <QSqlDatabase>
+#include <QVariant>
+#include <QHash>
 
 
 class RoomListModel : public QSqlQueryModel
