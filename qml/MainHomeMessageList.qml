@@ -49,6 +49,14 @@ Rectangle {
             separatorColor: listViewMainHomeMessageList.currentIndex === index ? "transparent" : highlightHover
             smooth: mouseAreaMainHomeMessageList.containsMouse
 
+
+            Component.onCompleted: {
+                console.log("----------"+_room_id+" "+_room_type)
+                if(index==0){
+                    currentRoom(_room_id,_room_type)
+                }
+            }
+
             MouseArea {
                 id: mouseAreaMainHomeMessageList
                 anchors.left: parent.left
@@ -72,11 +80,5 @@ Rectangle {
         }
         highlightFollowsCurrentItem: true
         highlightRangeMode: ListView.NoHighlightRange
-    }
-
-    Component.onCompleted: {
-
-        currentRoom(listViewMainHomeMessageList.model.get(0)._room_id,listViewMainHomeMessageList.model.get(0)._room_type)
-
     }
 }

@@ -25,8 +25,6 @@ Item {
     function setRoomId(roomid)
     {
         messageListModelContent.filterByRoomId(roomid)
-        listViewMainHomeMessageChatList.currentIndex=0
-        listViewMainHomeMessageChatList.update()
     }
 
     ListView {
