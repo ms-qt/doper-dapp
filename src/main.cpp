@@ -52,6 +52,8 @@
 #include "src/plugin/AppPluginManager.h"
 #include "src/plugin/Plugin.h"
 
+#include "src/model/db/message/MessageTextModel.h"
+
 static void registertypes()
 {
     qmlRegisterType<CertificateBean>("CertificateBean", 1, 0, "CertificateBean");
@@ -59,6 +61,8 @@ static void registertypes()
     qmlRegisterType<LoginHandler>("LoginHandler", 1, 0, "LoginHandler");
 
     qmlRegisterType<MessageBeanText>("MessageBeanText", 1, 0, "MessageBeanText");
+    qmlRegisterType<MessageTextModel>("MessageTextModel", 1, 0, "MessageTextModel");
+
 
     qmlRegisterType<TaskModel>("TaskModel", 1, 0, "TaskModel");
     qmlRegisterType<TaskListModel>("TaskListModel", 1, 0, "TaskListModel");

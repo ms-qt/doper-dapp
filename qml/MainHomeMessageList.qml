@@ -54,7 +54,7 @@ Rectangle {
                 hoverEnabled: true
                 onClicked: {
                     listViewMainHomeMessageList.currentIndex = index
-                    currentRoomId(_room_id,_room_type)
+                    currentRoom(_room_id,_room_type)
                 }
                 onDoubleClicked: {
 

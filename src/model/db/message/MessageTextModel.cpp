@@ -2,10 +2,10 @@
 // Created by maohuawei on 2020/2/5.
 //
 
-#include "MessagTextModel.h"
+#include "MessageTextModel.h"
 
 
-MessagTextModel::MessagTextModel()
+MessageTextModel::MessageTextModel()
 {
     if (QSqlDatabase::database().tables().contains(__TABLE_NAME__))
     {
@@ -26,12 +26,12 @@ MessagTextModel::MessagTextModel()
     refresh();
 }
 
-void MessagTextModel::refresh()
+void MessageTextModel::refresh()
 {
 
 }
 
-QVariant MessagTextModel::data(const QModelIndex &index, int role) const
+QVariant MessageTextModel::data(const QModelIndex &index, int role) const
 {
     QVariant value = QSqlQueryModel::data(index, role);
     if (role < Qt::UserRole)
@@ -46,7 +46,7 @@ QVariant MessagTextModel::data(const QModelIndex &index, int role) const
     return value;
 }
 
-QHash<int, QByteArray> MessagTextModel::roleNames() const
+QHash<int, QByteArray> MessageTextModel::roleNames() const
 {
     QHash<int, QByteArray> roles;
     roles[_id] = "_id";

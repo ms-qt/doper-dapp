@@ -211,10 +211,14 @@ set(app_SRC
         #        src/db/CertificateBean.h
 
 
-        src/model/db/message/MessagTextModel.cpp
-        src/model/db/message/MessagTextModel.h
+        src/model/db/message/MessageTextModel.cpp
+        src/model/db/message/MessageTextModel.h
         src/model/db/message/MessageListModel.cpp
         src/model/db/message/MessageListModel.h
+        src/model/db/message/MessageBeanText.cpp
+        src/model/db/message/MessageBeanText.h
+
+
         #
         #        src/model/db/organization/OrganizationModel.cpp
         #        src/model/db/organization/OrganizationModel.h
@@ -280,8 +284,7 @@ set(app_SRC
         src/TaoJsonModel/TaoJsonTreeModel.cpp
 
 
-        src/model/db/message/MessageBeanText.cpp
-        src/model/db/message/MessageBeanText.h
+
 
 
         src/emoji/EmojiModel.cpp

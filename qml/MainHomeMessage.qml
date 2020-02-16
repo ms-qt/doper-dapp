@@ -19,7 +19,7 @@ Item{
 
     Connections{
         target: mainHomeMessageList
-        onCurrentRoomId:{
+        onCurrentRoom:{
             console.log("房间ID:"+roomid+"  房间类型:"+roomtype)
         }
 

@@ -10,13 +10,12 @@ import QtQuick.Layouts 1.3
 
 import Toou2D 1.0
 
-
-
 import UserModel 1.0
 import TaskListModel 1.0
 import TaskModel 1.0
 import MessageListModel 1.0
 import RoomListModel 1.0
+import MessageTextModel 1.0
 
 
 ApplicationWindow {
@@ -74,6 +73,10 @@ ApplicationWindow {
     }
     RoomListModel{
         id:roomListModel
+    }
+
+    MessageTextModel{
+        id:messageTextModel
     }
 
 

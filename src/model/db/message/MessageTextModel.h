@@ -13,7 +13,7 @@
 #include <QVariant>
 #include <QHash>
 
-class MessagTextModel : public QSqlQueryModel
+class MessageTextModel : public QSqlQueryModel
 {
 Q_OBJECT
 public:
@@ -35,7 +35,7 @@ public:
 
 
 public:
-    MessagTextModel();
+    MessageTextModel();
 
     QVariant data(const QModelIndex &index, int role) const override;
 
