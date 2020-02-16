@@ -28,7 +28,7 @@ MessageTextModel::MessageTextModel()
 
 void MessageTextModel::refresh()
 {
-
+    setQuery("SELECT * from _message_text ORDER BY _time DESC");
 }
 
 QVariant MessageTextModel::data(const QModelIndex &index, int role) const
@@ -61,4 +61,20 @@ QHash<int, QByteArray> MessageTextModel::roleNames() const
     roles[_is_me] = "_is_me";
     roles[_is_read] = "_is_read";
     return roles;
+}
+
+
+QString MessageTextModel::textContentByMessageId(QString messageId)
+{
+    QSqlQuery result;
+    QString sql = "SELECT _text_content FROM _message_text WHERE _message_id = '"+messageId+"'";
+    if (result.exec(sql))
+    {
+        QString textContent;
+        while (result.next())
+        {
+            textContent = result.value(0).toString();
+        }
+        return textContent;
+    }
 }

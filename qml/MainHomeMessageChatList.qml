@@ -2,6 +2,7 @@ import QtQuick 2.12
 import QtQuick.Layouts 1.12
 import QtQuick.Controls 2.12
 import MessageListModel 1.0
+import MessageTextModel 1.0
 
 
 import Toou2D 1.0
@@ -15,6 +16,11 @@ Item {
     MessageListModel{
         id:messageListModelContent
     }
+
+    MessageTextModel{
+        id:messageTextModelContent
+    }
+
 
     Rectangle{
         width: parent.width
@@ -33,7 +39,7 @@ Item {
         width: parent.width
         height: parent.height
         id: listViewMainHomeMessageChatList
-        spacing: 5
+        //spacing: 5
         //        verticalLayoutDirection: ListView.BottomToTop
         //        boundsBehavior:ListView.SnapToItem
         cacheBuffer: 1
@@ -44,27 +50,39 @@ Item {
         delegate:Component{
             Rectangle{
                 width:parent.width
-                height: messageText.implicitHeight+30
+                height: textMessageContent.implicitHeight+30
 
                 TAvatar{
-                    id:vaatar
-                    width: 50
-                    height: 50
+                    id:avatar
+                    width: 30
+                    height: 30
                     source: "https://dss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1915011011,2156126360&fm=26&gp=0.jpg"
+                    radius: 20;
+                }
+
+                TLabel{
+                    anchors.left: avatar.right
+                    anchors.leftMargin: 10
+                    text:   Qt.formatDateTime(new Date(_time), "hh:mm")
+                    font.pixelSize: 10
+                    color: "#000000"
+                    id:labelTime
                 }
 
                 Rectangle{
-                    anchors.left: vaatar.right
-                    width:parent.width
-                    height: messageText.implicitHeight+30
-                    color: "#ff0a00"
-
-
+                    anchors.left: avatar.right
+                    anchors.top:labelTime.bottom
+                    anchors.topMargin: 5
+                    anchors.leftMargin: 5
+                    width:textMessageContent.implicitWidth+10
+                    height: textMessageContent.implicitHeight+10
+                    color: "#E6E6FA"
+                    radius: 10;
                     Text {
-                        width:parent.width
-                        id: messageText
-                        text: "111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111"
-                        color: "#ffffff"
+                        anchors.centerIn: parent
+                        id: textMessageContent
+                        text: messageTextModelContent.textContentByMessageId(_message_id)
+                        color: "#000000"
                         wrapMode: Text.Wrap
                         font : font.pixelSize=15
                     }

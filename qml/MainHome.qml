@@ -3,6 +3,7 @@ import QtQuick.Controls 2.0
 import Toou2D 1.0
 
 
+import "qrc:/qml/appcomponent"
 
 Item {
 
@@ -77,6 +78,15 @@ Item {
         color: "#000000"
         width: parent.width-leftMenuWidth
         height: parent.height
+
+
+//        ExplorerView {
+//            width: 260
+//            height: parent.height
+//            id:explorerViewMain
+//        }
+
+
     }
 
     // 点击插件管理

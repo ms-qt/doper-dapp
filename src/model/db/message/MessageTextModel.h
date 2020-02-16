@@ -45,6 +45,8 @@ public slots:
 
     void refresh();
 
+    QString textContentByMessageId(QString messageId);
+
 
 private:
 
