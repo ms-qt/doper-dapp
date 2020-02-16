@@ -11,6 +11,8 @@ Rectangle {
     color: background
     clip: true
 
+    signal menuCurrent(int position);
+
     ListView {
         id: listViewMainHomeLeftMenu
         anchors.fill: parent
@@ -19,13 +21,10 @@ Rectangle {
         boundsBehavior: Flickable.DragAndOvershootBounds
         maximumFlickVelocity: 2500
         snapMode: ListView.SnapToItem
-
         model: pluginModel
-
-        delegate: Item {
+        delegate: TRectangle {
             width: listViewMainHomeLeftMenu.width
             height: listViewMainHomeLeftMenu.width
-
             TImage{
                 anchors.top: parent.top
                 id:imageIcon
@@ -45,10 +44,7 @@ Rectangle {
                 font.pixelSize: 10
             }
 
-
-            //            color: listViewMainHomeLeftMenu.currentIndex === index ? "transparent" : (mouseAreaMainHomeLeftMenu.containsMouse ? highlightHover : background)
-            //            backgroundColor: listViewMainHomeLeftMenu.currentIndex === index ? "transparent" : (mouseAreaMainHomeLeftMenu.containsMouse ? highlightHover : background)
-            //            separatorColor: listViewMainHomeLeftMenu.currentIndex === index ? "transparent" : highlightHover
+            color: listViewMainHomeLeftMenu.currentIndex === index ? "transparent" : (mouseAreaMainHomeLeftMenu.containsMouse ? highlightHover : background)
             smooth: mouseAreaMainHomeLeftMenu.containsMouse
 
             MouseArea {
@@ -58,6 +54,7 @@ Rectangle {
                 hoverEnabled: true
                 onClicked: {
                     listViewMainHomeLeftMenu.currentIndex = index
+                    menuCurrent(index)
                 }
 
                 onDoubleClicked: {

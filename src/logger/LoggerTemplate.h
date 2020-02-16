@@ -1,4 +1,5 @@
-#pragma once
+﻿#pragma once
+#pragma execution_character_set("UTF-8")
 #include <QString>
 #include <string>
 namespace Logger

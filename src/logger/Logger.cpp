@@ -1,11 +1,11 @@
-#include "Logger.h"
+﻿#include "Logger.h"
 #include "LoggerTemplate.h"
 
 #include <QCoreApplication>
 #include <QDateTime>
 #include <QDir>
 #include <QMutex>
-
+ 
 #include <string>
 
 #ifdef Q_OS_WIN

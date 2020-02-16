@@ -49,6 +49,8 @@
 // 图片剪切板
 #include "src/systemfeatures/ImageClipboard.h"
 
+#include "src/plugin/AppPluginManager.h"
+#include "src/plugin/Plugin.h"
 
 static void registertypes()
 {
@@ -174,6 +176,12 @@ int main(int argc, char *argv[])
     // 用户信息数据库
     CertificateDB *certificateDb = new CertificateDB();
     engine.rootContext()->setContextProperty("certificateDb", certificateDb);
+
+
+    AppPluginManager *pluginManager = AppPluginManager::getInstance();
+//    Plugin *plugin= pluginManager->getPlugins()[0];
+//    pluginManager ->loader(plugin);
+
 
     PluginModel pluginModel;
     engine.rootContext()->setContextProperty("pluginModel", QVariant::fromValue(pluginModel.getPlugins()));

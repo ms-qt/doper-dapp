@@ -24,6 +24,14 @@ SystemTrayIcon {
     property bool login: rootWindow.global.loginSuccess
 
 
+    // 点击托盘时显示界面
+    onActivated:{
+        rootWindow.show()
+        rootWindow.raise()
+        rootWindow.requestActivate()
+    }
+
+
     menu: Menu {
 
         MenuItem {
@@ -95,11 +103,6 @@ SystemTrayIcon {
                 Qt.quit()
             }
         }
-
-
-
-
-
 
     }
 }

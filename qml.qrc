@@ -71,5 +71,7 @@
         <file>qml/MainWindowTitle.qml</file>
         <file>qml/MainHome.qml</file>
         <file>qml/MainHomeLeftMenu.qml</file>
+        <file>qml/BaseListMenuRight.qml</file>
+        <file>qml/BaseTextButton.qml</file>
     </qresource>
 </RCC>

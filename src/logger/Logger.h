@@ -1,7 +1,7 @@
-#pragma once
+﻿#pragma once
 #pragma execution_character_set("UTF-8")
 #include <QDebug>
-
+ 
 namespace Logger
 {
 #ifdef _DEBUG

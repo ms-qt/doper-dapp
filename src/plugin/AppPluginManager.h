@@ -1,11 +1,11 @@
-//
+﻿//
 // Created by 毛华伟 on 2020/1/3.
 //
-
+#pragma execution_character_set("UTF-8")
 #ifndef APP_APPPLUGINMANAGER_H
 #define APP_APPPLUGINMANAGER_H
 
-
+ 
 #include <QObject>
 #include <QObject>
 #include <QPluginLoader>

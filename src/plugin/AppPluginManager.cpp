@@ -1,7 +1,7 @@
-//
+﻿//
 // Created by 毛华伟 on 2020/1/3.
-//
-
+// 
+ 
 #include "AppPluginManager.h"
 
 AppPluginManager *AppPluginManager::instance = nullptr;
@@ -57,6 +57,7 @@ void AppPluginManager::scanLocalPlugin()
 
             if (pluginInterface)
             {
+
                 QJsonObject json = loader->metaData().value("MetaData").toObject();
 
                 Plugin *plugin = new Plugin();
