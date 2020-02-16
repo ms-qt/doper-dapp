@@ -20,6 +20,7 @@ CMakeLists.txt.user
 CMakeSettings.json
 
 
+cmake-build-release-visual-studio-2019
 
 # User-specific files
 *.rsuser
