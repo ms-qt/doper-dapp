@@ -13,6 +13,9 @@
 #include <QVariant>
 #include <QHash>
 
+
+#include "src/model/bean/user/UserBean.h"
+
 class UserModel : public QSqlQueryModel
 {
 Q_OBJECT
@@ -20,7 +23,6 @@ public:
     enum Roles
     {
         _id = Qt::UserRole + 1,//257
-
         _user_id,
         _name,
         _age,
@@ -58,6 +60,9 @@ public slots:
     void setSignature(QString userId,QString text);
     
     void sendMessage(QString userId);
+
+    UserBean* getUserByUserId(QString userId);
+
 
 
 private:

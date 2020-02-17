@@ -53,9 +53,8 @@ ApplicationWindow {
         // 是否登录
         property bool loginSuccess: false
 
-        // 用户id
-
-        property string userid:"maohuawei"
+        // 用户id TODO 为了调试方便先写死
+        property string userid:"29c799c72e13f5bd7af95c60b4187318"
 
 
 

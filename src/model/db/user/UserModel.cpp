@@ -23,7 +23,6 @@ UserModel::UserModel()
             qDebug() << __TABLE_NAME__ << "  创建失败" << sqlQuery.lastError().text();
         }
     }
-
     refresh();
 }
 
@@ -50,7 +49,6 @@ QHash<int, QByteArray> UserModel::roleNames() const
     roles[_company] = "_company";
     return roles;
 }
-
 
 QVariant UserModel::data(const QModelIndex &index, int role) const
 {
@@ -123,21 +121,62 @@ QString UserModel::getSignature(QString userId)
     }
 }
 
-
-void  UserModel::setSignature(QString userId, QString text)
+void UserModel::setSignature(QString userId, QString text)
 {
     qDebug() << "UserModel::setSignature";
     QSqlQuery result;
     QString sql = "UPDATE _user SET _signature = '" + text + "' WHERE _user_id = '" + userId + "'";
-    qDebug() << "UserModel::setSignature sql "<<sql ;
+    qDebug() << "UserModel::setSignature sql " << sql;
     if (result.exec(sql))
     {
-
     }
 }
 
 void UserModel::sendMessage(QString userId)
 {
-    
 
+}
+
+UserBean *UserModel::getUserByUserId(QString userId)
+{
+    qDebug()<<"UserBean *UserModel::getUserByUserId(QString userId)"<<userId;
+    QSqlQuery result;
+    QString sql = "SELECT * FROM _user WHERE _user_id = '" + userId + "'";
+    if (result.exec(sql))
+    {
+        UserBean *userBean = new UserBean();
+        while (result.next())
+        {
+            int _id = result.value(0).toInt();
+            QString _user_id = result.value(1).toString();
+            QString _name = result.value(2).toString();
+            int _age = result.value(3).toInt();
+            bool _sex = result.value(4).toBool();
+            QString _department = result.value(5).toString();
+            QString _job_title = result.value(6).toString();
+            QString _avatar = result.value(7).toString();
+            QString _signature = result.value(8).toString();
+            QString _phonenumber = result.value(9).toString();
+            QString _email = result.value(10).toString();
+            QString _qq = result.value(11).toString();
+            QString _introduction = result.value(12).toString();
+            QString _company = result.value(13).toString();
+
+            userBean->_id = _id;
+            userBean->_user_id = _user_id;
+            userBean->_name = _name;
+            userBean->_age = _age;
+            userBean->_sex = _sex;
+            userBean->_department = _department;
+            userBean->_job_title = _job_title;
+            userBean->_avatar = _avatar;
+            userBean->_signature = _signature;
+            userBean->_phonenumber = _phonenumber;
+            userBean->_email = _email;
+            userBean->_qq = _qq;
+            userBean->_introduction = _introduction;
+            userBean->_company = _company;
+        }
+        return userBean;
+    }
 }

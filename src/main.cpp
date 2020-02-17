@@ -53,6 +53,7 @@
 #include "src/plugin/Plugin.h"
 
 #include "src/model/db/message/MessageTextModel.h"
+#include "src/model/bean/user/UserBean.h"
 
 static void registertypes()
 {
@@ -80,6 +81,7 @@ static void registertypes()
     qmlRegisterType<Clipboard>("Clipboard", 1, 0, "Clipboard");
     // 图片剪切板
     qmlRegisterType<EmojiModel>("ImageClipboard", 1, 0, "ImageClipboard");
+    qmlRegisterType<UserBean>("UserBean", 1, 0, "UserBean");
 
 }
 

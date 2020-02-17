@@ -39,9 +39,9 @@ Item {
         width: parent.width
         height: parent.height
         id: listViewMainHomeMessageChatList
-        //spacing: 5
-        //        verticalLayoutDirection: ListView.BottomToTop
-        //        boundsBehavior:ListView.SnapToItem
+        //spacing: 1
+        //verticalLayoutDirection: ListView.BottomToTop
+        //boundsBehavior:ListView.SnapToItem
         cacheBuffer: 1
         focus: true
         clip: true

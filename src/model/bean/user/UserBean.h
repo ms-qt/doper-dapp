@@ -6,6 +6,7 @@
 #define APP_USERBEAN_H
 
 #include <QObject>
+#include <QString>
 
 class UserBean : public QObject
 {
@@ -60,8 +61,6 @@ public:
     QString qq();
     QString introduction();
     QString company();
-
-
 };
 
 

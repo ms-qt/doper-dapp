@@ -313,7 +313,7 @@ set(app_SRC
         src/component/DynamicLoadComponent.cpp
         src/component/DynamicLoadComponent.h
         src/model/bean/user/UserBean.cpp
-        src/model/bean/user/UserBean.h)
+        src/model/bean/user/UserBean.h src/model/bean/room/RoomP2PBean.cpp src/model/bean/room/RoomP2PBean.h)
 
 # 通知代码配置
 if (APPLE)

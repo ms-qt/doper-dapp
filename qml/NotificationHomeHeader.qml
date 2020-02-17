@@ -13,13 +13,9 @@ Rectangle{
     height: parent.height
     id:rectangleNotificationPanelHomeHeader
 
-
     UserModel{
-
         id:userModelNotificationHomeHeader
-
     }
-
 
     Row{
         width: parent.width
@@ -40,7 +36,7 @@ Rectangle{
                     width: parent.height/2
                     height: parent.height/2
 
-                    source:"image://imageAsync/"+userModelNotificationHomeHeader.getAvatar(rootWindow.global.userid)
+                    source:"image://imageAsync/"+userModelNotificationHomeHeader.getUserByUserId(rootWindow.global.userid)._avatar
                     anchors.centerIn: parent
                 }
             }
@@ -55,7 +51,7 @@ Rectangle{
                 topPadding: 10
                 anchors.leftMargin: 20
                 anchors.topMargin: 20
-                text: qsTr(userModelNotificationHomeHeader.getName(rootWindow.global.userid))
+                text: qsTr(userModelNotificationHomeHeader.getUserByUserId(rootWindow.global.userid)._name)
                 font.pixelSize: 25
                 font.bold: true
                 font.family: "Microsoft YaHei Mono"
@@ -67,7 +63,8 @@ Rectangle{
                 anchors.top: textNotificationPanelHomeHeaderName.bottom
                 anchors.leftMargin: 20
                 anchors.topMargin: 20
-                signatureText:userModelNotificationHomeHeader.getSignature(rootWindow.global.userid)==""?"点击修改签名":userModelNotificationHomeHeader.getSignature(rootWindow.global.userid)
+
+                signatureText:userModelNotificationHomeHeader.getUserByUserId(rootWindow.global.userid)._signature==""?"点击修改签名":userModelNotificationHomeHeader.getUserByUserId(rootWindow.global.userid)._signature
             }
         }
     }
