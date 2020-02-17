@@ -8,92 +8,58 @@ MessageBeanText::MessageBeanText()
 {
 }
 
-const QString &MessageBeanText::getMessageId() const
+
+int MessageBeanText::id()
 {
-    return messageId;
+    return _id;
 }
 
-void MessageBeanText::setMessageId(const QString &messageId)
+QString MessageBeanText::room_id()
 {
-    MessageBeanText::messageId = messageId;
+    return _room_id;
 }
 
-const QString &MessageBeanText::getSenderId() const
+QString MessageBeanText::message_id()
 {
-    return senderId;
+    return _message_id;
 }
 
-void MessageBeanText::setSenderId(const QString &senderId)
+QString MessageBeanText::event_id()
 {
-    MessageBeanText::senderId = senderId;
+    return _event_id;
 }
 
-const QString &MessageBeanText::getTextContent() const
+QString MessageBeanText::sender_id()
 {
-    return textContent;
+    return _sender_id;
 }
 
-void MessageBeanText::setTextContent(const QString &textContent)
+qint64 MessageBeanText::time()
 {
-    MessageBeanText::textContent = textContent;
+    return _time;
 }
 
-const QString &MessageBeanText::getEventId() const
+QString MessageBeanText::text_content()
 {
-    return eventId;
+    return _text_content;
 }
 
-void MessageBeanText::setEventId(const QString &eventId)
+qint64 MessageBeanText::message_sender_time()
 {
-    MessageBeanText::eventId = eventId;
+    return _message_sender_time;
 }
 
-qint64 MessageBeanText::getTime() const
+qint64 MessageBeanText::message_receive_time()
 {
-    return time;
+    return _message_receive_time;
 }
 
-void MessageBeanText::setTime(qint64 time)
+bool MessageBeanText::is_me()
 {
-    MessageBeanText::time = time;
+    return _is_me;
 }
 
-qint64 MessageBeanText::getSenderTime() const
+bool MessageBeanText::is_read()
 {
-    return senderTime;
-}
-
-void MessageBeanText::setSenderTime(qint64 senderTime)
-{
-    MessageBeanText::senderTime = senderTime;
-}
-
-qint64 MessageBeanText::getReceiveTime() const
-{
-    return receiveTime;
-}
-
-void MessageBeanText::setReceiveTime(qint64 receiveTime)
-{
-    MessageBeanText::receiveTime = receiveTime;
-}
-
-bool MessageBeanText::isMe1() const
-{
-    return isMe;
-}
-
-void MessageBeanText::setIsMe(bool isMe)
-{
-    MessageBeanText::isMe = isMe;
-}
-
-bool MessageBeanText::isRead1() const
-{
-    return isRead;
-}
-
-void MessageBeanText::setIsRead(bool isRead)
-{
-    MessageBeanText::isRead = isRead;
+    return _is_read;
 }

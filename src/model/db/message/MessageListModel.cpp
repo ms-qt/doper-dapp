@@ -150,9 +150,17 @@ MessageBeanText *MessageListModel::getLasterMessageText(QString roomId)
             bool _is_me = result.value(9).toBool();
             bool _is_read = result.value(10).toBool();
 
-            messageBeanText->setMessageId(_message_id);
-            messageBeanText->setTextContent(_text_content);
-            messageBeanText->setTime(_time);
+            messageBeanText->_id = (_id);
+            messageBeanText->_room_id = (_room_id);
+            messageBeanText->_message_id = (_message_id);
+            messageBeanText->_event_id = (_event_id);
+            messageBeanText->_sender_id = (_sender_id);
+            messageBeanText->_time = (_time);
+            messageBeanText->_text_content = (_text_content);
+            messageBeanText->_message_sender_time = (_message_sender_time);
+            messageBeanText->_message_receive_time = (_message_receive_time);
+            messageBeanText->_is_me = (_is_me);
+            messageBeanText->_is_read = (_is_read);
         }
         return messageBeanText;
     }

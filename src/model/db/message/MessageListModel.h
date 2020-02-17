@@ -18,7 +18,6 @@
 
 class MessageListModel : public QSqlQueryModel
 {
-
 Q_OBJECT
 public:
     enum Roles
@@ -53,11 +52,8 @@ public slots:
 
     MessageBeanText *getLasterMessageText(QString roomId);
 
-    // 筛选
+    // 更具房间ID筛选
     void filterByRoomId(QString roomId);
-
-
-
 
 private:
 
@@ -74,6 +70,5 @@ private:
                                      ");";
 
 };
-
 
 #endif //DOPER_DAPP_MESSAGELISTMODEL_H

@@ -10,74 +10,43 @@
 class MessageBeanText : public QObject
 {
 Q_OBJECT
-    Q_PROPERTY(QString textContent
-                       READ
-                               getTextContent
-                       CONSTANT
-                       )
-
-
-    Q_PROPERTY(qint64 time
-                       READ
-                               getTime
-                       CONSTANT
-                       )
-
+    Q_PROPERTY(QString _id READ id CONSTANT)
+    Q_PROPERTY(qint64 _room_id READ room_id CONSTANT)
+    Q_PROPERTY(qint64 _message_id READ message_id CONSTANT)
+    Q_PROPERTY(qint64 _event_id READ event_id CONSTANT)
+    Q_PROPERTY(qint64 _sender_id READ sender_id CONSTANT)
+    Q_PROPERTY(qint64 _time READ _time CONSTANT)
+    Q_PROPERTY(qint64 _text_content READ _text_content CONSTANT)
+    Q_PROPERTY(qint64 _message_sender_time READ _message_sender_time CONSTANT)
+    Q_PROPERTY(qint64 _message_receive_time READ _message_receive_time CONSTANT)
+    Q_PROPERTY(qint64 _is_me READ _is_me CONSTANT)
+    Q_PROPERTY(qint64 _is_read READ _is_read CONSTANT)
 public:
     MessageBeanText();
-
-public slots:
-
-
 public:
-    QString messageId;
-    QString senderId;
-    QString textContent;
-    QString eventId;
-    qint64 time;
-    qint64 senderTime;
-    qint64 receiveTime;
-    bool isMe;
-    bool isRead;
+    int _id;
+    QString _room_id;
+    QString _message_id;
+    QString _event_id;
+    QString _sender_id;
+    qint64 _time;
+    QString _text_content;
+    qint64 _message_sender_time;
+    qint64 _message_receive_time;
+    bool _is_me;
+    bool _is_read;
 
-public slots:
-
-    const QString &getMessageId() const;
-
-    void setMessageId(const QString &messageId);
-
-    const QString &getSenderId() const;
-
-    void setSenderId(const QString &senderId);
-
-    const QString &getTextContent() const;
-
-    void setTextContent(const QString &textContent);
-
-    const QString &getEventId() const;
-
-    void setEventId(const QString &eventId);
-
-    qint64 getTime() const;
-
-    void setTime(qint64 time);
-
-    qint64 getSenderTime() const;
-
-    void setSenderTime(qint64 senderTime);
-
-    qint64 getReceiveTime() const;
-
-    void setReceiveTime(qint64 receiveTime);
-
-    bool isMe1() const;
-
-    void setIsMe(bool isMe);
-
-    bool isRead1() const;
-
-    void setIsRead(bool isRead);
-
+    int id();
+    QString room_id();
+    QString message_id();
+    QString event_id();
+    QString sender_id();
+    qint64 time();
+    QString text_content();
+    qint64 message_sender_time();
+    qint64 message_receive_time();
+    bool is_me();
+    bool is_read();
 };
 
 

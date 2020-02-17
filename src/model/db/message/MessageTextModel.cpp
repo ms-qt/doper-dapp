@@ -67,7 +67,7 @@ QHash<int, QByteArray> MessageTextModel::roleNames() const
 QString MessageTextModel::textContentByMessageId(QString messageId)
 {
     QSqlQuery result;
-    QString sql = "SELECT _text_content FROM _message_text WHERE _message_id = '"+messageId+"'";
+    QString sql = "SELECT _text_content FROM _message_text WHERE _message_id = '" + messageId + "'";
     if (result.exec(sql))
     {
         QString textContent;
@@ -76,5 +76,42 @@ QString MessageTextModel::textContentByMessageId(QString messageId)
             textContent = result.value(0).toString();
         }
         return textContent;
+    }
+}
+
+MessageBeanText *MessageTextModel::messageByMessageId(QString message_id)
+{
+    QSqlQuery result;
+    QString sql = "SELECT * FROM _message_text WHERE _message_id = '" + message_id + "' ORDER BY _time DESC LIMIT 1";
+    if (result.exec(sql))
+    {
+        MessageBeanText *messageBeanText = new MessageBeanText();
+        while (result.next())
+        {
+            int _id = result.value(0).toInt();
+            QString _room_id = result.value(1).toString();
+            QString _message_id = result.value(2).toString();
+            QString _event_id = result.value(3).toString();
+            QString _sender_id = result.value(4).toString();
+            qint64 _time = result.value(5).toLongLong() / 1000;
+            QString _text_content = result.value(6).toString();
+            qint64 _message_sender_time = result.value(7).toLongLong();
+            qint64 _message_receive_time = result.value(8).toLongLong();
+            bool _is_me = result.value(9).toBool();
+            bool _is_read = result.value(10).toBool();
+
+            messageBeanText->_id = (_id);
+            messageBeanText->_room_id = (_room_id);
+            messageBeanText->_message_id = (_message_id);
+            messageBeanText->_event_id = (_event_id);
+            messageBeanText->_sender_id = (_sender_id);
+            messageBeanText->_time = (_time);
+            messageBeanText->_text_content = (_text_content);
+            messageBeanText->_message_sender_time = (_message_sender_time);
+            messageBeanText->_message_receive_time = (_message_receive_time);
+            messageBeanText->_is_me = (_is_me);
+            messageBeanText->_is_read = (_is_read);
+        }
+        return messageBeanText;
     }
 }

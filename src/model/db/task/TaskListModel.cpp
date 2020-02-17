@@ -1,9 +1,7 @@
 ﻿//
 // Created by maohuawei on 2020/2/5.
 //
-
 #include "TaskListModel.h"
-
 
 TaskListModel::TaskListModel()
 {
@@ -48,9 +46,7 @@ QVariant TaskListModel::data(const QModelIndex &index, int role) const
         value = QSqlQueryModel::data(modelIndex, Qt::DisplayRole);
     }
     return value;
-
 }
-
 QHash<int, QByteArray> TaskListModel::roleNames() const
 {
     QHash<int, QByteArray> roles;
@@ -59,7 +55,6 @@ QHash<int, QByteArray> TaskListModel::roleNames() const
     roles[_task_id] = "_task_id";
     return roles;
 }
-
 
 void TaskListModel::enterTask(QString taskId)
 {
