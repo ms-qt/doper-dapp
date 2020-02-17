@@ -6,8 +6,6 @@
         <file>images/img_buddy.png</file>
         <file>images/img_default.png</file>
         <file>images/img_email.png</file>
-        <file>images/img_emoji.png</file>
-        <file>images/img_file.png</file>
         <file>images/img_icon_blue.png</file>
         <file>images/img_icon.png</file>
         <file>images/img_im.png</file>
@@ -15,8 +13,6 @@
         <file>images/img_plugin_manager.png</file>
         <file>images/img_qrcode.png</file>
         <file>images/img_room.png</file>
-        <file>images/img_video.png</file>
-        <file>images/img_voice.png</file>
         <file>images/img_refresh.png</file>
         <file>images/org_ms_image_dev.png</file>
         <file>images/img_loading.png</file>
@@ -54,5 +50,9 @@
         <file>images/image_task.png</file>
         <file>images/image_switch_theme.png</file>
         <file>images/images_bug_feedback.png</file>
+        <file>images/image_emoji.png</file>
+        <file>images/image_file.png</file>
+        <file>images/image_video.png</file>
+        <file>images/image_voice.png</file>
     </qresource>
 </RCC>

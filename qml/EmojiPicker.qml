@@ -73,7 +73,7 @@ ColumnLayout {
         Layout.leftMargin: 12
         Layout.rightMargin: 12
 
-        color: MSettings.darkTheme ? "#424242" : "#e7ebeb"
+        color: "#424242"
     }
 
 
