@@ -72,12 +72,8 @@ ColumnLayout {
         Layout.preferredHeight: 1
         Layout.leftMargin: 12
         Layout.rightMargin: 12
-
         color: "#424242"
     }
-
-
-
 
 
     ListView {

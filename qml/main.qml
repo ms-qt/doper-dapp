@@ -508,4 +508,37 @@ ApplicationWindow {
             }
         }
     }
+
+
+
+
+    property bool isEnter: false
+
+
+    //贴边隐藏实现
+    MouseArea {
+        anchors.fill: parent
+        hoverEnabled: true
+        onEntered: {
+            isEnter=true
+            floatHide()
+        }
+        onExited: {
+            isEnter=false
+            floatHide()
+        }
+    }
+
+    function floatHide()
+    {
+
+        console.info("x:"+rootWindow.x+" y:"+rootWindow.y)
+
+        if(rootWindow.y<100&&!isEnter)
+        {
+            rootWindow.height=1
+        }else{
+            rootWindow.height=100
+        }
+    }
 }
