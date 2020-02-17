@@ -12,7 +12,7 @@
 #include <QSqlDatabase>
 #include <QVariant>
 #include <QHash>
-#include "MessageBeanText.h"
+#include "src/model/bean/message/MessageBeanText.h"
 
 class MessageTextModel : public QSqlQueryModel
 {
@@ -49,10 +49,8 @@ public slots:
     // 根据messageid 获取信息
     QString textContentByMessageId(QString messageId);
 
-    QString _sender_id_by_message_id(QString messageId);
-
     // 更具message_id 获取message
-    MessageBeanText* messageByMessageId(QString message_id);
+    MessageBeanText *messageByMessageId(QString message_id);
 
 
 private:

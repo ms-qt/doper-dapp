@@ -14,7 +14,7 @@
 #include <QVariant>
 #include <QHash>
 
-#include "src/model/db/message/MessageBeanText.h"
+#include "src/model/bean/message/MessageBeanText.h"
 
 class MessageListModel : public QSqlQueryModel
 {

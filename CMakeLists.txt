@@ -215,8 +215,8 @@ set(app_SRC
         src/model/db/message/MessageTextModel.h
         src/model/db/message/MessageListModel.cpp
         src/model/db/message/MessageListModel.h
-        src/model/db/message/MessageBeanText.cpp
-        src/model/db/message/MessageBeanText.h
+        src/model/bean/message/MessageBeanText.cpp
+        src/model/bean/message/MessageBeanText.h
 
 
         #
@@ -239,16 +239,16 @@ set(app_SRC
         #        src/model/db/room/RoomMenberModel.h
         #        src/model/db/room/RoomMenberModel.cpp
         #        src/model/db/room/RoomMenberModel.h
-                src/model/db/room/RoomListModel.cpp
-                src/model/db/room/RoomListModel.h
+        src/model/db/room/RoomListModel.cpp
+        src/model/db/room/RoomListModel.h
         #
-                src/model/db/task/TaskModel.cpp
-                src/model/db/task/TaskModel.h
-                src/model/db/task/TaskListModel.cpp
-                src/model/db/task/TaskListModel.h
-        
-                src/model/db/user/UserModel.cpp
-                src/model/db/user/UserModel.h
+        src/model/db/task/TaskModel.cpp
+        src/model/db/task/TaskModel.h
+        src/model/db/task/TaskListModel.cpp
+        src/model/db/task/TaskListModel.h
+
+        src/model/db/user/UserModel.cpp
+        src/model/db/user/UserModel.h
 
 
         src/tool/ThreadTool.cpp
@@ -284,20 +284,17 @@ set(app_SRC
         src/TaoJsonModel/TaoJsonTreeModel.cpp
 
 
-
-
-
         src/emoji/EmojiModel.cpp
         src/emoji/EmojiModel.h
 
-#        src/systemfeatures/imageclipboard.cpp
-#        src/systemfeatures/imageclipboard.h
+        #        src/systemfeatures/imageclipboard.cpp
+        #        src/systemfeatures/imageclipboard.h
 
 
-#        src/app/base/BaseQQuickView.cpp
-#        src/app/base/BaseQQuickView.h
-#        src/model/db/mainleftmenu/MainLeftMenu.cpp
-#        src/model/db/mainleftmenu/MainLeftMenu.h
+        #        src/app/base/BaseQQuickView.cpp
+        #        src/app/base/BaseQQuickView.h
+        #        src/model/db/mainleftmenu/MainLeftMenu.cpp
+        #        src/model/db/mainleftmenu/MainLeftMenu.h
 
         src/app/AppInfo.h
 
@@ -309,7 +306,14 @@ set(app_SRC
         src/proxy/ui/UIProxy.h
 
 
-        src/login/LoginHandler.cpp src/login/LoginHandler.h src/model/PluginModel.cpp src/model/PluginModel.h src/component/DynamicLoadComponent.cpp src/component/DynamicLoadComponent.h)
+        src/login/LoginHandler.cpp
+        src/login/LoginHandler.h
+        src/model/PluginModel.cpp
+        src/model/PluginModel.h
+        src/component/DynamicLoadComponent.cpp
+        src/component/DynamicLoadComponent.h
+        src/model/bean/user/UserBean.cpp
+        src/model/bean/user/UserBean.h)
 
 # 通知代码配置
 if (APPLE)

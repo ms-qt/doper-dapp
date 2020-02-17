@@ -4,7 +4,6 @@
 
 #include "MessageListModel.h"
 
-
 MessageListModel::MessageListModel()
 {
     if (QSqlDatabase::database().tables().contains(__TABLE_NAME__))
@@ -65,7 +64,6 @@ QHash<int, QByteArray> MessageListModel::roleNames() const
     roles[_time] = "_time";
     return roles;
 }
-
 
 void MessageListModel::enterRoom(QString roomId)
 {
@@ -165,7 +163,6 @@ MessageBeanText *MessageListModel::getLasterMessageText(QString roomId)
         return messageBeanText;
     }
 }
-
 
 void MessageListModel::filterByRoomId(QString roomId)
 {

@@ -32,7 +32,6 @@
         <file>qml/Base/PopupFrame/CustomMouseArea.qml</file>
         <file>qml/Base/PopupFrame/PopupFrame.qml</file>
         <file>qml/Base/PopupFrame/PopupFrameContentItem.qml</file>
-        <file>qml/Base/PopupFrame/PopupFrameContentItem.qml</file>
         <file>qml/Base/ListMenuRight.qml</file>
         <file>qml/MainControlPanel/MainPanelTitle.qml</file>
         <file>qml/MainControlPanel/LeftMenuSideBar.qml</file>

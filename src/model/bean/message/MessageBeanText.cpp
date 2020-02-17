@@ -8,7 +8,6 @@ MessageBeanText::MessageBeanText()
 {
 }
 
-
 int MessageBeanText::id()
 {
     return _id;

@@ -38,9 +38,9 @@ Rectangle {
 
             roomName: roomListModel.getRoomName(_room_id)
             roomAvatar: roomListModel.getRoomAvatar(_room_id)
-            lasterMessage: messageListModel.getLasterMessageText(_room_id).textContent
+            lasterMessage: messageListModel.getLasterMessageText(_room_id)._text_content
             online: _room_type=='_p2p' ? true : false
-            time : Qt.formatDateTime(new Date(messageListModel.getLasterMessageText(_room_id).time), "hh:mm")
+            time : Qt.formatDateTime(new Date(messageListModel.getLasterMessageText(_room_id)._time), "hh:mm")
             roomType:_room_type
             width: listViewMainHomeMessageList.width
             height: 85

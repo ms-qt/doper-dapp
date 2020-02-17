@@ -10,17 +10,17 @@
 class MessageBeanText : public QObject
 {
 Q_OBJECT
-    Q_PROPERTY(QString _id READ id CONSTANT)
-    Q_PROPERTY(qint64 _room_id READ room_id CONSTANT)
-    Q_PROPERTY(qint64 _message_id READ message_id CONSTANT)
-    Q_PROPERTY(qint64 _event_id READ event_id CONSTANT)
-    Q_PROPERTY(qint64 _sender_id READ sender_id CONSTANT)
-    Q_PROPERTY(qint64 _time READ _time CONSTANT)
-    Q_PROPERTY(qint64 _text_content READ _text_content CONSTANT)
-    Q_PROPERTY(qint64 _message_sender_time READ _message_sender_time CONSTANT)
-    Q_PROPERTY(qint64 _message_receive_time READ _message_receive_time CONSTANT)
-    Q_PROPERTY(qint64 _is_me READ _is_me CONSTANT)
-    Q_PROPERTY(qint64 _is_read READ _is_read CONSTANT)
+    Q_PROPERTY(int _id READ id CONSTANT)
+    Q_PROPERTY(QString _room_id READ room_id CONSTANT)
+    Q_PROPERTY(QString _message_id READ message_id CONSTANT)
+    Q_PROPERTY(QString _event_id READ event_id CONSTANT)
+    Q_PROPERTY(QString _sender_id READ sender_id CONSTANT)
+    Q_PROPERTY(qint64 _time READ time CONSTANT)
+    Q_PROPERTY(QString _text_content READ text_content CONSTANT)
+    Q_PROPERTY(qint64 _message_sender_time READ message_sender_time CONSTANT)
+    Q_PROPERTY(qint64 _message_receive_time READ message_receive_time CONSTANT)
+    Q_PROPERTY(bool _is_me READ is_me CONSTANT)
+    Q_PROPERTY(bool _is_read READ is_read CONSTANT)
 public:
     MessageBeanText();
 public:

@@ -29,7 +29,7 @@
 // 登录处理器
 #include "src/login/LoginHandler.h"
 // model
-#include "src/model/db/message/MessageBeanText.h"
+#include "src/model/bean/message/MessageBeanText.h"
 #include "src/model/db/message/MessageListModel.h"
 #include "src/model/db/room/RoomListModel.h"
 

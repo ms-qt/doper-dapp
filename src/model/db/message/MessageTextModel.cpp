@@ -4,7 +4,6 @@
 
 #include "MessageTextModel.h"
 
-
 MessageTextModel::MessageTextModel()
 {
     if (QSqlDatabase::database().tables().contains(__TABLE_NAME__))
