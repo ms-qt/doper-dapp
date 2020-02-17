@@ -28,6 +28,10 @@ ApplicationWindow {
     width: rootWindowWidth
     height: rootWindowHeight
 
+
+    minimumWidth:  rootWindow.width/2
+    minimumHeight: rootWindow.height/2
+
     flags: Qt.Window | Qt.FramelessWindowHint
 
 

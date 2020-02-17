@@ -18,6 +18,13 @@ ApplicationWindow {
     width: Screen.width/6*5
     height: Screen.height/6*5
 
+    minimumWidth:  mainWindow.width/2
+    minimumHeight: mainWindow.height/2
+
+    x:Screen.width/2-mainWindow.width/2
+    y:Screen.height/2-mainWindow.height/2
+
+
     property int xMouse
     property int yMouse
 
