@@ -29,5 +29,9 @@ if (APPLE)
     include(AppleCMakeLists.cmake)
 endif (APPLE)
 
+if (WIN32)
+    include(Win32CMakeLists.cmake)
+endif (WIN32)
+
 
 
